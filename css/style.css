@@ -1,0 +1,434 @@
+@import url(reset.css);
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* .visible{
+    display: block;
+}
+
+.hide{
+    display: none;
+} */
+/* a,
+a:hover,
+ul.grid__list--fmenu li a {
+    text-decoration: none
+} */
+#chatbubble{
+    position: fixed;
+    right: 30px;
+    top: 85vh;
+    height: 80px;
+}
+
+#chattext{
+    position: fixed;
+    right: 30px;
+    top: 76vh;
+    height: 60px;
+    display: block;
+}
+
+#bot{
+    width: 400px;
+    height: 0px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 10px;
+    background: transparent;
+}
+/* #chatbutton{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+} */
+
+.chat__header{
+    background: red!important;
+}
+
+#close{
+    position: fixed;
+    right: 22px;
+    bottom: 469px;
+    font-size: 1.5em;
+    color: #fff;
+    display: none;
+    cursor: pointer;
+}
+
+.header_menu{
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.header_menu ul{
+    list-style: none;
+    display: flex;
+    font-size: 0.8em;
+    align-items: center;
+    padding-right: 50px;
+    text-align: center;
+}
+.header_menu li a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.header_menu li {
+    padding: 10px;
+    min-width: 75px;
+
+}
+
+#header_name h3{
+    padding: 15px 0 15px 50px;
+    letter-spacing: 8px;
+    font-size: 2em;
+
+}
+
+.nav_line{
+    padding: 8px;
+}
+
+.header{
+    z-index: 50;
+    position: fixed;
+}
+
+section{
+    height: 500px;
+    width: 100%;
+    background-color: black;
+    border: 1px solid #bebebe;
+}
+
+#home_section{
+    height: 100%;
+    min-height: 100vh;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+#main_heading{
+    /* color: #fff;
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    flex-direction: column;
+    position: relative; */
+    margin-top: 12vh;
+    color: #fff;
+    padding: 50px;
+    position: relative;
+    top: 18%;
+    transition: font-size .20s ease-in; 
+}
+
+#main_heading h2{
+    align-items: center;
+    display: flex;
+    color: #00A0E5;
+    font-size: 3.6em;
+    letter-spacing: 16px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+#main_heading h1{
+    font-size: 7em;
+    padding-bottom: 10px;
+    /* transition: font-size .25s linear;  */
+}
+
+#main_heading h3{
+    padding: 0 50px 30px 10px;
+    font-size: 1.5em;
+    flex-grow: 1;
+}
+
+#dropDown{
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 99vh;
+    transform: translateY(-180%);
+    left: 50%;
+}
+
+#heading_bottom p{
+    /* justify-content: center;
+    align-items: center;
+    display: flex; */
+    position: absolute;
+    top: 90vh;
+    transform: translateY(-100%);
+    left: 49.5%;
+    color: white;
+    font-size: 0.8em;
+}
+
+#TFMlogo_heading{
+    /* margin-top: 10vh; */
+    position: relative;
+    transition: margin-top .25s ease-in; 
+}
+#TFMLogo{
+    margin-left: 50px;
+}
+
+#hamburger{
+    display: none;
+}
+
+.header-link:hover{
+    color: white;
+}
+#services_section {
+    background: white;
+    height: 100%;
+    background-image: url("../images/Man.png");
+    background-repeat: no-repeat;
+    background-position: left; 
+    background-size: 750px;
+    height: 1000px;
+    transition: font-size .20s ease-in;
+}
+
+#services_section h2{
+    color: #00A0E5;
+    font-size: 10.5em;
+    font-weight: lighter;
+    margin-left: 20%;
+    margin-top: 10vh;
+}
+#services_section h3 h4{
+    color: black;
+}
+
+#services_section p{
+    color: black;
+    font-size: 1.5em;
+}
+
+
+@media screen and (max-width: 1060px){
+    #main_heading{
+        font-size: 0.8em;
+        /* transition: font-size .05s ease-in;  */
+    }
+    /* #TFMlogo_heading{
+        margin-top: 100px;
+        transition: margin-top .25s ease-in; 
+    } */
+}
+
+@media screen and (min-height: 850px){
+    /* #TFMlogo_heading{
+        margin-top: 240px;
+        transition: margin-top .25s ease-in;
+    } */
+    #chattext{
+        top:78vh;
+    }
+}
+
+@media screen and (min-height: 1100px){
+    /* #TFMlogo_heading{
+        margin-top: 350px;
+        transition: margin-top .25s ease-in; 
+    } */
+    #main_heading{
+        transition: margin-top .25s ease-in; 
+        margin-top: 23vh;
+    }
+}
+
+@media screen and (max-width: 960px){
+    #hamburger{
+        position: fixed;
+        width: 40px;
+        right: 20px;
+        top: 30px;
+        display: block;
+        z-index: 10;
+        cursor: pointer;
+    }
+    .header_menu{
+        height: 420px;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.9);
+        justify-content: left;
+        display: none;
+    }
+
+    #main_heading h1 {
+        font-size: 5.5em;
+    }
+
+    #header_name h3{
+        display: none;
+    }
+    .header_menu ul{
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+    .nav_line{
+        display: none;
+    }
+    .header-link{
+        font-size: 3em;
+    }
+    /* #TFMlogo_heading{
+        margin-top: 15vh;
+        transition: margin-top .25s ease-in; 
+        -o-transition: margin-top .25s ease-in;
+        -moz-transition: margin-top .25s ease-in;
+        -webkit-transition: margin-top .25s ease-in;
+    } */
+    #TFMLogo{
+        height: 60px;
+        transition: height .25s ease-in; 
+    }
+
+}
+@media screen and (min-width: 640px){
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+    }    
+}
+
+@media screen and (max-width: 500px){
+    #main_heading{
+        top: 11%;
+        transition: top .25s ease-in; 
+    }
+    #main_heading h2 {
+        font-size: 2em;
+        padding-left: 4px;
+    }
+    #main_heading h1 {
+        font-size: 3em;
+    }
+
+    #main_heading h3 {
+        font-size: 1.5em;
+        padding: 0;
+    }
+    #heading_bottom p {
+        left: 40%;
+        transition: left .25s ease-in; 
+    }
+
+    #dropDown {
+        max-width: 100%;
+        height: auto;
+        position: absolute;
+        top: 99vh;
+        transform: translateY(-135%);
+        left: 42%;
+        transition: left .25s ease-in; 
+    }
+    #TFMlogo_heading{
+        margin-top: 49px;
+        transition: margin-top .25s ease-in; 
+    }
+    #TFMLogo{
+        margin-left: 30px;
+        height: 50px;
+        transition: height .25s ease-in;
+    }
+    #chattext{
+        display:none;
+        cursor: pointer;
+    }
+    #chatbubble{
+        height: 60px;
+        right: 20px;
+        top: 87vh;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-height: 700px){
+    #main_heading{
+        top: 15%;
+    }
+    #TFMLogo {
+        height: 60px;
+        transition: height .25s ease-in;
+    }
+}
+
+@media screen and (max-width: 700px) and (max-height: 700px){
+    #main_heading h1{
+        font-size: 3em;
+        /* transition: font-size .25s ease-in; */
+    }
+    /* #TFMlogo_heading {
+        margin-top: 110px;
+        transition: margin-top .25s ease-in;
+    } */
+}
+
+@media screen and (max-height: 650px){
+    /* #TFMlogo_heading {
+        margin-top: 0vh;
+        height: 60px;
+        transition: margin-top .25s ease-in;
+    } */
+       
+    #chatbubble{
+        height: 60px;
+    }
+    #heading_bottom p{
+        top: 88vh;
+    }
+    #main_heading{
+        padding-bottom: 0vh;
+    }
+}
+@media screen and (max-height: 550px){
+    #TFMLogo{
+        margin-left: 30px;
+        height: 50px;
+        transition: height .25s ease-in;
+    }
+}
+
+@media screen and (max-height: 700px){
+    #TFMLogo{
+        margin-left: 30px;
+        margin-top: 0vh;
+        /* height: 50px; */
+        transition: height .25s ease-in;
+    }
+    #main_heading{
+        padding-bottom: 0vh;
+    }
+}
+
+@media screen and (max-width: 1130px){
+    #services_section{
+        font-size: 0.8em;
+        transition: font-size .20s ease-in;
+    }
+}
