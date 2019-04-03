@@ -4,9 +4,6 @@ body,
 html {
     width: 100%;
     height: 100%;
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
     min-height: 100vh;
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -18,24 +15,21 @@ html {
 .hide{
     display: none;
 } */
-/* a,
-a:hover,
-ul.grid__list--fmenu li a {
-    text-decoration: none
-} */
+
 #chatbubble{
     position: fixed;
-    right: 30px;
-    top: 85vh;
-    height: 80px;
+    right: 20px;
+    top: 82vh;
+    height: 60px;
 }
 
 #chattext{
     position: fixed;
+    display: none;
     right: 30px;
-    top: 76vh;
+    top: 72vh;
     height: 60px;
-    display: block;
+    cursor: pointer;
 }
 
 #bot{
@@ -46,15 +40,6 @@ ul.grid__list--fmenu li a {
     bottom: 10px;
     border-radius: 10px;
     background: transparent;
-}
-/* #chatbutton{
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-} */
-
-.chat__header{
-    background: red!important;
 }
 
 #close{
@@ -68,13 +53,14 @@ ul.grid__list--fmenu li a {
 }
 
 .header_menu{
-    display: flex;
-    justify-content: space-between;
+    height: 420px;
+    z-index: 1;
     background: rgba(255, 255, 255, 0.9);
-    position: fixed;
-    top: 0;
+    justify-content: left;
+    display: none;
     width: 100%;
 }
+
 .header_menu ul{
     list-style: none;
     display: flex;
@@ -95,11 +81,24 @@ ul.grid__list--fmenu li a {
 
 }
 
+.header_menu ul{
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+.nav_line{
+    display: none;
+}
+.header-link{
+    font-size: 3em;
+}
+
 #header_name h3{
     padding: 15px 0 15px 50px;
     letter-spacing: 8px;
     font-size: 2em;
-
+    display: none;
 }
 
 .nav_line{
@@ -109,6 +108,7 @@ ul.grid__list--fmenu li a {
 .header{
     z-index: 50;
     position: fixed;
+    width: 100%;
 }
 
 section{
@@ -121,46 +121,36 @@ section{
 #home_section{
     height: 100%;
     min-height: 100vh;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 }
 
 #main_heading{
-    /* color: #fff;
-    display: flex;
-    padding: 50px;
-    justify-content: center;
-    flex-direction: column;
-    position: relative; */
-    margin-top: 12vh;
+    margin-top: 8vh;
     color: #fff;
     padding: 50px;
     position: relative;
-    top: 18%;
     transition: font-size .20s ease-in; 
+    font-size: 0.8em;
+    padding-bottom: 0vh;
 }
 
 #main_heading h2{
     align-items: center;
     display: flex;
     color: #00A0E5;
-    font-size: 3.6em;
+    font-size: 2em;
     letter-spacing: 16px;
     padding-bottom: 10px;
-    padding-left: 10px;
+    padding-left: 4px;
 }
 
 #main_heading h1{
-    font-size: 7em;
+    font-size: 3em;
     padding-bottom: 10px;
-    /* transition: font-size .25s linear;  */
 }
 
 #main_heading h3{
-    padding: 0 50px 30px 10px;
+    padding: 0;
     font-size: 1.5em;
-    flex-grow: 1;
 }
 
 #dropDown{
@@ -169,19 +159,18 @@ section{
     position: absolute;
     top: 99vh;
     transform: translateY(-180%);
-    left: 50%;
+    left: 42%;
+    transition: left .25s ease-in;
 }
 
 #heading_bottom p{
-    /* justify-content: center;
-    align-items: center;
-    display: flex; */
     position: absolute;
-    top: 90vh;
+    top: 84vh;
     transform: translateY(-100%);
-    left: 49.5%;
+    left: 40%;
     color: white;
     font-size: 0.8em;
+    transition: left .25s ease-in;
 }
 
 #TFMlogo_heading{
@@ -190,231 +179,410 @@ section{
     transition: margin-top .25s ease-in; 
 }
 #TFMLogo{
-    margin-left: 50px;
+    margin-left: 30px;
+    margin-top: 0vh;
+    transition: height .25s ease-in;
+    height: 50px;
 }
 
 #hamburger{
-    display: none;
+    position: fixed;
+    width: 35px;
+    right: 20px;
+    top: 24px;
+    display: block;
+    z-index: 10;
+    cursor: pointer;
 }
 
+#hamburgerCont{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 71px;
+}
 .header-link:hover{
     color: white;
 }
 #services_section {
     background: white;
     height: 100%;
-    background-image: url("../images/Man.png");
-    background-repeat: no-repeat;
-    background-position: left; 
-    background-size: 750px;
-    height: 1000px;
+    background-image: none;
+    /* background-image: url("../images/Man.png"); */
+    
+    /* height: 1000px; */
+    font-size: 0.8em;
     transition: font-size .20s ease-in;
 }
 
 #services_section h2{
     color: #00A0E5;
-    font-size: 10.5em;
     font-weight: lighter;
-    margin-left: 20%;
-    margin-top: 10vh;
+    font-size: 4em;
+    margin-left: 20px;
+    margin-top: 50px;
+    transition: font-size .25s ease-in;
 }
 #services_section h3 h4{
     color: black;
 }
 
-#services_section p{
+#subSection_par{
     color: black;
+    font-size: 1.2em;
+    width: 280px;
+    margin: 20px;
+    transition: width .20s ease-in;
+    font-weight: lighter;
+}
+.subSection{
+    margin-left: auto;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.subSection h3{
+    margin: 30px 20px 0 20px;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.services_main{
+    margin: 20px;
+}
+
+.serv_sections{
+    padding: 10px 0;
+}
+
+.serv_sections h4{
     font-size: 1.5em;
-    width: 600px;
-    margin-left: 45vw;
+    padding: 10px 0;
+}
+
+.service_shortDescr{
+    font-weight: lighter;
+    font-size: 1.2em;
 }
 
 
-@media screen and (max-width: 1060px){
+
+@media screen and (min-width: 500px){
     #main_heading{
-        font-size: 0.8em;
-        /* transition: font-size .05s ease-in;  */
+        margin-top: 12vh;
     }
-    /* #TFMlogo_heading{
-        margin-top: 100px;
-        transition: margin-top .25s ease-in; 
-    } */
-}
-
-@media screen and (min-height: 850px){
-    /* #TFMlogo_heading{
-        margin-top: 240px;
-        transition: margin-top .25s ease-in;
-    } */
+    #main_heading h2 {
+        font-size: 3.6em;
+        padding-left: 4px;
+    }
+    #main_heading h3 {
+        padding: 0 30px 30px 10px;
+    }
+    #TFMLogo{
+        height: 60px;
+    }
+    #heading_bottom p {
+        left: 49.5%;
+    }
+    #dropDown{
+        left: 50%;
+    }
+    .services_main{
+        margin: 20px 50px 50px 50px;
+    }
+    #services_section h2 {
+        font-size: 5em;
+        margin-left: 22vw;
+    }
+    #subSection_par {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+        font-size: 1.2em;
+        width: 400px;
+    }
     #chattext{
-        top:78vh;
-    }
-}
-
-@media screen and (min-height: 1100px){
-    /* #TFMlogo_heading{
-        margin-top: 350px;
-        transition: margin-top .25s ease-in; 
-    } */
-    #main_heading{
-        transition: margin-top .25s ease-in; 
-        margin-top: 23vh;
-    }
-}
-
-@media screen and (max-width: 960px){
-    #hamburger{
-        position: fixed;
-        width: 40px;
-        right: 20px;
-        top: 30px;
         display: block;
-        z-index: 10;
-        cursor: pointer;
     }
-    .header_menu{
-        height: 420px;
-        z-index: 1;
-        background: rgba(255, 255, 255, 0.9);
-        justify-content: left;
-        display: none;
-    }
+}
 
+@media screen and (min-width: 700px){
     #main_heading h1 {
         font-size: 5.5em;
     }
-
-    #header_name h3{
-        display: none;
-    }
-    .header_menu ul{
-        flex-direction: column;
-        text-align: left;
-        align-items: flex-start;
-        padding-top: 40px;
-    }
-    .nav_line{
-        display: none;
-    }
-    .header-link{
-        font-size: 3em;
-    }
-    /* #TFMlogo_heading{
-        margin-top: 15vh;
-        transition: margin-top .25s ease-in; 
-        -o-transition: margin-top .25s ease-in;
-        -moz-transition: margin-top .25s ease-in;
-        -webkit-transition: margin-top .25s ease-in;
-    } */
-    #TFMLogo{
-        height: 60px;
-        transition: height .25s ease-in; 
-    }
     #services_section h2 {
         font-size: 7.5em;
-        transition: font-size .25s ease-in; 
+        transition: font-size .25s ease-in;
+        margin-left: 18vw;
     }
-    #services_section p{
-        margin-left: 25vw;
-        transition: margin-left .20s ease-in;
+    #subSection_par {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.3em;
+        transition: width .20s ease-in;
+    }
+    .services_main{
+        margin: 0 auto 50px;
     }
 
-}
-@media screen and (min-width: 640px){
-    .flex-container {
+    #chatbubble {
+        right: 30px;
+        height: 80px;
+    }
+    .subSection h3{
+        font-size: 2em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+    }
+    .services_main{
         display: flex;
-        flex-direction: column;
-    }    
+        padding-top: 50px;
+        justify-content: space-between;
+        width: 600px;
+        font-size: 1.2em;
+    }
+    .serv_sections{
+        padding: 0 10px 0 20px;
+        min-width: 171px;
+    }
+    .service_shortDescr{
+        font-size: 1em;
+        padding-top: 10px;
+    }
 }
+@media screen and (min-width: 960px){
+    #hamburger{
+        display: none;
+    }
 
-@media screen and (max-width: 500px){
-    #main_heading{
-        top: 11%;
-        transition: top .25s ease-in; 
+    .header_menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background: rgba(255, 255, 255, 0.9);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 62px;
+    }
+    .header_menu ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        font-size: 0.3em;
+        align-items: center;
+        padding-right: 50px;
+        text-align: center;
+        padding-top: 0;
+    } 
+    
+    .header_menu li {
+        padding: 10px;
+        min-width: 75px;
+    
+    }
+    #hamburgerCont{
+        height: 0;
+    }
+    
+    #header_name h3 {
+        padding: 16px 0 15px 50px;
+        letter-spacing: 8px;
+        font-size: 2em;
+        display: flex;
+    }
+    
+    .nav_line{
+        padding: 8px;
+        display: block;
+        font-size: 3em;
+        padding-top: 5px;
+    }
+    
+    .header{
+        z-index: 50;
+        position: fixed;
+    }
+
+    #main_heading h1 {
+        font-size: 7em;
     }
     #main_heading h2 {
-        font-size: 2em;
-        padding-left: 4px;
+        padding-left: 8px;
     }
-    #main_heading h1 {
-        font-size: 3em;
+    .subSection{
+        margin-left: 368px;
     }
-
-    #main_heading h3 {
-        font-size: 1.5em;
-        padding: 0;
-    }
-    #heading_bottom p {
-        left: 40%;
-        transition: left .25s ease-in; 
-    }
-
-    #dropDown {
-        max-width: 100%;
-        height: auto;
-        position: absolute;
-        top: 99vh;
-        transform: translateY(-135%);
-        left: 42%;
-        transition: left .25s ease-in; 
-    }
-    #TFMlogo_heading{
-        margin-top: 17px;
-        transition: margin-top .25s ease-in; 
-    }
-    #TFMLogo{
-        margin-left: 30px;
-        height: 50px;
-        transition: height .25s ease-in;
-    }
-    #chattext{
-        display:none;
-        cursor: pointer;
-    }
-    #chatbubble{
-        height: 60px;
-        right: 20px;
-        top: 87vh;
+    #services_section{
+        background-image: url("../images/Man.png");
+        background-repeat: no-repeat;
+        background-position: -123px 144px;
+        background-size: 681px;
+        background-attachment: fixed;
+        transition: background-size .25s ease-in;
     }
     #services_section h2 {
-        font-size: 4em;
-        margin-left: 10px;
+        font-size: 10em;
+        transition: font-size .25s ease-in;
+        margin-left: 28vw;
     }
-    #services_section p {
-        margin: 10px;
-        width: 300px;
+    #subSection_par {
+        width: 500px;
+    }
+    #TFMLogo{
+        height: 100%;
+    }
+    #chattext {
+        position: fixed;
+        right: 30px;
+        top: 76vh;
+        height: 60px;
+        display: block;
+    }
+    #chatbubble {
+        position: fixed;
+        right: 30px;
+        top: 82vh;
+        height: 80px;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1130px){
+    #main_heading{
+        font-size: 1em;
+    }
+    #services_section{
+        font-size: 1em;
+        transition: font-size .20s ease-in;
+        background: url("../images/Man.png");
+        background-repeat: no-repeat;
+        background-position: -123px 66px;
+        background-size: 900px;
+        background-attachment: fixed;
+        transition: background-size .25s ease-in;
+    }
+    #services_section h2{
+        font-size: 8.5em;
+        margin-left: 35%;
+        margin-top: 10vh;
+    }
+    #subSection_par{
+        font-size: 1.5em;
+        padding: 10px 0 10px 1%;
+        width: 600px;
+        margin-left: 45vw;
     }
 
+    .subSection{
+        font-weight: lighter;
+        margin-left: 0;
+    }
+    .subSection h3{
+        font-size: 2em;
+        /* padding-left: 33%; */
+        width: 600px;
+        /* text-align: center; */
+        /* margin-left: auto; */
+        margin-right: auto;
+        margin-left: 45vw;
+        padding: 10px 0 10px 1%;
+        text-align: center;
+    }
+    .services_main{
+        display: flex;
+        padding-left: 46vw;
+        padding-top: 50px;
+        justify-content: space-between;
+        width: 600px;
+        font-size: 1.2em;
+        margin: 0;
+    }
+    .serv_sections{
+        padding: 0 10px 0 20px;
+        min-width: 171px;
+    }
+
+    .serv_sections h4{
+        font-size: 1em;
+    }
+    .service_shortDescr{
+        font-size: 1em;
+        padding-top: 10px;
+    }
+    
+}
+
+@media screen and (min-height: 400px) and (min-width: 960px){
+    #chattext{
+        display: block;
+        right: 55px;
+    }
+
+}
+
+@media screen and (min-height: 550px){
+    #TFMlogo_heading {
+        margin-top: 3vh;
+    }
+    #heading_bottom p {
+        top: 86vh;
+    }
+    /* #chattext{
+        display: block;
+    } */
 }
 
 @media screen and (max-width: 500px) and (min-height: 700px){
-    #main_heading{
-        top: 15%;
-    }
     #TFMLogo {
         height: 60px;
         transition: height .25s ease-in;
     }
+    #TFMlogo_heading {
+        margin-top: 5vh;
+    }
+    #chattext{
+        display: block;
+    }
 }
+
+@media screen and (min-height: 800px){
+    #chattext{
+        top: 74vh;
+    }
+    #main_heading{
+        transition: margin-top .25s ease-in; 
+        margin-top: 23vh;
+    }
+    #TFMlogo_heading {
+        margin-top: 5vh;
+    }
+    #heading_bottom p {
+        top: 90vh;
+    }
+}
+
+@media screen and (min-height: 900px) and (min-width: 800px){
+    #chattext{
+        top: 77vh;
+    }
+    #chatbubble {
+        top: 85vh;
+    }
+}
+
 
 @media screen and (max-width: 700px) and (max-height: 700px){
     #main_heading h1{
         font-size: 3em;
-        /* transition: font-size .25s ease-in; */
+        transition: font-size .25s ease-in;
     }
-    /* #TFMlogo_heading {
-        margin-top: 110px;
-        transition: margin-top .25s ease-in;
-    } */
 }
 
-@media screen and (max-height: 650px){
-    /* #TFMlogo_heading {
-        margin-top: 0vh;
-        height: 60px;
-        transition: margin-top .25s ease-in;
-    } */
-       
+
+/* @media screen and (max-height: 650px){
+    
     #chatbubble{
         height: 60px;
     }
@@ -424,33 +592,26 @@ section{
     #main_heading{
         padding-bottom: 0vh;
     }
-}
-@media screen and (max-height: 550px){
-    #TFMLogo{
-        margin-left: 30px;
-        height: 50px;
-        transition: height .25s ease-in;
-    }
-}
+} */
 
-@media screen and (max-height: 700px){
+/* @media screen and (max-height: 700px){
     #TFMLogo{
         margin-left: 30px;
         margin-top: 0vh;
         /* height: 50px; */
-        transition: height .25s ease-in;
+      /*  transition: height .25s ease-in;
     }
-    #main_heading{
+   /* #main_heading{
         padding-bottom: 0vh;
     }
-}
+} */
 
-@media screen and (max-width: 1130px){
+/* @media screen and (max-width: 1130px){
     #services_section{
         font-size: 0.8em;
         transition: font-size .20s ease-in;
     }
-    #services_section p{
+    #subSection_par{
         width: 450px;
         transition: width .20s ease-in;
     }
@@ -459,7 +620,7 @@ section{
     #services_section h2{
         font-size: 5em;
     }
-    #services_section p {
+    #subSection_par {
         margin-left: 20px;
     }
-}
+} */

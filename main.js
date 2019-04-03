@@ -16,12 +16,15 @@ function closeChat(){
 
 
 var nav = document.getElementsByClassName("header_menu");
+var navBg = document.getElementById("hamburgerCont");
 
 function menuSwitch(){
     if(nav[0].style.display == "flex"){
         nav[0].style.display = "None";
+        navBg.style.height = "71px";
     } else{
         nav[0].style.display = "flex";
+        navBg.style.height = "0";
     }
 }
 
