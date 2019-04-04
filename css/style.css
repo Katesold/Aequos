@@ -30,6 +30,7 @@ html {
     top: 72vh;
     height: 60px;
     cursor: pointer;
+    z-index: 2;
 }
 
 #bot{
@@ -195,10 +196,20 @@ section{
     cursor: pointer;
 }
 
+#hamburgerBlack{
+    position: fixed;
+    width: 35px;
+    right: 20px;
+    top: 24px;
+    display: none;
+    z-index: 10;
+    cursor: pointer;
+}
+
 #hamburgerCont{
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
-    height: 71px;
+    height: 75px;
 }
 .header-link:hover{
     color: white;
@@ -219,7 +230,7 @@ section{
     font-weight: lighter;
     font-size: 4em;
     margin-left: 20px;
-    margin-top: 50px;
+    margin-top: 70px;
     transition: font-size .25s ease-in;
 }
 #services_section h3 h4{
@@ -229,7 +240,7 @@ section{
 #subSection_par{
     color: black;
     font-size: 1.2em;
-    width: 280px;
+    width: 90%;;
     margin: 20px;
     transition: width .20s ease-in;
     font-weight: lighter;
@@ -264,6 +275,94 @@ section{
     font-size: 1.2em;
 }
 
+#sdWan_section{
+    color: #fff;
+    font-weight: lighter;
+    height: 100%;
+    padding-bottom: 20px;
+}
+.sdHome{
+    margin: 20px;
+}
+.sdHome h2{
+    margin-top: 70px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+.sdHomeDescr p{
+    padding-bottom: 20px;
+}
+
+.sdIconsHome{
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#hybridIcon{
+    height: 95px;
+    padding: 15px;
+}
+#lifecycleIcon{
+    height: 95px;
+    padding: 15px;
+}
+#cloudIcon{
+    height: 90px;
+    padding: 20px 15px;
+}
+
+#overview_section{
+    background-color: #00A0E5;
+    height: 100%;
+}
+#overview_section h2{
+    color: #fff;
+    font-size: 2em;
+    font-weight: lighter;
+    padding: 70px 10px 10px 20px;
+}
+.reasonsHome{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.reasonsHome h3{
+    color: #fff;
+    font-size: 1.5em;
+    padding-bottom: 15px;
+}
+.reasonsHome p{
+    padding-bottom: 30px;
+    font-weight: lighter;
+}
+.reasonsEnd{
+    order: -1;
+    margin-bottom: 40px;
+}
+
+.reasonsEnd h4{
+    margin: 0 0 20px;
+}
+
+.reasonsEnd h5{
+    font-weight: lighter;
+}
+
+.reasonsEnd a{
+    font-weight: normal;
+}
+
+
+
+/*
+
+MEDIA QUERIES
+
+*/
 
 
 @media screen and (min-width: 500px){
@@ -291,7 +390,8 @@ section{
     }
     #services_section h2 {
         font-size: 5em;
-        margin-left: 22vw;
+        margin-left: 0;
+        text-align: center;
     }
     #subSection_par {
         margin-left: auto;
@@ -303,6 +403,31 @@ section{
     #chattext{
         display: block;
     }
+    .subSection h3{
+        text-align: center;
+    }
+    #overview_section{
+        text-align: center;
+        font-size: 1.2em;
+    }
+    #overview_section h2{
+        font-size: 1.8em;
+    }
+    .reasonsHome{
+        margin: 20px auto;
+        width: 400px;
+    }
+    .reasonsHome p{
+        text-align: justify;
+    }
+    .reasonsHome h3{
+        font-weight: lighter;
+    }
+    .reasonsEnd {
+        order: 0;
+        margin-bottom: 60px;
+        margin-top: 30px;
+    }
 }
 
 @media screen and (min-width: 700px){
@@ -312,14 +437,17 @@ section{
     #services_section h2 {
         font-size: 7.5em;
         transition: font-size .25s ease-in;
-        margin-left: 18vw;
+        margin-left: 0;
+        text-align: center;
     }
     #subSection_par {
-        width: 400px;
         margin-left: auto;
         margin-right: auto;
         font-size: 1.3em;
         transition: width .20s ease-in;
+    }
+    .subSection h3 {
+        text-align: center;
     }
     .services_main{
         margin: 0 auto 50px;
@@ -350,9 +478,51 @@ section{
         font-size: 1em;
         padding-top: 10px;
     }
+    #sdWan_section {
+        font-size: 1.2em;
+    }
+    .sdHome h2 {
+        text-align: center;
+        font-size: 3em;
+    }
+    .sdHomeDescr{
+        margin: 20px 50px;
+    }
+
+    .sdHomeDescr h3{
+        text-align: center;
+        font-weight: lighter;
+        font-size: 1.5em;
+        padding-top: 30px;
+    }
+    #overview_section{
+        text-align: center;
+        font-size: 1.2em;
+        display: flex;
+    }
+    #overview_section h2 {
+        font-size: 2em;
+        text-align: left;
+        padding: 70px 0 0 40px;
+        width: 275px;
+    }
+    .reasonsHome{
+        margin: 70px 60px 50px 0;
+        text-align: left;
+        width: 500px;
+    }
+    .reasonsHome p{
+        text-align: justify;
+    }
+    .reasonsEnd {
+        order: 0;
+        margin-bottom: 60px;
+        margin-top: 30px;
+    }
+
 }
 @media screen and (min-width: 960px){
-    #hamburger{
+    #hamburger, #hamburgerBlack{
         display: none;
     }
 
@@ -417,9 +587,9 @@ section{
     #services_section{
         background-image: url("../images/Man.png");
         background-repeat: no-repeat;
-        background-position: -123px 144px;
-        background-size: 681px;
-        background-attachment: fixed;
+        background-position: -123px 77px;
+        background-size: 596px;
+        /* background-attachment: fixed; */
         transition: background-size .25s ease-in;
     }
     #services_section h2 {
@@ -447,6 +617,49 @@ section{
         height: 80px;
         display: block;
     }
+
+    #sdWan_section {
+        font-size: 1.2em;
+    }
+    .sdHome{
+        margin: 0;
+    }
+    .sdHome h2 {
+        font-size: 5em;
+        margin-left: 40%;
+        text-align: left;
+    }
+    .sdHomeDescr{
+        width: 500px;
+        position: relative;
+        margin: 0 0 10px 40%;
+    }
+
+    .sdHomeDescr h3{
+        text-align: left;
+        font-size: 2em;
+        padding: 0;
+    }
+    .sdHomeDescr p {
+        padding-bottom: 30px;
+        width: 500px;
+    }
+    #hybridIcon{
+        height: 120px;
+        padding: 20px 30px;
+    }
+    #lifecycleIcon{
+        height: 120px;
+        padding: 20px 30px;
+    }
+    #cloudIcon{
+        height: 120px;
+        padding: 20px 30px;
+    }
+    .sdIconsHome{
+        justify-content: left;
+        padding: 40px 20px 40px 100px;
+    }
 }
 
 @media screen and (min-width: 1130px){
@@ -459,8 +672,8 @@ section{
         background: url("../images/Man.png");
         background-repeat: no-repeat;
         background-position: -123px 66px;
-        background-size: 900px;
-        background-attachment: fixed;
+        background-size: 778px;
+        /* background-attachment: fixed; */
         transition: background-size .25s ease-in;
     }
     #services_section h2{
@@ -510,6 +723,12 @@ section{
     .service_shortDescr{
         font-size: 1em;
         padding-top: 10px;
+    }
+    .sdHome h2 {
+        margin-left: 47%;
+    }
+    .sdHomeDescr{
+        margin: 0 0 10px 47%;
     }
     
 }

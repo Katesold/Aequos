@@ -17,14 +17,17 @@ function closeChat(){
 
 var nav = document.getElementsByClassName("header_menu");
 var navBg = document.getElementById("hamburgerCont");
+var navBlack = document.getElementById("hamburgerBlack");
 
 function menuSwitch(){
     if(nav[0].style.display == "flex"){
         nav[0].style.display = "None";
-        navBg.style.height = "71px";
+        navBg.style.height = "75px";
+        navBlack.style.display = "None";
     } else{
         nav[0].style.display = "flex";
         navBg.style.height = "0";
+        navBlack.style.display = "Block";
     }
 }
 
