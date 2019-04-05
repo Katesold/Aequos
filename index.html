@@ -164,26 +164,121 @@ ga('send', 'pageview'); -->
 		</section>
 
 		<section id="overview_section">
-			<h2>WHY CHOOSE AEQUOS?</h2>
-			<div class="reasonsHome">
-				<h3>REASON 1</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
-				<h3>REASON 2</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
-				<h3>REASON 3</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
-				<h3>REASON 4</h3>			
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
-				<div class="reasonsEnd">
-					<h4>WHY IS IT SPECIAL WHAT WE DO? LOREM IPSUM DOLOR SIT AMET, CONSECUTER ADIPISCING ELIT.</h4>
-					<h5>MORE <a>ABOUT US</a> AND OUR BUSINESS FOCUSED APPROACH.</h5>
+			<div id="overviewCont">
+				<h2>WHY CHOOSE AEQUOS?</h2>
+				<div class="reasonsHome">
+					<h3>REASON 1</h3>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
+					<h3>REASON 2</h3>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
+					<h3>REASON 3</h3>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
+					<h3>REASON 4</h3>			
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
+					<div class="reasonsEnd">
+						<h4>WHY IS IT SPECIAL WHAT WE DO? </h4>
+						<h4>LOREM IPSUM DOLOR SIT AMET, CONSECUTER ADIPISCING ELIT.</h4>
+						<h5>MORE <a>ABOUT US</a> AND OUR BUSINESS FOCUSED APPROACH.</h5>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<section>
+		<section id="clients_section">
+			<div>
+				<h2>SOME OF OUR CLIENTS</h2>
+				<div class="clientLogos">
+					<img id="oxfamLogo" src="images/oxfamLogo.png">
+					<img id="motorLogo" src="images/motorLogo.png">
+					<img id="abbeyLogo" src="images/abbeyLogo.png">
+					<img id="safestoreLogo" src="images/safestoreLogo.png">
+					<img id="pizzahutLogo" src="images/pizzalogo.png">
+				</div>
+				
+			</div>
 			
 		</section>
+		<section id="contact_section">
+			<div class="contactCont">
+				<h2>CONTACT US</h2>
+					<form action="" method="get" class="contactForm">
+							<div class="form">
+								<label for="name">NAME </label>
+								<input type="text" placeholder="Firstname Surname" name="name" id="name" required>
+							</div>
+							<div class="form">
+									<label for="phone">PHONE</label>
+									<input type="tel" placeholder="07412345678" id="phone" name="phone"
+												 pattern="^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$
+												 "
+												 required>
+							</div>
+							<div class="form">
+								<label for="email">EMAIL </label>
+								<input type="email" placeholder="example@gmail.com" name="email" id="email" required>
+							</div>
+							<div>
+									<textarea rows="4" cols="50" name="comment" form="usrform">Enter message here</textarea>
+							</div>
+							<div class="form">
+									<input type="submit" value="SEND">
+								</div>
+						</form>
+			</div>
+			<hr>
+			<div class="info">
+				<div class="location">
+					<h3>WHERE WE ARE</h3>
+					<p>Advanced Technology Innovation Centre,
+							Loughborough University Science & Enterprise Park,
+							5 Oakwood Drive, Loughborough, Leicestershire,
+							LE11 3QF</p>
+							<p>Central Working Slough,
+									The Future Works,
+									2 Brunel Way, Slough, Berkshire,
+									SL1 1FQ</p>
+				</div>
+				<div class="emails">
+					<h3>CALL US AT</h3>
+					<p>0345 872 6060</p>
+					<h3>INFO</div>/h3>
+					<p>info@aequos.co.uk</p>
+					<h3>TECHNICAL SUPPORT</h3>
+					<p>servicedesk@aequos.co.uk</p>
+					<h3>SALES</h3>
+					<p>sales@aequos.co.uk</p>
+				</div>
+				<div class="social">
+						<img id="linkedinBlack" src="images/social/black/linkedin.png">
+						<img id="twitterBlack" src="images/social/black/twitter.png">
+						<img id="instaBlack" src="images/social/black/instagram.png">
+						<img id="facebookBlack" src="images/social/black/facebook.png">
+				</div>
+
+			</div>
+
+		</section>
+
+		<footer>
+
+			<div>
+				<div>
+					<h2>AEQUOS</h2>
+					<p>Copyright © 2018 AEQUOS. All Rights Reserved. A TFM Group Company</p>
+					<p>Company info</p>
+					<p>Terms of Use</p>
+					<p>Privacy Policy</p>
+				</div>
+				<div>
+					<h3>AEQUOS</h3>
+					<p></p>
+				</div>
+				<div>
+						<h3>TFM GROUP</h3>
+						<p></p>
+					</div>
+			</div>
+		</footer>
 
 	</div>
 

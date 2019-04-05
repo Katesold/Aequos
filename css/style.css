@@ -113,19 +113,18 @@ html {
 }
 
 section{
-    height: 500px;
     width: 100%;
-    background-color: black;
-    border: 1px solid #bebebe;
+    /* background-color: black; */
 }
 
 #home_section{
     height: 100%;
     min-height: 100vh;
+    background-color: black;
 }
 
 #main_heading{
-    margin-top: 8vh;
+    padding-top: 8vh;
     color: #fff;
     padding: 50px;
     position: relative;
@@ -230,7 +229,7 @@ section{
     font-weight: lighter;
     font-size: 4em;
     margin-left: 20px;
-    margin-top: 70px;
+    padding-top: 70px;
     transition: font-size .25s ease-in;
 }
 #services_section h3 h4{
@@ -280,12 +279,13 @@ section{
     font-weight: lighter;
     height: 100%;
     padding-bottom: 20px;
+    background-color: black;
 }
 .sdHome{
     margin: 20px;
 }
 .sdHome h2{
-    margin-top: 70px;
+    padding-top: 70px;
     margin-bottom: 20px;
     font-size: 2em;
     font-weight: lighter;
@@ -313,9 +313,12 @@ section{
     height: 90px;
     padding: 20px 15px;
 }
-
 #overview_section{
+    height: 10%;
     background-color: #00A0E5;
+}
+#overviewCont{
+    background-color: rgba(0, 160, 229, 0.65);
     height: 100%;
 }
 #overview_section h2{
@@ -333,7 +336,7 @@ section{
 .reasonsHome h3{
     color: #fff;
     font-size: 1.5em;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 .reasonsHome p{
     padding-bottom: 30px;
@@ -350,11 +353,75 @@ section{
 
 .reasonsEnd h5{
     font-weight: lighter;
+    padding-top: 25px;
 }
 
 .reasonsEnd a{
     font-weight: normal;
 }
+
+#clients_section{
+    background-color: #E6E6E6;
+}
+
+#clients_section h2 {
+    font-size: 1.5em;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    padding: 70px 10px 20px;
+    text-align: center;
+}
+
+.clientLogos img{
+    width: 110px;
+    height: 100%;
+    padding: 20px;
+}
+
+#contact_section{
+    background-color: #FFF;
+    height: 100%;
+}
+
+.clientLogos{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 20px 50px;
+    justify-content: center;
+}
+
+#pizzahutLogo{
+    width: 55px;
+    padding: 10px 20px;
+}
+#contact_section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contactCont h2{
+    text-align: center;
+    padding: 50px;
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+.contactForm{
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+hr{
+    height: 0.5px;
+    width: calc(100% - 20px);
+    margin-top: 50px;
+}
+
 
 
 
@@ -367,7 +434,7 @@ MEDIA QUERIES
 
 @media screen and (min-width: 500px){
     #main_heading{
-        margin-top: 12vh;
+        padding-top: 12vh;
     }
     #main_heading h2 {
         font-size: 3.6em;
@@ -406,9 +473,9 @@ MEDIA QUERIES
     .subSection h3{
         text-align: center;
     }
-    #overview_section{
+    #overviewCont{
         text-align: center;
-        font-size: 1.2em;
+        /* font-size: 1.2em; */
     }
     #overview_section h2{
         font-size: 1.8em;
@@ -427,6 +494,11 @@ MEDIA QUERIES
         order: 0;
         margin-bottom: 60px;
         margin-top: 30px;
+        color: #fff;
+    }
+    #clients_section h2 {
+        font-size: 2em;
+        padding: 70px 10px 20px;
     }
 }
 
@@ -435,16 +507,22 @@ MEDIA QUERIES
         font-size: 5.5em;
     }
     #services_section h2 {
-        font-size: 7.5em;
+        font-size: 6em;
         transition: font-size .25s ease-in;
         margin-left: 0;
         text-align: center;
+        padding-top: 120px;
+    }
+    #services_section h4{
+        font-size: 1em;
     }
     #subSection_par {
         margin-left: auto;
         margin-right: auto;
         font-size: 1.3em;
         transition: width .20s ease-in;
+        padding-bottom: 20px;
+        width: 500px;
     }
     .subSection h3 {
         text-align: center;
@@ -484,6 +562,7 @@ MEDIA QUERIES
     .sdHome h2 {
         text-align: center;
         font-size: 3em;
+        padding-top: 120px;
     }
     .sdHomeDescr{
         margin: 20px 50px;
@@ -496,28 +575,46 @@ MEDIA QUERIES
         padding-top: 30px;
     }
     #overview_section{
+        background: url(../images/Girl.png);
+        background-repeat: no-repeat;
+        background-position: -106px 200px;
+        background-size: 541px;
+        transition: background-size .25s ease-in;
+        background-color: #00A0E5;
+    }
+    #overviewCont{
         text-align: center;
         font-size: 1.2em;
         display: flex;
+        /* background: url("../images/Girl.png");
+        background-repeat: no-repeat;
+        background-position: -123px 66px;
+        background-size: 778px;
+        transition: background-size .25s ease-in; */
+        /* background-color: #00A0E5; */
     }
     #overview_section h2 {
         font-size: 2em;
         text-align: left;
-        padding: 70px 0 0 40px;
-        width: 275px;
+        padding: 120px 0 0 40px;
+        width: 272px;
     }
     .reasonsHome{
-        margin: 70px 60px 50px 0;
+        margin: 120px 60px 50px 0;
         text-align: left;
         width: 500px;
     }
     .reasonsHome p{
         text-align: justify;
+        font-size: 0.9em;
     }
     .reasonsEnd {
         order: 0;
         margin-bottom: 60px;
         margin-top: 30px;
+    }
+    .reasonsEnd h4{
+        font-weight: lighter;
     }
 
 }
@@ -525,7 +622,6 @@ MEDIA QUERIES
     #hamburger, #hamburgerBlack{
         display: none;
     }
-
     .header_menu{
         display: flex;
         flex-direction: row;
@@ -546,35 +642,29 @@ MEDIA QUERIES
         text-align: center;
         padding-top: 0;
     } 
-    
     .header_menu li {
         padding: 10px;
         min-width: 75px;
-    
     }
     #hamburgerCont{
         height: 0;
     }
-    
     #header_name h3 {
         padding: 16px 0 15px 50px;
         letter-spacing: 8px;
         font-size: 2em;
         display: flex;
     }
-    
     .nav_line{
         padding: 8px;
         display: block;
         font-size: 3em;
         padding-top: 5px;
     }
-    
     .header{
         z-index: 50;
         position: fixed;
     }
-
     #main_heading h1 {
         font-size: 7em;
     }
@@ -587,13 +677,13 @@ MEDIA QUERIES
     #services_section{
         background-image: url("../images/Man.png");
         background-repeat: no-repeat;
-        background-position: -123px 77px;
+        background-position: -123px 93px;
         background-size: 596px;
         /* background-attachment: fixed; */
         transition: background-size .25s ease-in;
     }
     #services_section h2 {
-        font-size: 10em;
+        font-size: 8.5em;
         transition: font-size .25s ease-in;
         margin-left: 28vw;
     }
@@ -617,7 +707,6 @@ MEDIA QUERIES
         height: 80px;
         display: block;
     }
-
     #sdWan_section {
         font-size: 1.2em;
     }
@@ -634,7 +723,6 @@ MEDIA QUERIES
         position: relative;
         margin: 0 0 10px 40%;
     }
-
     .sdHomeDescr h3{
         text-align: left;
         font-size: 2em;
@@ -660,6 +748,34 @@ MEDIA QUERIES
         justify-content: left;
         padding: 40px 20px 40px 100px;
     }
+    #overview_section{
+        background-position: -11px 200px;
+    }
+    #overview_section h2 {
+        font-size: 2.5em;
+        padding: 70px 100px 0 40px;
+    }
+    #overviewCont{
+        justify-content: center;
+    }
+    #clients_section h2 {
+        font-size: 4em;
+        font-weight: lighter;
+        display: flex;
+        justify-content: center;
+        padding: 80px 0 50px;
+    }
+    .clientLogos img {
+        width: 150px;
+        height: 100%;
+        padding: 20px;
+    }
+    #pizzahutLogo{
+        width: 70px;
+    }
+    #motorLogo{
+        padding: 10px 20px;
+    }
 }
 
 @media screen and (min-width: 1130px){
@@ -671,15 +787,15 @@ MEDIA QUERIES
         transition: font-size .20s ease-in;
         background: url("../images/Man.png");
         background-repeat: no-repeat;
-        background-position: -123px 66px;
-        background-size: 778px;
+        background-position: -142px 144px;;
+        background-size: 797px;
         /* background-attachment: fixed; */
         transition: background-size .25s ease-in;
     }
     #services_section h2{
         font-size: 8.5em;
         margin-left: 35%;
-        margin-top: 10vh;
+        padding-top: 10vh;
     }
     #subSection_par{
         font-size: 1.5em;
@@ -691,6 +807,7 @@ MEDIA QUERIES
     .subSection{
         font-weight: lighter;
         margin-left: 0;
+        margin-bottom: 100px;
     }
     .subSection h3{
         font-size: 2em;
@@ -729,6 +846,23 @@ MEDIA QUERIES
     }
     .sdHomeDescr{
         margin: 0 0 10px 47%;
+    }
+    #overview_section {
+        background-position: -1px 200px;
+        background-size: 695px;
+    }
+    #overviewCont {
+        justify-content: center;
+    }
+    #overview_section h2 {
+        font-size: 3.5em;
+        padding: 70px 160px 0 40px;
+    }
+    .clientLogos img {
+        padding: 20px 55px;
+    }
+    #safestoreLogo{
+        padding-top: 23px;
     }
     
 }
@@ -772,7 +906,7 @@ MEDIA QUERIES
     }
     #main_heading{
         transition: margin-top .25s ease-in; 
-        margin-top: 23vh;
+        padding-top: 23vh;
     }
     #TFMlogo_heading {
         margin-top: 5vh;
