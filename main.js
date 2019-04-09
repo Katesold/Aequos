@@ -1,17 +1,20 @@
 var button = document.getElementById('chatbubble');
 var chat = document.getElementById('bot');
 var closeButton = document.getElementById('close');
+var chattext = document.getElementById('chattext');
 
 function openChat(){
     button.style.display = 'none';
     chat.style.height = '500px';
     closeButton.style.display = "block";
+    chattext.style.display = "None";
 }
 
 function closeChat(){
     button.style.display = 'block';
     chat.style.height = '0';
     closeButton.style.display = "none";
+    chattext.style.display = "Block";
 }
 
 
@@ -24,6 +27,7 @@ function menuSwitch(){
         nav[0].style.display = "None";
         navBg.style.height = "75px";
         navBlack.style.display = "None";
+        
     } else{
         nav[0].style.display = "flex";
         navBg.style.height = "0";
@@ -31,10 +35,10 @@ function menuSwitch(){
     }
 }
 
-document.getElementById("chattext").addEventListener("click", hideMe);
+chattext.addEventListener("click", hideMe);
 
 function hideMe() {
-  document.getElementById("chattext").style.display = "None";
+  chattext.style.display = "None";
 }
 // nav[0].addEventListener("resize", hideMenu);
 

@@ -122,7 +122,7 @@ ga('send', 'pageview'); -->
 				<img id="chattext" src="images/chattext.png">
 	
 			</div>
-			<iframe id="bot" src="https://snatchbot.me/webchat/?botID=42894&appID=3drApNnnYaVm7PfrtccS"></iframe>
+			<!-- <iframe id="bot" src="https://snatchbot.me/webchat/?botID=42894&appID=3drApNnnYaVm7PfrtccS"></iframe> -->
 		<section id="services_section">
 			<h2>OVERVIEW</h2>
 			<div class="subSection">
@@ -167,20 +167,31 @@ ga('send', 'pageview'); -->
 			<div id="overviewCont">
 				<h2>WHY CHOOSE AEQUOS?</h2>
 				<div class="reasonsHome">
-					<h3>REASON 1</h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
-					<h3>REASON 2</h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
-					<h3>REASON 3</h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
-					<h3>REASON 4</h3>			
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
+					<div class="reasonsHorizontal">
+						<div>
+							<h3>REASON 1</h3>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
+						</div>
+						<div class="reasonScroll first">
+							<h3>REASON 2</h3>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
+						</div>
+						<div class="reasonScroll second">
+							<h3>REASON 3</h3>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
+						</div>
+						<div class="reasonScroll third">
+							<h3>REASON 4</h3>			
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit </p>
+						</div>
+					</div>
 					<div class="reasonsEnd">
 						<h4>WHY IS IT SPECIAL WHAT WE DO? </h4>
 						<h4>LOREM IPSUM DOLOR SIT AMET, CONSECUTER ADIPISCING ELIT.</h4>
 						<h5>MORE <a>ABOUT US</a> AND OUR BUSINESS FOCUSED APPROACH.</h5>
 					</div>
 				</div>
+				<img></img>
 			</div>
 		</section>
 
@@ -202,58 +213,61 @@ ga('send', 'pageview'); -->
 			<div class="contactCont">
 				<h2>CONTACT US</h2>
 					<form action="" method="get" class="contactForm">
-							<div class="form">
-								<label for="name">NAME </label>
-								<input type="text" placeholder="Firstname Surname" name="name" id="name" required>
+						<div class="namePhoneCont">
+								<div class="form oneLine">
+									<label for="name">Name </label>
+									<input type="text" placeholder="Firstname Surname" name="name" id="name" required>
+								</div>
+								<div class="form oneLine">
+										<label for="phone">Phone</label>
+										<input type="tel" placeholder="07412345678" id="phone" name="phone"
+													pattern="^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$">
+								</div>
 							</div>
 							<div class="form">
-									<label for="phone">PHONE</label>
-									<input type="tel" placeholder="07412345678" id="phone" name="phone"
-												 pattern="^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$
-												 "
-												 required>
-							</div>
-							<div class="form">
-								<label for="email">EMAIL </label>
+								<label for="email">Email </label>
 								<input type="email" placeholder="example@gmail.com" name="email" id="email" required>
 							</div>
-							<div>
-									<textarea rows="4" cols="50" name="comment" form="usrform">Enter message here</textarea>
-							</div>
 							<div class="form">
-									<input type="submit" value="SEND">
+									<label for="messageArea">Write your message </label>
+									<textarea id="messageArea" rows="4" cols="45" name="comment" form="usrform">Enter message here</textarea>
+							</div>
+							<div class="form submitBtn">
+									<input  type="submit" value="SEND" role="button">
 								</div>
 						</form>
 			</div>
 			<hr>
-			<div class="info">
-				<div class="location">
-					<h3>WHERE WE ARE</h3>
-					<p>Advanced Technology Innovation Centre,
-							Loughborough University Science & Enterprise Park,
-							5 Oakwood Drive, Loughborough, Leicestershire,
-							LE11 3QF</p>
-							<p>Central Working Slough,
-									The Future Works,
-									2 Brunel Way, Slough, Berkshire,
-									SL1 1FQ</p>
-				</div>
-				<div class="emails">
-					<h3>CALL US AT</h3>
-					<p>0345 872 6060</p>
-					<h3>INFO</div>/h3>
-					<p>info@aequos.co.uk</p>
-					<h3>TECHNICAL SUPPORT</h3>
-					<p>servicedesk@aequos.co.uk</p>
-					<h3>SALES</h3>
-					<p>sales@aequos.co.uk</p>
-				</div>
-				<div class="social">
-						<img id="linkedinBlack" src="images/social/black/linkedin.png">
-						<img id="twitterBlack" src="images/social/black/twitter.png">
-						<img id="instaBlack" src="images/social/black/instagram.png">
-						<img id="facebookBlack" src="images/social/black/facebook.png">
-				</div>
+				<div class="contactInfo">
+					<div class="cInfoSection location">
+						<h3>WHERE WE ARE</h3>
+						<p>Advanced Technology Innovation Centre,
+								Loughborough University Science & Enterprise Park,
+								5 Oakwood Drive, Loughborough, Leicestershire,
+								LE11 3QF</p>
+								<p>Central Working Slough,
+										The Future Works,
+										2 Brunel Way, Slough, Berkshire,
+										SL1 1FQ</p>
+					</div>
+					<div class="cInfoSection emails">
+						<h3>CALL US AT</h3>
+						<p>0345 872 6060</p>
+						<h3>INFO</h3>
+						<p>info@aequos.co.uk</p>
+						<h3>TECHNICAL SUPPORT</h3>
+						<p>servicedesk@aequos.co.uk</p>
+						<h3>SALES</h3>
+						<p>sales@aequos.co.uk</p>
+					</div>
+					<div class="cInfoSection social">
+						<h3>SOCIAL</h3>
+							<img id="linkedinBlack" src="images/social/black/linkedin.png">
+							<img id="twitterBlack" src="images/social/black/twitter.png">
+							<img id="instaBlack" src="images/social/black/instagram.png">
+							<img id="facebookBlack" src="images/social/black/facebook.png">
+					</div>
+			</div>
 
 			</div>
 
@@ -261,21 +275,31 @@ ga('send', 'pageview'); -->
 
 		<footer>
 
-			<div>
-				<div>
+			<div class="footerCont">
+				<div class="footerAequos">
 					<h2>AEQUOS</h2>
-					<p>Copyright © 2018 AEQUOS. All Rights Reserved. A TFM Group Company</p>
+					<h4 class="copyright">Copyright © 2018 AEQUOS.<br>
+					All Rights Reserved. A TFM Group Company</h4>
 					<p>Company info</p>
 					<p>Terms of Use</p>
 					<p>Privacy Policy</p>
 				</div>
-				<div>
+				<div class="sitemap">
 					<h3>AEQUOS</h3>
-					<p></p>
+					<p>Home</p>
+					<p>Services</p>
+					<p>SD-WAN</p>
+					<p>About us</p>
+					<p>News</p>
+					<p>Contact</p>
 				</div>
-				<div>
+				<div class="footerTFM">
 						<h3>TFM GROUP</h3>
-						<p></p>
+						<p>Home</p>
+						<p>Products</p>
+						<p>Services</p>
+						<p>Careers</p>
+						<p>Contact</p>
 					</div>
 			</div>
 		</footer>

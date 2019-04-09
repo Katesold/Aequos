@@ -126,7 +126,7 @@ section{
 #main_heading{
     padding-top: 8vh;
     color: #fff;
-    padding: 50px;
+    padding: 80px 50px;
     position: relative;
     transition: font-size .20s ease-in; 
     font-size: 0.8em;
@@ -150,7 +150,7 @@ section{
 
 #main_heading h3{
     padding: 0;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 #dropDown{
@@ -318,7 +318,7 @@ section{
     background-color: #00A0E5;
 }
 #overviewCont{
-    background-color: rgba(0, 160, 229, 0.65);
+    background-color: rgba(0, 160, 229, 0.75);
     height: 100%;
 }
 #overview_section h2{
@@ -359,6 +359,34 @@ section{
 .reasonsEnd a{
     font-weight: normal;
 }
+
+.reasonsHorizontal{
+    display: inline-block;
+    /* overflow-x: hidden; */
+    width: 100%;
+    height: 300px;
+}
+.reasonScroll{
+    position: relative;
+    left: 120%;
+    /* overflow: auto; */
+    overflow: hidden;
+    top: -209px;
+}
+
+/* .first{
+    left:10%;
+} */
+
+.second{
+    top: -416px;
+}
+
+.third{
+    top: -624px;
+}
+
+
 
 #clients_section{
     background-color: #E6E6E6;
@@ -403,24 +431,113 @@ section{
 
 .contactCont h2{
     text-align: center;
-    padding: 50px;
-    font-size: 2em;
+    padding: 70px 50px 30px;
+    font-size: 1.6em;
     font-weight: lighter;
 }
 
 .contactForm{
-    text-align: center;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .form{
     display: flex;
     flex-direction: column;
+    padding: 10px 0;
 }
 
 hr{
-    height: 0.5px;
-    width: calc(100% - 20px);
+    width: calc(100% - 100px);
     margin-top: 50px;
+    border-top: 1px solid #dadada;
 }
+
+.form input, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border-width: thin;
+    border-style: solid;
+    border-color: #969696;
+    border-width: 1px;
+    font-size: 12px;
+    color: #757575;
+  }
+.form label{
+    padding-left: 17px;
+}
+
+.submitBtn{
+    width: 40%;
+    margin: auto;
+}
+.contactInfo{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+.location {
+    width: 250px;
+}
+.cInfoSection p{
+    font-weight: lighter;
+    padding: 10px 0;
+}
+.emails p{
+    padding-bottom: 30px;
+}
+.social img{
+    /* padding: 20px; */
+    padding: 10px;
+}
+.social h3{
+    padding-left: 10px;
+}
+.cInfoSection {
+    padding: 20px 10px;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding-bottom: 70px;
+}
+
+.footerCont{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 70px 30px 0;
+}
+
+.footerAequos{
+    width: 100%;
+}
+.sitemap{
+    width: 100%;
+    padding: 30px 0;
+}
+
+.footerAequos h2{
+    font-size: 1.7em;
+    letter-spacing: 8px;
+    padding: 0 0 10px 0;
+}
+.footerCont p{
+    font-weight: lighter;
+    padding: 8px 0;
+}
+.copyright{
+    padding-bottom: 20px;
+    font-weight: lighter;
+}
+.footerCont h3{
+    padding: 15px 0;
+}
+
+
 
 
 
@@ -442,6 +559,7 @@ MEDIA QUERIES
     }
     #main_heading h3 {
         padding: 0 30px 30px 10px;
+        font-size: 1.5em;
     }
     #TFMLogo{
         height: 60px;
@@ -499,6 +617,22 @@ MEDIA QUERIES
     #clients_section h2 {
         font-size: 2em;
         padding: 70px 10px 20px;
+    }
+    .contactForm{
+        width: 400px;
+    }
+    .contactInfo{
+        justify-content: space-evenly;
+    }
+    .footerAequos{
+        width: 50%;
+    }
+    .sitemap{
+        width: 25%;
+        padding: 0;
+    }
+    .footerCont h3 {
+        padding: 0 0 15px 0;
     }
 }
 
@@ -616,7 +750,31 @@ MEDIA QUERIES
     .reasonsEnd h4{
         font-weight: lighter;
     }
-
+    .contactForm{
+        width: 600px;
+    }
+    .oneLine{
+        width: 46%;
+    }
+    .namePhoneCont{
+        display: flex;
+        justify-content: space-between;
+    }
+    .contactCont h2{
+        font-size: 2em;
+    }
+    .form input, textarea{
+        font-size: 0.8em;
+    }
+    .footerAequos{
+        width: 60%;
+    }
+    .sitemap{
+        width: 15%;
+    }
+    .copyright{
+        padding-bottom: 30px;
+    }
 }
 @media screen and (min-width: 960px){
     #hamburger, #hamburgerBlack{
@@ -775,6 +933,20 @@ MEDIA QUERIES
     }
     #motorLogo{
         padding: 10px 20px;
+    }
+    .contactCont h2 {
+        font-size: 3em;
+    }
+    .contactInfo{
+        justify-content: space-between;
+        margin: 50px;
+    }
+    .location {
+        width: 350px;
+    }
+    .footerCont p {
+        font-weight: lighter;
+        padding: 10px 0;
     }
 }
 
