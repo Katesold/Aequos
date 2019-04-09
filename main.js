@@ -59,9 +59,100 @@ function screenTest(e) {
     }
 }
   
-  mql.addListener(screenTest);
+mql.addListener(screenTest);
 
 
+var right = document.querySelector(".toRight");
+var left = document.querySelector(".toLeft");
+
+right.addEventListener('click', switchReasonsR);
+left.addEventListener('click', switchReasonsL);
+var reasons = document.getElementsByClassName("reasonScroll");
+var navRs = document.getElementsByClassName("navi");
+
+var i = 0;
+function switchReasonsR(){
+  if(i==0){
+    i += 1;
+  }
+  if(reasons.length > i){
+    //console.log(reasons[i], i);
+    // reasons[i].style.left = "0";
+    // reasons[i-1].style.left = "150%";
+    reasons[i].style.position = "Static";
+    navRs[i+1].src = "images/blackdot.png";
+    // reasons[i].style.transform = "translateX(0px)";
+    // reasons[i].style.transform = "transition(left 2s)";
+    reasons[i-1].style.position = "Absolute";
+    navRs[i].src = "images/whitedot.png";
+    i = i + 1;
+  } else{
+    reasons[3].style.position = "Absolute";
+    navRs[4].src = "images/whitedot.png";
+    i = 0;
+    reasons[0].style.position = "Static";
+    navRs[1].src = "images/blackdot.png";
+    //console.log(reasons[i], i);
+  }
+}
+
+function switchReasonsL(){
+  i = i-1;
+  if (i < 0){
+    reasons[3].style.position = "Static";
+    navRs[4].src = "images/blackdot.png";
+    reasons[0].style.position = "Absolute";
+    navRs[1].src = "images/whitedot.png";
+    //console.log(i);
+    i = 4;
+    //console.log(reasons[i], i);
+  } else if (i >= 0 && i < reasons.length){
+    if(i-1 == -1){
+      reasons[3].style.position = "Static";
+      navRs[4].src = "images/blackdot.png";
+      reasons[0].style.position = "Absolute";
+      navRs[1].src = "images/whitedot.png";
+      i = 4;
+    } else{
+      reasons[i-1].style.position = "Static";
+      navRs[i].src = "images/blackdot.png";
+      reasons[i].style.position = "Absolute";
+      navRs[i+1].src = "images/whitedot.png";
+     // console.log(reasons[i], i);
+    }
+      
+  } else {
+    reasons[i-1].style.position = "Static";
+    reasons[0].style.position = "Absolute";
+    reasons[i].style.position = "Absolute";
+   // console.log(reasons[i]);
+  }
+
+
+  var mql2 = window.matchMedia('(max-width: 500px)');
+
+var f = document.getElementsByClassName("first");
+
+  function screenTest2(e) {
+      if (e.matches) {
+        reasons.style.position = "static";
+        first[0].style.position = "static";
+      }
+  }
+    
+    mql.addListener(screenTest2);
+
+
+
+  //   console.log( i);
+  //   reasons[i].style.position = "Static";
+  // } else{
+  //   reasons[1].style.position = "Absolute";
+  //   i = 0;
+  //   reasons[0].style.position = "Static";
+  //   console.log(reasons[i], i);
+  // }
+}
 
 // $(document).ready(function(){   
 //     setTimeout(function () {
