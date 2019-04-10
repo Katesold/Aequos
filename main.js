@@ -72,6 +72,23 @@ var navRs = document.getElementsByClassName("navi");
 
 var i = 0;
 function switchReasonsR(){
+  // i = i+1;
+  // console.log(i+" i");
+  // if(i === 4){
+  //   reasons[0].style.order= "-1";
+  //   reasons[3].style.order = "0";
+  //   navRs[1].src = "images/blackdot.png";
+  //   navRs[4].src = "images/whitedot.png";
+  //   i = 0;
+  // } else {
+  //   reasons[i].style.order= "-1";
+  //   reasons[i-1].style.order = "0";
+  //   navRs[i+1].src = "images/blackdot.png";
+  //   navRs[i].src = "images/whitedot.png";
+  // }
+
+
+
   if(i==0){
     i += 1;
   }
@@ -79,80 +96,90 @@ function switchReasonsR(){
     //console.log(reasons[i], i);
     // reasons[i].style.left = "0";
     // reasons[i-1].style.left = "150%";
-    reasons[i].style.position = "Static";
+    reasons[i].style.order= "-1";
     navRs[i+1].src = "images/blackdot.png";
     // reasons[i].style.transform = "translateX(0px)";
     // reasons[i].style.transform = "transition(left 2s)";
-    reasons[i-1].style.position = "Absolute";
+    reasons[i-1].style.order = "0";
     navRs[i].src = "images/whitedot.png";
     i = i + 1;
   } else{
-    reasons[3].style.position = "Absolute";
+    reasons[3].style.order = "0";
     navRs[4].src = "images/whitedot.png";
     i = 0;
-    reasons[0].style.position = "Static";
+    reasons[0].style.order = "-1";
     navRs[1].src = "images/blackdot.png";
     //console.log(reasons[i], i);
   }
 }
 
 function switchReasonsL(){
+
   i = i-1;
+  console.log(i+" start");
   if (i < 0){
-    reasons[3].style.position = "Static";
+    // reasons[3].style.position = "Static";
+    reasons[3].style.order = "-1";
     navRs[4].src = "images/blackdot.png";
-    reasons[0].style.position = "Absolute";
+    // reasons[0].style.position = "Absolute";
+    reasons[0].style.order = "0";
     navRs[1].src = "images/whitedot.png";
-    //console.log(i);
+    console.log(i+" i<0");
     i = 4;
     //console.log(reasons[i], i);
   } else if (i >= 0 && i < reasons.length){
     if(i-1 == -1){
-      reasons[3].style.position = "Static";
+      // reasons[3].style.position = "Static";
+      reasons[3].style.order = "-1";
       navRs[4].src = "images/blackdot.png";
-      reasons[0].style.position = "Absolute";
+      // reasons[0].style.position = "Absolute";
+      reasons[0].style.order = "0";
       navRs[1].src = "images/whitedot.png";
+      console.log(i+" i>=0");
       i = 4;
     } else{
-      reasons[i-1].style.position = "Static";
+      // reasons[i-1].style.position = "Static";
+      reasons[i-1].style.order = "-1";
       navRs[i].src = "images/blackdot.png";
-      reasons[i].style.position = "Absolute";
+      // reasons[i].style.position = "Absolute";
+      reasons[i].style.order = "0";
       navRs[i+1].src = "images/whitedot.png";
+      console.log(i+" else");
      // console.log(reasons[i], i);
     }
       
   } else {
-    reasons[i-1].style.position = "Static";
-    reasons[0].style.position = "Absolute";
-    reasons[i].style.position = "Absolute";
+    // reasons[i-1].style.position = "Static";
+    // reasons[0].style.position = "Absolute";
+    // reasons[i].style.position = "Absolute";
+    reasons[i-1].style.order = "-1";
+    reasons[0].style.order = "0";
+    reasons[i].style.order = "0";
    // console.log(reasons[i]);
   }
-
-
-  var mql2 = window.matchMedia('(max-width: 500px)');
-
-var f = document.getElementsByClassName("first");
-
-  function screenTest2(e) {
-      if (e.matches) {
-        reasons.style.position = "static";
-        first[0].style.position = "static";
-      }
-  }
-    
-    mql.addListener(screenTest2);
-
-
-
-  //   console.log( i);
-  //   reasons[i].style.position = "Static";
-  // } else{
-  //   reasons[1].style.position = "Absolute";
-  //   i = 0;
-  //   reasons[0].style.position = "Static";
-  //   console.log(reasons[i], i);
-  // }
 }
+
+
+
+  var touchStartpt;
+  for(var j = 0; j < reasons.length; j++){
+  reasons[j].addEventListener('touchstart', function(e){
+    touchStartpt = e.touches[0].screenX;
+    console.log(e, touchStartpt);
+  });
+
+  reasons[j].addEventListener('touchend', function(ev){
+    var touchEndpt = ev.changedTouches[0].screenX
+    console.log(ev, touchEndpt);
+    if (touchEndpt < touchStartpt){
+      switchReasonsR();
+    } else if (touchEndpt > touchStartpt){
+      switchReasonsL();
+    }
+  })
+}
+
+
 
 // $(document).ready(function(){   
 //     setTimeout(function () {
