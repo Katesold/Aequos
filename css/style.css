@@ -15,6 +15,14 @@ html {
 .hide{
     display: none;
 } */
+.shape{
+    position: absolute;
+    width: 100%;
+}
+.upside{
+    z-index: -1;
+    transform: rotate(180deg);
+}
 
 #chatbubble{
     position: fixed;
@@ -284,6 +292,9 @@ section{
 }
 .sdHome{
     margin: 20px;
+}
+.upsideShape{
+    display: none;
 }
 .sdHome h2{
     padding-top: 70px;
@@ -659,6 +670,16 @@ MEDIA QUERIES
     .reasonScroll p{
         width: 100%;
         padding-right: 0;
+    }
+    .upsideShape{
+        display: block;
+    }
+    .upside{
+        width: 150%;
+        left: -420px;
+    }
+    #sdWan_section {
+        background: none;
     }
 }
 
