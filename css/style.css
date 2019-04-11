@@ -6,6 +6,7 @@ html {
     height: 100%;
     min-height: 100vh;
     font-family: 'Josefin Sans', sans-serif;
+    /* scroll-behavior: smooth; */
 }
 
 /* .visible{
@@ -17,11 +18,14 @@ html {
 } */
 .shape{
     position: absolute;
-    width: 100%;
+    width: 200%;
+    top: 19%;
 }
 .upside{
     z-index: -1;
     transform: rotate(180deg);
+    top: 130px;
+    left: -100px;
 }
 
 #chatbubble{
@@ -39,7 +43,7 @@ html {
     top: 72vh;
     height: 60px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 3;
 }
 
 #bot{
@@ -130,6 +134,8 @@ section{
     height: 100%;
     min-height: 100vh;
     background-color: black;
+    overflow: hidden;
+    position: relative;
 }
 
 #main_heading{
@@ -139,7 +145,7 @@ section{
     position: relative;
     transition: font-size .20s ease-in; 
     font-size: 0.8em;
-    padding-bottom: 0vh;
+    padding-bottom: 1vh;
 }
 
 #main_heading h2{
@@ -289,12 +295,17 @@ section{
     height: 100%;
     padding-bottom: 20px;
     background-color: black;
+    overflow: hidden;
 }
 .sdHome{
     margin: 20px;
+    z-index: 2;
+    position: relative;
 }
 .upsideShape{
-    display: none;
+    /* display: none; */
+    position: relative;
+    z-index: 1;
 }
 .sdHome h2{
     padding-top: 70px;
@@ -383,6 +394,7 @@ section{
     overflow: hidden;
 }
 .reasonScroll{
+    transition: transform .5s ease-out;
     /* top: 0px;
     left: 150%; */
     /* transition: all 2s ease; */
@@ -533,6 +545,14 @@ footer{
     font-weight: lighter;
     padding: 8px 0;
 }
+.footerCont a{
+    font-weight: lighter;
+    padding: 8px 0;
+    flex-direction: column;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
 .copyright{
     padding-bottom: 20px;
     font-weight: lighter;
@@ -621,6 +641,7 @@ MEDIA QUERIES
     }
     #overview_section h2{
         font-size: 1.8em;
+        padding-top: 120px;
     }
     .reasonsHome{
         margin: 20px auto;
@@ -673,15 +694,16 @@ MEDIA QUERIES
     }
     .upsideShape{
         display: block;
+        position: relative;
+    }
+    .shape{
+        width: 100%;
     }
     .upside{
-        width: 150%;
-        left: -420px;
+        top: 72px;
+        left: 0;
     }
-    #sdWan_section {
-        background: none;
-    }
-}
+} 
 
 @media screen and (min-width: 700px){
     #main_heading h1 {

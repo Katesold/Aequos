@@ -82,7 +82,7 @@ ga('send', 'pageview'); -->
 					<h3>AEQUOS</h3>
 				</div>                                                           
 				<ul role ="navigation">
-					<li><a class="selected header-link" href="#intro">HOME</a></li><p class="nav_line">|</p>
+					<li><a class="selected header-link" href="#home_section">HOME</a></li><p class="nav_line">|</p>
 					<li><a href="services.html" class="header-link">SERVICES</a></li><p class="nav_line">|</p>
 					<li><a href="sd-wan" class="header-link">SD-WAN</a></li><p class="nav_line">|</p>
 					<li><a href="about.html" class="header-link">ABOUT US</a></li><p class="nav_line">|</p>
@@ -117,7 +117,7 @@ ga('send', 'pageview'); -->
 		</section>
 		<div id="heading_bottom">
 			<p>SEE MORE</p>
-			<img id="dropDown" src="images/dropD.png">
+			<a href="#services_section"><img alt="down arrow" id="dropDown" src="images/dropD.png"></a>
 
 		</div>
 		<div id="chat">
@@ -151,7 +151,7 @@ ga('send', 'pageview'); -->
 
 		<section id="sdWan_section">
 			<div class="upsideShape">
-					<img class="shape upside" src="images/shape.gif" alt="blue background abstract shape">
+					<img class="shape upside" src="images/shapeTransBlack.gif" alt="blue background abstract shape">
 			</div>
 			<div class="sdHome">
 				<h2>SD-WAN</h2>
@@ -227,7 +227,7 @@ ga('send', 'pageview'); -->
 		<section id="contact_section">
 			<div class="contactCont">
 				<h2>CONTACT US</h2>
-					<form action="" method="get" class="contactForm">
+					<form action="mail.php" method="POST" class="contactForm">
 						<div class="namePhoneCont">
 								<div class="form oneLine">
 									<label for="name">Name </label>
@@ -235,8 +235,9 @@ ga('send', 'pageview'); -->
 								</div>
 								<div class="form oneLine">
 										<label for="phone">Phone</label>
-										<input type="tel" placeholder="07412345678" id="phone" name="phone"
-													pattern="^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$">
+										<input type="tel" placeholder="07412345678" id="phone" name="phone">
+													<!-- <input type="tel" placeholder="07412345678" id="phone" name="phone"
+													pattern="^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$"> -->
 								</div>
 							</div>
 							<div class="form">
@@ -244,11 +245,11 @@ ga('send', 'pageview'); -->
 								<input type="email" placeholder="example@gmail.com" name="email" id="email" required>
 							</div>
 							<div class="form">
-									<label for="messageArea">Write your message </label>
-									<textarea id="messageArea" rows="4" cols="45" name="comment" form="usrform">Enter message here</textarea>
+									<label for="message">Write your message </label>
+									<textarea name="message" id="message" rows="4" cols="45">Enter message here</textarea>
 							</div>
 							<div class="form submitBtn">
-									<input  type="submit" value="SEND" role="button">
+									<input type="submit" value="SEND" role="button">
 								</div>
 						</form>
 			</div>
@@ -277,9 +278,9 @@ ga('send', 'pageview'); -->
 					</div>
 					<div class="cInfoSection social">
 						<h3>SOCIAL</h3>
-							<img id="linkedinBlack" src="images/social/black/linkedin.png">
-							<img id="twitterBlack" src="images/social/black/twitter.png">
-							<img id="instaBlack" src="images/social/black/instagram.png">
+							<a href="https://www.linkedin.com/company/aequos-sd-wan/" target="_blank"><img alt="Aequos SD-WAN LinkedIn" id="linkedinBlack" src="images/social/black/linkedin.png" ></a>
+							<a href="https://twitter.com/Aequossdwan" target="_blank"><img alt="Aequos SD-WAN LinkedIn" id="twitterBlack" src="images/social/black/twitter.png"></a>
+							<img alt="Aequos SD-WAN LinkedIn"  id="instaBlack" src="images/social/black/instagram.png">
 							<img id="facebookBlack" src="images/social/black/facebook.png">
 					</div>
 			</div>
@@ -301,20 +302,20 @@ ga('send', 'pageview'); -->
 				</div>
 				<div class="sitemap">
 					<h3>AEQUOS</h3>
-					<p>Home</p>
-					<p>Services</p>
-					<p>SD-WAN</p>
-					<p>About us</p>
-					<p>News</p>
-					<p>Contact</p>
+					<a href="#home_section">Home</a>
+					<a>Services</a>
+					<a>SD-WAN</a>
+					<a>About us</a>
+					<a>News</a>
+					<a>Contact</a>
 				</div>
 				<div class="footerTFM">
 						<h3>TFM GROUP</h3>
-						<p>Home</p>
-						<p>Products</p>
-						<p>Services</p>
-						<p>Careers</p>
-						<p>Contact</p>
+						<a>Home</a>
+						<a>Products</a>
+						<a>Services</a>
+						<a>Careers</a>
+						<a>Contact</a>
 					</div>
 			</div>
 		</footer>
@@ -340,7 +341,7 @@ ga('send', 'pageview'); -->
                         
 
 <!--	</footer>
-	<div id="cookie-law-info-bar" class="cookie-law-bar-index"><span>This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish.<a  class="cookie_action_close_header medium cli-plugin-button cli-plugin-main-button accept-cli">Accept</a> <a href="http://aequos.co.uk/privacy-policy.html" id="CONSTANT_OPEN_URL" target="_blank" class="cli-plugin-main-link" >Read More</a></span></div> -->
+	<div id="cookie-law-info-bar" class="cookie-law-bar-index"><span>This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish.<a  class="cookie_action_close_header medium cli-plugin-button cli-plugin-main-button accept-cli">Accept</> <a href="http://aequos.co.uk/privacy-policy.html" id="CONSTANT_OPEN_URL" target="_blank" class="cli-plugin-main-link" >Read More</a></span></div> -->
 
 	  
 
