@@ -9,5 +9,6 @@ $subject = "Contact Form";
 // $headers .= "Organization: Sender Organization\r\n";
 $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $formcontent, $mailheader, $message) or die("Error!");
-echo "Thank You!" . " -" . "<a href='index.html' style='text-decoration:none;color:#ff0099;'> Return Home</a>";
+echo "<script> location.href='index.html#contact_section'; </script>";
+exit;
 ?>

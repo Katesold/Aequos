@@ -40,6 +40,14 @@ chattext.addEventListener("click", hideMe);
 function hideMe() {
   chattext.style.display = "None";
 }
+
+
+function navListen (){
+  nav[0].style.display = "None";
+  navBlack.style.display = "None";
+  navBg.style.height = "75px";
+}
+
 // nav[0].addEventListener("resize", hideMenu);
 
 // function hideMenu() {
@@ -48,15 +56,19 @@ function hideMe() {
 //     }
 //     //document.getElementById("header").style.display = "None";
 // }
-
+var home = document.querySelector('.selected');
 var mql = window.matchMedia('(max-width: 960px)');
 
 function screenTest(e) {
     if (e.matches) {
       nav[0].style.display = "None";
+      home.addEventListener('click', navListen);
+
+
     } else {
       nav[0].style.display = "flex";
       navBg.style.height = "0";
+      home.removeEventListener('click', navListen);
     }
 }
   
@@ -73,34 +85,12 @@ var navRs = document.getElementsByClassName("navi");
 
 var i = 0;
 function switchReasonsR(){
-  // i = i+1;
-  // console.log(i+" i");
-  // if(i === 4){
-  //   reasons[0].style.order= "-1";
-  //   reasons[3].style.order = "0";
-  //   navRs[1].src = "images/blackdot.png";
-  //   navRs[4].src = "images/whitedot.png";
-  //   i = 0;
-  // } else {
-  //   reasons[i].style.order= "-1";
-  //   reasons[i-1].style.order = "0";
-  //   navRs[i+1].src = "images/blackdot.png";
-  //   navRs[i].src = "images/whitedot.png";
-  // }
-
-
-
   if(i==0){
     i += 1;
   }
   if(reasons.length > i){
-    //console.log(reasons[i], i);
-    // reasons[i].style.left = "0";
-    // reasons[i-1].style.left = "150%";
     reasons[i].style.order= "-1";
     navRs[i+1].src = "images/blackdot.png";
-    // reasons[i].style.transform = "translateX(0px)";
-    // reasons[i].style.transform = "transition(left 2s)";
     reasons[i-1].style.order = "0";
     navRs[i].src = "images/whitedot.png";
     i = i + 1;
@@ -119,10 +109,8 @@ function switchReasonsL(){
   i = i-1;
   console.log(i+" start");
   if (i < 0){
-    // reasons[3].style.position = "Static";
     reasons[3].style.order = "-1";
     navRs[4].src = "images/blackdot.png";
-    // reasons[0].style.position = "Absolute";
     reasons[0].style.order = "0";
     navRs[1].src = "images/whitedot.png";
     console.log(i+" i<0");
@@ -130,19 +118,15 @@ function switchReasonsL(){
     //console.log(reasons[i], i);
   } else if (i >= 0 && i < reasons.length){
     if(i-1 == -1){
-      // reasons[3].style.position = "Static";
       reasons[3].style.order = "-1";
       navRs[4].src = "images/blackdot.png";
-      // reasons[0].style.position = "Absolute";
       reasons[0].style.order = "0";
       navRs[1].src = "images/whitedot.png";
       console.log(i+" i>=0");
       i = 4;
     } else{
-      // reasons[i-1].style.position = "Static";
       reasons[i-1].style.order = "-1";
       navRs[i].src = "images/blackdot.png";
-      // reasons[i].style.position = "Absolute";
       reasons[i].style.order = "0";
       navRs[i+1].src = "images/whitedot.png";
       console.log(i+" else");
@@ -150,9 +134,6 @@ function switchReasonsL(){
     }
       
   } else {
-    // reasons[i-1].style.position = "Static";
-    // reasons[0].style.position = "Absolute";
-    // reasons[i].style.position = "Absolute";
     reasons[i-1].style.order = "-1";
     reasons[0].style.order = "0";
     reasons[i].style.order = "0";
@@ -181,12 +162,22 @@ function switchReasonsL(){
 }
 
 
+// var home = document.querySelector('.selected');
+
+// home.addEventListener('click', function(){
+//   nav[0].style.display = "None";
+//   navBlack.style.display = "None";
+//   navBg.style.height = "75px";
+// })
+
 
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
+
+    console.log(event);
     // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
