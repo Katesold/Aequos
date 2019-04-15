@@ -27,43 +27,56 @@ html {
     top: 130px;
     left: -100px;
 }
-
-#chatbubble{
+.chat{
     position: fixed;
+    right: 30px;
+    top: 70vh;
+    height: 80px;
+    display: block;
+}
+.chatbubble{
+    /* position: fixed;*/
     right: 20px;
-    top: 82vh;
+    /* top: 82vh; */
     height: 60px;
+    position: relative;
     z-index: 50;
 }
 
-#chattext{
-    position: fixed;
+.chattext{
+    /* position: fixed;*/
     display: none;
-    right: 30px;
-    top: 72vh;
-    height: 60px;
-    cursor: pointer;
+    right: 79px;
+    /* top: 72vh; */
+    width: 96px;
+    cursor: pointer; 
+    position: relative;
     z-index: 3;
 }
 
-#bot{
-    width: 400px;
+.bot{
+    width: 95%;
     height: 0px;
     position: fixed;
     right: 10px;
     bottom: 10px;
     border-radius: 10px;
     background: transparent;
+    z-index: 60;
 }
 
-#close{
+.close{
     position: fixed;
     right: 22px;
-    bottom: 469px;
+    bottom: 455px;
     font-size: 1.5em;
     color: #fff;
     display: none;
     cursor: pointer;
+    z-index: 70;
+    text-align: right;
+    width: 100px;
+    height: 40px;
 }
 
 .header_menu{
@@ -226,7 +239,7 @@ section{
     height: 75px;
 }
 .header-link:hover{
-    color: white;
+    color: #00a0e5;
 }
 #services_section {
     background: white;
@@ -237,12 +250,14 @@ section{
     /* height: 1000px; */
     font-size: 0.8em;
     transition: font-size .20s ease-in;
+    display: flex;
+    flex-direction: column;
 }
 
 #services_section h2{
     color: #00A0E5;
     font-weight: lighter;
-    font-size: 4em;
+    font-size: 3em;
     margin-left: 20px;
     padding-top: 70px;
     transition: font-size .25s ease-in;
@@ -251,7 +266,7 @@ section{
     color: black;
 }
 
-#subSection_par{
+.subSection p{
     color: black;
     font-size: 1.2em;
     width: 90%;;
@@ -266,27 +281,57 @@ section{
 }
 
 .subSection h3{
-    margin: 30px 20px 0 20px;
-    font-size: 1.2em;
+    margin: 60px 20px 0 20px;
+    font-size: 2em;
     text-align: left;
+    font-weight: lighter;
+    color: #00a0e5;
+}
+#model{
+    font-size: 1.8em;
 }
 
 .services_main{
     margin: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .serv_sections{
-    padding: 10px 0;
+    padding: 15px 10px;
 }
 
 .serv_sections h4{
     font-size: 1.5em;
-    padding: 10px 0;
+    padding: 10px 0 0;
 }
 
-.service_shortDescr{
+.serv_sections ul{
+    list-style-type: disc;
+    font-weight: lighter;
+    padding: 0 10px;
+    font-size: 1.3em;
+    margin: 5px 5px 5px 10px;
+}
+.serv_sections ul li{
+    padding: 5px 0;
+}
+.servicesList{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* .service_shortDescr{
     font-weight: lighter;
     font-size: 1.2em;
+} */
+.fas {
+    top: 2px;
+    position: relative;
+}
+.discoverServices{
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #00a0e5;
 }
 
 #sdWan_section{
@@ -324,6 +369,11 @@ section{
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.sdIconsHome img{
+    height: 100px;
+    padding: 20px;
+}
 #hybridIcon{
     height: 95px;
     padding: 15px;
@@ -348,7 +398,14 @@ section{
     color: #fff;
     font-size: 2em;
     font-weight: lighter;
-    padding: 70px 10px 10px 20px;
+    padding: 70px 10px 20px 20px;
+}
+.partner{
+    font-weight: lighter;
+    color: white;
+}
+.partner p{
+    padding: 0 20px;
 }
 .reasonsHome{
     margin: 20px;
@@ -361,24 +418,36 @@ section{
     color: #fff;
     font-size: 1.5em;
     padding-bottom: 10px;
+    width: 80vw;
 }
 .reasonsHome p{
     padding-bottom: 30px;
     font-weight: lighter;
     padding-right: 120px;
 }
+.reasonsHome a{
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+}
+.reasonsHome .fas{
+    top: 1px;
+}
 .reasonsEnd{
     order: -1;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 }
 
 .reasonsEnd h4{
-    margin: 0 0 20px;
+    margin: 0 0 45px;
+    font-weight: lighter;
 }
 
-.reasonsEnd h5{
+.reasonsEnd a{
     font-weight: lighter;
     padding-top: 25px;
+    color: white;
+    cursor: pointer;
 }
 
 .reasonsEnd a{
@@ -401,7 +470,7 @@ section{
 }
 
 .reasonScroll p{
-    width: 90vw;
+    width: 85vw;
 }
 
 #clients_section{
@@ -426,6 +495,13 @@ section{
 #contact_section{
     background-color: #FFF;
     height: 100%;
+}
+#contact_section h2{
+    font-size: 2em;
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    font-weight: lighter;
 }
 
 .clientLogos{
@@ -503,6 +579,30 @@ hr{
     font-weight: lighter;
     padding: 10px 0;
 }
+.infoContact{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    padding: 20px 0 50px;
+}
+.contactBtn{
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    height: 53px;
+    width: 140px;
+    cursor: pointer;
+}
+.contactBtn:hover{
+    background-color: #E6E6E6;
+    color: white;
+}
+.contactBtn a{
+    text-decoration: none;
+    color: black;
+}
+
+
 .emails p{
     padding-bottom: 30px;
 }
@@ -582,6 +682,12 @@ footer{
 .reasonScroll{
     touch-action: manipulation;
 }
+.footerCont a{
+    cursor: pointer;
+}
+.footerCont a:hover{
+    color: #00A0E5;
+}
 
 
 
@@ -594,6 +700,9 @@ MEDIA QUERIES
 
 
 @media screen and (min-width: 500px){
+    .bot{
+        width: 400px;
+    }
     #main_heading{
         padding-top: 12vh;
     }
@@ -615,25 +724,31 @@ MEDIA QUERIES
         left: 50%;
     }
     .services_main{
-        margin: 20px 50px 50px 50px;
+        /* margin: 20px 50px 50px 100px; */
+        font-size: 1.2em;
+        margin: 10px 50px;
     }
     #services_section h2 {
-        font-size: 5em;
+        font-size: 3.5em;
         margin-left: 0;
-        text-align: center;
+        /* text-align: center; */
+        padding: 70px 50px 0;
     }
-    #subSection_par {
-        margin-left: auto;
+    .subSection p {
+        /* margin-left: auto;
         margin-right: auto;
-        text-align: justify;
+        text-align: justify; */
         font-size: 1.2em;
-        width: 400px;
+        width: 450px;
+        padding: 10px 30px;
     }
-    #chattext{
+    .chattext{
         display: block;
     }
     .subSection h3{
-        text-align: center;
+        /* text-align: center; */
+        margin: 0 auto;
+        padding: 20px 50px 0;
     }
     #overviewCont{
         text-align: center;
@@ -647,15 +762,19 @@ MEDIA QUERIES
         margin: 20px auto;
         width: 400px;
     }
+    .reasonsHome a{
+        padding-top: 30px;
+    }
     .reasonsHome p{
         text-align: justify;
     }
     .reasonsHome h3{
         font-weight: lighter;
+        width: 100%;
     }
     .reasonsEnd {
         order: 0;
-        margin-bottom: 60px;
+        margin-bottom: 0;
         margin-top: 30px;
         color: #fff;
     }
@@ -686,7 +805,8 @@ MEDIA QUERIES
         display: none;
     }
     .reasonsHorizontal{
-        display: inline-block;
+        /* display: inline-block; */
+        flex-direction: column;
     }
     .reasonScroll p{
         width: 100%;
@@ -710,7 +830,7 @@ MEDIA QUERIES
         font-size: 5.5em;
     }
     #services_section h2 {
-        font-size: 6em;
+        font-size: 4.5em;
         transition: font-size .25s ease-in;
         margin-left: 0;
         text-align: center;
@@ -719,7 +839,7 @@ MEDIA QUERIES
     #services_section h4{
         font-size: 1em;
     }
-    #subSection_par {
+    .subSection p{
         margin-left: auto;
         margin-right: auto;
         font-size: 1.3em;
@@ -727,32 +847,32 @@ MEDIA QUERIES
         padding-bottom: 20px;
         width: 500px;
     }
-    .subSection h3 {
-        text-align: center;
-    }
-    .services_main{
-        margin: 0 auto 50px;
-    }
 
-    #chatbubble {
+    .chatbubble {
         right: 30px;
         height: 80px;
     }
     .subSection h3{
-        font-size: 2em;
-        margin-left: auto;
+        font-size: 3em;
+        text-align: left;
+        margin: 0;
+        max-width: 300px;
+        padding: 0 0 0 30px;
+        /* margin-left: auto;
         margin-right: auto;
-        width: 400px;
+        width: 400px; */
     }
     .services_main{
         display: flex;
-        padding-top: 50px;
-        justify-content: space-between;
-        width: 600px;
+        padding: 0;
+        margin: 0;
+        /* justify-content: space-between; */
+        /* width: 600px; */
         font-size: 1.2em;
+        /* margin: 0 auto 50px; */
     }
     .serv_sections{
-        padding: 0 10px 0 20px;
+        padding: 0 10px 30px 30px;
         min-width: 171px;
     }
     .service_shortDescr{
@@ -780,15 +900,14 @@ MEDIA QUERIES
     #overview_section{
         background: url(../images/Girl.png);
         background-repeat: no-repeat;
-        background-position: -106px 247px;
+        background-position: -106px 439px;
         background-size: 541px;
         transition: background-size .25s ease-in;
         background-color: #00A0E5;
     }
     #overviewCont{
-        text-align: center;
         font-size: 1.2em;
-        display: flex;
+        /* display: flex; */
         /* background: url("../images/Girl.png");
         background-repeat: no-repeat;
         background-position: -123px 66px;
@@ -796,16 +915,32 @@ MEDIA QUERIES
         transition: background-size .25s ease-in; */
         /* background-color: #00A0E5; */
     }
-    #overview_section h2 {
-        font-size: 2em;
+    .partner{
+        display: flex;
+        flex-direction: column;
+    }
+    .partner p {
+        padding: 120px 9vw 0 0;
+        width: 400px;
         text-align: left;
+        align-self: flex-end;
+    }
+    #overview_section h2 {
+        font-size: 4em;
+        order: 1;
+        padding-top: 30px;
+        width: 700px;
+        align-self: center;
+        /* text-align: left;
         padding: 120px 0 0 40px;
-        width: 272px;
+        width: 272px; */
     }
     .reasonsHome{
-        margin: 120px 60px 50px 0;
+        /* margin: 120px 60px 50px 0; */
         text-align: left;
-        width: 500px;
+        padding-right: 50px;
+        margin-left: 40%;
+
     }
     .reasonsHome p{
         text-align: justify;
@@ -813,8 +948,7 @@ MEDIA QUERIES
     }
     .reasonsEnd {
         order: 0;
-        margin-bottom: 60px;
-        margin-top: 30px;
+        margin: 0;
     }
     .reasonsEnd h4{
         font-weight: lighter;
@@ -843,6 +977,19 @@ MEDIA QUERIES
     }
     .copyright{
         padding-bottom: 30px;
+    }
+    .contactBtn{
+        height: 60px;
+        width: 190px;
+        font-size: 19px;
+    }
+    .servicesList{
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding: 50px;
+    }
+    #clients_section h2 {
+        font-size: 2.5em;
     }
 }
 @media screen and (min-width: 960px){
@@ -898,39 +1045,58 @@ MEDIA QUERIES
     #main_heading h2 {
         padding-left: 8px;
     }
-    .subSection{
-        margin-left: 368px;
+    .subSection {
+        margin-left: auto;
+        text-align: left;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 70px;
     }
     #services_section{
         background-image: url("../images/Man.png");
         background-repeat: no-repeat;
-        background-position: -123px 93px;
-        background-size: 596px;
+        background-position: -138px 448px;
+        background-size: 800px;
         /* background-attachment: fixed; */
         transition: background-size .25s ease-in;
     }
     #services_section h2 {
-        font-size: 8.5em;
+        font-size: 5em;
         transition: font-size .25s ease-in;
-        margin-left: 28vw;
+        margin-left: -10vw;
+        max-width: 523px;
+        order: 1;
+        padding: 0;
     }
-    #subSection_par {
+    .servicesList{
+        /* padding: 0; */
+        justify-content: flex-end;
+        order: 3;
+        /* padding-left: 50px; */
+        padding: 20px;
+    }
+    .subSection p {
         width: 500px;
+        order: 0;
+    }
+    #model{
+        order: 2;
     }
     #TFMLogo{
         height: 100%;
     }
-    #chattext {
-        position: fixed;
+    .chattext {
+        /* position: fixed;
         right: 30px;
-        top: 76vh;
+        top: 76vh; */
         height: 60px;
         display: block;
     }
-    #chatbubble {
-        position: fixed;
+    .chatbubble {
+        /* position: fixed;
         right: 30px;
-        top: 82vh;
+        top: 82vh; */
         height: 80px;
         display: block;
     }
@@ -941,9 +1107,10 @@ MEDIA QUERIES
         margin: 0;
     }
     .sdHome h2 {
-        font-size: 5em;
+        font-size: 3em;
         margin-left: 40%;
         text-align: left;
+        max-width: 500px;
     }
     .sdHomeDescr{
         width: 500px;
@@ -972,21 +1139,32 @@ MEDIA QUERIES
         padding: 20px 30px;
     }
     .sdIconsHome{
-        justify-content: left;
-        padding: 40px 20px 40px 100px;
+        justify-content: space-between;
+        padding: 40px;
+        /* padding: 40px 20px 40px 100px; */
+    }
+    .sdIconsHome img{
+        height: 130px;
     }
     #overview_section{
-        background-position: -11px 247px;
+        background-position: -50px 352px;
     }
     #overview_section h2 {
-        font-size: 3em;
-        padding: 120px 100px 0 40px;
+        font-size: 5em;
+        padding-top: 50px;
+        width: 800px;
     }
     #overviewCont{
         justify-content: center;
     }
+    .reasonsHome{
+        width: 550px;
+    }
+    .reasonsHome a{
+        color: black;
+        font-size: 1em;
+    }
     #clients_section h2 {
-        font-size: 4em;
         font-weight: lighter;
         display: flex;
         justify-content: center;
@@ -1006,6 +1184,9 @@ MEDIA QUERIES
     .contactCont h2 {
         font-size: 3em;
     }
+    #contact_section h2 {
+        font-size: 3em;
+    }
     .contactInfo{
         justify-content: space-between;
         margin: 50px;
@@ -1016,6 +1197,10 @@ MEDIA QUERIES
     .footerCont p {
         font-weight: lighter;
         padding: 10px 0;
+    }
+    .partner p{
+        padding: 120px 100px 0 0;
+        width: 500px;
     }
 }
 
@@ -1028,20 +1213,22 @@ MEDIA QUERIES
         transition: font-size .20s ease-in;
         background: url("../images/Man.png");
         background-repeat: no-repeat;
-        background-position: -142px 144px;;
-        background-size: 797px;
+        background-position: -142px 545px;
+        background-size: 867px;
         /* background-attachment: fixed; */
         transition: background-size .25s ease-in;
     }
     #services_section h2{
-        font-size: 8.5em;
-        margin-left: 35%;
-        padding-top: 10vh;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 800px;
+        align-self: center;
     }
-    #subSection_par{
-        font-size: 1.5em;
+    .subSection p{
+        font-size: 1.2em;
         padding: 10px 0 10px 1%;
-        width: 600px;
+        width: 550px;
         margin-left: 45vw;
     }
 
@@ -1051,17 +1238,17 @@ MEDIA QUERIES
         margin-bottom: 100px;
     }
     .subSection h3{
-        font-size: 2em;
+        /* font-size: 2em; */
         /* padding-left: 33%; */
-        width: 600px;
+        /* width: 600px; */
         /* text-align: center; */
         /* margin-left: auto; */
-        margin-right: auto;
+        /* margin-right: auto;
         margin-left: 45vw;
         padding: 10px 0 10px 1%;
-        text-align: center;
+        text-align: center; */
     }
-    .services_main{
+    /* .services_main{
         display: flex;
         padding-left: 46vw;
         padding-top: 50px;
@@ -1069,18 +1256,19 @@ MEDIA QUERIES
         width: 600px;
         font-size: 1.2em;
         margin: 0;
-    }
+    } */
     .serv_sections{
-        padding: 0 10px 0 20px;
+        padding: 0 10px 29px 20px;
         min-width: 171px;
+        font-size: 0.8em;
     }
 
     .serv_sections h4{
         font-size: 1em;
     }
-    .service_shortDescr{
-        font-size: 1em;
-        padding-top: 10px;
+    .servicesList{
+        margin-left: 30vw;
+        justify-content: center;
     }
     .sdHome h2 {
         margin-left: 47%;
@@ -1089,15 +1277,17 @@ MEDIA QUERIES
         margin: 0 0 10px 47%;
     }
     #overview_section {
-        background-position: -1px 200px;
+        background-position: -1px 393px;
         background-size: 695px;
     }
     #overviewCont {
         justify-content: center;
     }
     #overview_section h2 {
-        font-size: 3.5em;
-        padding: 70px 160px 0 40px;
+        font-size: 6em;
+        /* padding: 120px 160px 0 40px; */
+        width: 1000px;
+        align-self: center;
     }
     .clientLogos img {
         padding: 20px 55px;
@@ -1105,13 +1295,25 @@ MEDIA QUERIES
     #safestoreLogo{
         padding-top: 23px;
     }
+    .partner p{
+        padding: 120px 100px 0 0;
+        width: 600px;
+        font-size: 1.5em;
+    }
+    .reasonsHome{
+        margin-left: 45%;
+        font-size: 1.2em;
+    }
+    #clients_section h2 {
+        font-size: 2.8em;
+    }
     
 }
 
 @media screen and (min-height: 400px) and (min-width: 960px){
-    #chattext{
+    .chattext{
         display: block;
-        right: 55px;
+        right: 115px;
     }
 
 }
@@ -1142,9 +1344,9 @@ MEDIA QUERIES
 }
 
 @media screen and (min-height: 800px){
-    #chattext{
+    /* .chattext{
         top: 74vh;
-    }
+    } */
     #main_heading{
         transition: margin-top .25s ease-in; 
         padding-top: 23vh;
@@ -1158,12 +1360,12 @@ MEDIA QUERIES
 }
 
 @media screen and (min-height: 900px) and (min-width: 800px){
-    #chattext{
+    /* .chattext{
         top: 77vh;
     }
-    #chatbubble {
+    .chatbubble {
         top: 85vh;
-    }
+    } */
 }
 
 

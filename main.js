@@ -1,18 +1,18 @@
-var button = document.getElementById('chatbubble');
-var chat = document.getElementById('bot');
-var closeButton = document.getElementById('close');
-var chattext = document.getElementById('chattext');
+var button = document.getElementsByClassName('chatbubble');
+var chat = document.getElementsByClassName('bot');
+var closeButton = document.getElementsByClassName('close')[0];
+var chattext = document.getElementsByClassName('chattext')[0];
 
 function openChat(){
-    button.style.display = 'none';
-    chat.style.height = '500px';
+    button[0].style.display = 'none';
+    chat[0].style.height = '500px';
     closeButton.style.display = "block";
     chattext.style.display = "None";
 }
 
 function closeChat(){
-    button.style.display = 'block';
-    chat.style.height = '0';
+    button[0].style.display = 'block';
+    chat[0].style.height = '0';
     closeButton.style.display = "none";
     chattext.style.display = "Block";
 }
@@ -63,7 +63,7 @@ function screenTest(e) {
     if (e.matches) {
       nav[0].style.display = "None";
       home.addEventListener('click', navListen);
-
+      navBg.style.height = "75px";
 
     } else {
       nav[0].style.display = "flex";
