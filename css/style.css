@@ -33,24 +33,22 @@ html {
     top: 70vh;
     height: 80px;
     display: block;
+    z-index: 50;
 }
 .chatbubble{
-    /* position: fixed;*/
     right: 20px;
-    /* top: 82vh; */
     height: 60px;
-    position: relative;
+    position: absolute;
     z-index: 50;
+    top: 48px;
 }
 
 .chattext{
-    /* position: fixed;*/
     display: none;
-    right: 79px;
-    /* top: 72vh; */
+    right: 20px;
     width: 96px;
     cursor: pointer; 
-    position: relative;
+    position: absolute;
     z-index: 3;
 }
 
@@ -152,9 +150,8 @@ section{
 }
 
 #main_heading{
-    padding-top: 8vh;
     color: #fff;
-    padding: 80px 50px;
+    padding: 16vh 50px 10px 50px;
     position: relative;
     transition: font-size .20s ease-in; 
     font-size: 0.8em;
@@ -164,7 +161,7 @@ section{
 #main_heading h2{
     align-items: center;
     display: flex;
-    color: #00A0E5;
+    color: #009de0;
     font-size: 2em;
     letter-spacing: 16px;
     padding-bottom: 10px;
@@ -213,7 +210,7 @@ section{
     height: 50px;
 }
 
-#hamburger{
+.hamburger{
     position: fixed;
     width: 35px;
     right: 20px;
@@ -223,7 +220,7 @@ section{
     cursor: pointer;
 }
 
-#hamburgerBlack{
+.hamburgerBlack{
     position: fixed;
     width: 35px;
     right: 20px;
@@ -233,13 +230,13 @@ section{
     cursor: pointer;
 }
 
-#hamburgerCont{
+.hamburgerCont{
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 75px;
 }
 .header-link:hover{
-    color: #00a0e5;
+    color: #009de0;
 }
 #services_section {
     background: white;
@@ -255,7 +252,7 @@ section{
 }
 
 #services_section h2{
-    color: #00A0E5;
+    color: #009de0;
     font-weight: lighter;
     font-size: 3em;
     margin-left: 20px;
@@ -285,7 +282,7 @@ section{
     font-size: 2em;
     text-align: left;
     font-weight: lighter;
-    color: #00a0e5;
+    color: #009de0;
 }
 #model{
     font-size: 1.8em;
@@ -331,7 +328,8 @@ section{
 .discoverServices{
     font-size: 1.2em;
     text-decoration: none;
-    color: #00a0e5;
+    color: #009de0;
+    font-weight: normal;
 }
 
 #sdWan_section{
@@ -362,6 +360,9 @@ section{
 .sdHomeDescr p{
     padding-bottom: 20px;
 }
+.sdHomeDescr h3{
+    padding-bottom: 20px;
+}
 
 .sdIconsHome{
     padding: 40px 20px;
@@ -388,7 +389,7 @@ section{
 }
 #overview_section{
     height: 10%;
-    background-color: #00A0E5;
+    background-color: #009de0;
 }
 #overviewCont{
     background-color: rgba(0, 160, 229, 0.75);
@@ -416,7 +417,7 @@ section{
 
 .reasonsHome h3{
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.4em;
     padding-bottom: 10px;
     width: 80vw;
 }
@@ -461,6 +462,7 @@ section{
     /* height: 300px; */
     position: relative;
     overflow: hidden;
+    padding-top: 5px;
 }
 .reasonScroll{
     transition: transform .5s ease-out;
@@ -686,7 +688,7 @@ footer{
     cursor: pointer;
 }
 .footerCont a:hover{
-    color: #00A0E5;
+    color: #009de0;
 }
 
 
@@ -702,9 +704,6 @@ MEDIA QUERIES
 @media screen and (min-width: 500px){
     .bot{
         width: 400px;
-    }
-    #main_heading{
-        padding-top: 12vh;
     }
     #main_heading h2 {
         font-size: 3.6em;
@@ -724,20 +723,15 @@ MEDIA QUERIES
         left: 50%;
     }
     .services_main{
-        /* margin: 20px 50px 50px 100px; */
         font-size: 1.2em;
         margin: 10px 50px;
     }
     #services_section h2 {
         font-size: 3.5em;
         margin-left: 0;
-        /* text-align: center; */
         padding: 70px 50px 0;
     }
     .subSection p {
-        /* margin-left: auto;
-        margin-right: auto;
-        text-align: justify; */
         font-size: 1.2em;
         width: 450px;
         padding: 10px 30px;
@@ -746,13 +740,11 @@ MEDIA QUERIES
         display: block;
     }
     .subSection h3{
-        /* text-align: center; */
         margin: 0 auto;
         padding: 20px 50px 0;
     }
     #overviewCont{
         text-align: center;
-        /* font-size: 1.2em; */
     }
     #overview_section h2{
         font-size: 1.8em;
@@ -769,7 +761,7 @@ MEDIA QUERIES
         text-align: justify;
     }
     .reasonsHome h3{
-        font-weight: lighter;
+        /* font-weight: lighter; */
         width: 100%;
     }
     .reasonsEnd {
@@ -805,7 +797,6 @@ MEDIA QUERIES
         display: none;
     }
     .reasonsHorizontal{
-        /* display: inline-block; */
         flex-direction: column;
     }
     .reasonScroll p{
@@ -852,24 +843,21 @@ MEDIA QUERIES
         right: 30px;
         height: 80px;
     }
+    .chattext{
+        right: 35px;
+    }
     .subSection h3{
         font-size: 3em;
         text-align: left;
         margin: 0;
         max-width: 300px;
         padding: 0 0 0 30px;
-        /* margin-left: auto;
-        margin-right: auto;
-        width: 400px; */
     }
     .services_main{
         display: flex;
         padding: 0;
         margin: 0;
-        /* justify-content: space-between; */
-        /* width: 600px; */
         font-size: 1.2em;
-        /* margin: 0 auto 50px; */
     }
     .serv_sections{
         padding: 0 10px 30px 30px;
@@ -896,6 +884,7 @@ MEDIA QUERIES
         font-weight: lighter;
         font-size: 1.5em;
         padding-top: 30px;
+        padding-bottom: 20px;
     }
     #overview_section{
         background: url(../images/Girl.png);
@@ -903,7 +892,7 @@ MEDIA QUERIES
         background-position: -106px 439px;
         background-size: 541px;
         transition: background-size .25s ease-in;
-        background-color: #00A0E5;
+        background-color: #009de0;
     }
     #overviewCont{
         font-size: 1.2em;
@@ -993,7 +982,7 @@ MEDIA QUERIES
     }
 }
 @media screen and (min-width: 960px){
-    #hamburger, #hamburgerBlack{
+    .hamburger, .hamburgerBlack{
         display: none;
     }
     .header_menu{
@@ -1020,7 +1009,7 @@ MEDIA QUERIES
         padding: 10px;
         min-width: 75px;
     }
-    #hamburgerCont{
+    .hamburgerCont{
         height: 0;
     }
     #header_name h3 {
@@ -1087,10 +1076,6 @@ MEDIA QUERIES
         height: 100%;
     }
     .chattext {
-        /* position: fixed;
-        right: 30px;
-        top: 76vh; */
-        height: 60px;
         display: block;
     }
     .chatbubble {
@@ -1120,7 +1105,7 @@ MEDIA QUERIES
     .sdHomeDescr h3{
         text-align: left;
         font-size: 2em;
-        padding: 0;
+        padding: 0 0 20px 0;
     }
     .sdHomeDescr p {
         padding-bottom: 30px;
@@ -1310,14 +1295,6 @@ MEDIA QUERIES
     
 }
 
-@media screen and (min-height: 400px) and (min-width: 960px){
-    .chattext{
-        display: block;
-        right: 115px;
-    }
-
-}
-
 @media screen and (min-height: 550px){
     #TFMlogo_heading {
         margin-top: 3vh;
@@ -1325,9 +1302,9 @@ MEDIA QUERIES
     #heading_bottom p {
         top: 86vh;
     }
-    /* #chattext{
+    .chattext{
         display: block;
-    } */
+    }
 }
 
 @media screen and (max-width: 500px) and (min-height: 700px){
@@ -1338,7 +1315,7 @@ MEDIA QUERIES
     #TFMlogo_heading {
         margin-top: 5vh;
     }
-    #chattext{
+    .chattext{
         display: block;
     }
 }
@@ -1349,7 +1326,7 @@ MEDIA QUERIES
     } */
     #main_heading{
         transition: margin-top .25s ease-in; 
-        padding-top: 23vh;
+        padding-top: 25vh;
     }
     #TFMlogo_heading {
         margin-top: 5vh;
@@ -1360,12 +1337,9 @@ MEDIA QUERIES
 }
 
 @media screen and (min-height: 900px) and (min-width: 800px){
-    /* .chattext{
-        top: 77vh;
+    .chat{
+        top: 80vh;
     }
-    .chatbubble {
-        top: 85vh;
-    } */
 }
 
 
@@ -1373,6 +1347,7 @@ MEDIA QUERIES
     #main_heading h1{
         font-size: 3em;
         transition: font-size .25s ease-in;
+        top: 21vh;
     }
 }
 

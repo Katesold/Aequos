@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="UK's Leading Software-Defined Wide Area Network Provider" />
 <meta name="keywords" content="Aequos, technology, Business, SD-WAN" />
 <title>AEQUOS</title>
@@ -21,11 +21,23 @@
 	  "@context": "http://schema.org",
 	  "@type": "Organization",
 	  "url": "http://aequos.co.uk",
-	  "name": "Aequos, TFM Group company, technology, Business",
+		"name": "Aequos",
+		"description": "Aequos is a company that provides networking solutions to organisations of all sizes",
 	  "contactPoint": {
 		"@type": "Contact",
 		"telephone": "0345 646 6060",
-		"contactType": "General Enquiries"
+		"email": "mailto:info@aequos.co.uk",
+		"address": {
+    	"@type": "PostalAddress",
+    	"addressLocality": "Leicestershire",
+    	"addressRegion": "Loughborough",
+    	"postalCode":"LE11 3QF",
+    	"streetAddress": "Advanced Technology Innovation Centre	Loughborough University Science and Enterprise Park 5 Oakwood Drive"
+  	},
+		"contactType": "General Enquiries",
+		"areaServed" : "UK",
+		"sameAs" : [ "https://www.linkedin.com/company/aequos-sd-wan/",
+    "https://twitter.com/Aequossdwan"]
 	  }
 	}
 	</script>
@@ -77,31 +89,31 @@ ga('send', 'pageview'); -->
 	<header class="header">
 		<div class="header_content">
 			<!-- <div class="header_logo-title"><a href="index.html"><img class="image-full" src="images/Logo-Aequos.png" alt="Aequos"><img class="image-sticky" src="images/Logo-Aequos-sticky.png" alt="Aequos-Logo"></a></div> -->
-			<nav class="header_menu">
+			<nav tabindex="0" class="header_menu" role="navigation" aria-label="Mobile Navigation Dropdown">
 				<div id="header_name">
 					<h3>AEQUOS</h3>
 				</div>                                                           
-				<ul role ="navigation">
-					<li><a class="selected header-link" href="#home_section">HOME</a></li><p class="nav_line">|</p>
-					<li><a href="services.html" class="header-link">SERVICES</a></li><p class="nav_line">|</p>
-					<li><a href="sd-wan" class="header-link">SD-WAN</a></li><p class="nav_line">|</p>
-					<li><a href="about.html" class="header-link">ABOUT US</a></li><p class="nav_line">|</p>
-					<li><a href="news.html" class="header-link">NEWS</a></li><p class="nav_line">|</p>
-					<li><a href="contact-us.html" class="header-link">CONTACT</a></li>						
+				<ul>
+					<li><a tabindex="0" role="menuitem" tabindex="0" class="selected header-link" href="#home_section">HOME</a></li><p class="nav_line">|</p>
+					<li><a role="menuitem" tabindex="0" href="services.html" class="header-link">SERVICES</a></li><p class="nav_line">|</p>
+					<li><a role="menuitem" tabindex="0" href="sd-wan" class="header-link">SD-WAN</a></li><p class="nav_line">|</p>
+					<li><a role="menuitem" tabindex="0" href="about.html" class="header-link">ABOUT US</a></li><p class="nav_line">|</p>
+					<li><a role="menuitem" tabindex="0" href="news.html" class="header-link">NEWS</a></li><p class="nav_line">|</p>
+					<li><a role="menuitem" tabindex="0" href="contact-us.html" class="header-link">CONTACT</a></li>						
 				</ul>
 			</nav> 
 		</div>	
-		<div id="hamburgerCont">
-			<div id="hamburger_bg">
-				<img id="hamburger" onclick="menuSwitch()" src="images/hamburger.png">
-				<img id="hamburgerBlack" onclick="menuSwitch()" src="images/hamburger_black.png">
+		<div class="hamburgerCont">
+			<div class="hamburger_bg">
+				<img alt="hamburger menu to open menu" role="button" aria-label="Open menu" class="hamburger" onclick="menuSwitch()" src="images/hamburger.png">
+				<img alt="hamburger menu to close menu" role="button" aria-label="Close menu" class="hamburgerBlack" onclick="menuSwitch()" src="images/hamburger_black.png">
 			</div>
 		</div>
 		<!-- <img onclick="openChat()" id="chatbutton" src="images/chatbutton.png">	 -->
 	</header>
 
 
-	<div class="flex-container">
+	<main class="flex-container" role="main">
 		<section id="home_section">
 			<img class="shape" src="images/shape.gif" alt="blue background abstract shape">
 			<div id="main_heading">
@@ -110,21 +122,21 @@ ga('send', 'pageview'); -->
 				<h3>Aequos are the experts in using SD-WAN to deliver the right networking solutions and the right bandwidth at the right times.</h3>
 			</div>
 			<div id="TFMlogo_heading">
-					<img id="TFMLogo" src="images/TFMlogo.png">
+					<img alt="TFM Group Logo" id="TFMLogo" src="images/TFMlogo.png">
 			</div>
 			
 		</section>
 		<div id="heading_bottom">
 			<p>SEE MORE</p>
-			<a href="#services_section"><img alt="down arrow" id="dropDown" src="images/dropD.png"></a>
+			<a href="#services_section"><img role="button" aria-label="Scroll down to next section" alt="down arrow" id="dropDown" src="images/dropD.png"></a>
 
 		</div>
 		<div class="chat">
-				<img class="chattext" src="images/chattext.png">
-				<img class="chatbubble" onclick="openChat()" src="images/chatbubble.png">
+				<img alt="Lets chat bubble above chat icon" class="chattext" src="images/chattext.png">
+				<img alt="chat bubble to open chat window and start chatting with Aequos" class="chatbubble" onclick="openChat()" src="images/chatbubble.png">
 		</div>
-			<iframe class="bot" src="https://snatchbot.me/webchat/?botID=42894&appID=3drApNnnYaVm7PfrtccS"></iframe>
-			<p class="close" onclick="closeChat()"> X</p>
+			<iframe title="Aequos chatbot" class="bot" src="https://snatchbot.me/webchat/?botID=42894&appID=3drApNnnYaVm7PfrtccS"></iframe>
+			<p aria-label="Close chat" role="button" class="close" onclick="closeChat()"> X</p>
 		<section id="services_section">
 			
 			<div class="subSection">
@@ -143,7 +155,7 @@ ga('send', 'pageview'); -->
 								<li>Infrastructure</li>
 								<li>Optional Scoping & Design</li>
 							</ul>
-							<a class="discoverServices" href="">Discover More <i class='fas fa-angle-right'></i></a>
+							<a aria-label="Navigation to Services page Bronze Service" class="discoverServices" href="">Discover More <i class='fas fa-angle-right'></i></a>
 						</div>
 						<div class="serv_sections">
 							<h4>SILVER SERVICE</h4>
@@ -153,7 +165,7 @@ ga('send', 'pageview'); -->
 									<li>Scoping & Design</li>
 									<li>Monitoring & Trends</li>
 								</ul>
-								<a class="discoverServices" href="">Discover More <i class='fas fa-angle-right'></i></a>
+								<a aria-label="Navigation to Services page Silver Service" class="discoverServices" href="">Discover More <i class='fas fa-angle-right'></i></a>
 						</div>
 						<div class="serv_sections">
 							<h4>GOLD SERVICE</h4>
@@ -165,7 +177,7 @@ ga('send', 'pageview'); -->
 									<li>Scoping & Design</li>
 									<li>Monitoring & Trends</li>
 								</ul>
-								<a class="discoverServices" href="">Discover More <i class='fas fa-angle-right'></i></a>
+								<a aria-label="Navigation to Services page Gold Service" class="discoverServices" href="">Discover More <i class='fas fa-angle-right'></i></a>
 						</div>
 					</div>
 				</div>
@@ -181,6 +193,7 @@ ga('send', 'pageview'); -->
 				<div class="sdHomeDescr">
 					<p>SD-WAN uses the advantages of cloud computing to transform the management of WANs through a single cloud-based console. Simple, streamlined, scalable, it empowers you to dynamically share bandwidth throughout your WAN. Remotely re-allocate it at will, rather than waiting for an on-site engineer to reconfigure it at local network level. And allocate it according to need, flexibly scaling up and down as required. </p>
 					<h3>Cloud-based connectivity transforms the way you manage your networks.</h3>
+					<a aria-label="Navigation to SD-WAN page" class="discoverServices" href="">Discover More <i class='fas fa-angle-right'></i></a>
 				</div>
 				<div class="sdIconsHome">
 						<img alt="greater agility" id="agilityIcon" src="images/agility.png">
@@ -223,12 +236,12 @@ ga('send', 'pageview'); -->
 					</div>
 				
 				<div class="navReasons">
-					<button class="toLeft"><img class="navi leftArrow" src="images/left.png"></button>
-					<img class="navi blackDot" src="images/blackdot.png">
-					<img class="navi whiteDot" src="images/whitedot.png">
-					<img class="navi whiteDot" src="images/whitedot.png">
-					<img class="navi whiteDot" src="images/whitedot.png">
-					<button class="toRight"><img class="navi rightArrow" src="images/right.png"></button>
+					<button aria-label="reveals contents from right to left in descending order" class="toLeft"><img alt="Left arrow" class="navi leftArrow" src="images/left.png"></button>
+					<img alt="black dot refers to reason displayed for partnering with Aequos" class="navi blackDot" src="images/blackdot.png">
+					<img alt="white dot refers to reason hidden for partnering with Aequos" class="navi whiteDot" src="images/whitedot.png">
+					<img alt="white dot refers to reason hidden for partnering with Aequos" class="navi whiteDot" src="images/whitedot.png">
+					<img alt="white dot refers to reason hidden for partnering with Aequos" class="navi whiteDot" src="images/whitedot.png">
+					<button aria-label="reveals contents from left to right in ascending order" class="toRight"><img alt="Right arrow" class="navi rightArrow" src="images/right.png"></button>
 					<!-- <button><i class="fas fa-chevron-right"></i></button> -->
 				</div>
 				<a class="discoverServices">MORE ABOUT US <i class='fas fa-angle-right'></i></a>
@@ -240,11 +253,11 @@ ga('send', 'pageview'); -->
 			<div>
 				<h2>A FEW OF THE PARTNERS WE WORK WITH </h2>
 				<div class="clientLogos">
-					<img id="oxfamLogo" src="images/oxfamLogo.png">
-					<img id="motorLogo" src="images/motorLogo.png">
-					<img id="abbeyLogo" src="images/abbeyLogo.png">
-					<img id="safestoreLogo" src="images/safestoreLogo.png">
-					<img id="pizzahutLogo" src="images/pizzalogo.png">
+					<img alt="Oxfam logo" id="oxfamLogo" src="images/oxfamLogo.png">
+					<img alt="Motorpoint logo"  id="motorLogo" src="images/motorLogo.png">
+					<img alt="Abbeyfield logo"  id="abbeyLogo" src="images/abbeyLogo.png">
+					<img alt="Safestore logo"  id="safestoreLogo" src="images/safestoreLogo.png">
+					<img alt="Pizzahut logo"  id="pizzahutLogo" src="images/pizzalogo.png">
 				</div>
 				
 			</div>
@@ -307,16 +320,16 @@ ga('send', 'pageview'); -->
 					<div class="cInfoSection social">
 						<h3>SOCIAL</h3>
 							<a href="https://www.linkedin.com/company/aequos-sd-wan/" target="_blank"><img alt="Aequos SD-WAN LinkedIn" id="linkedinBlack" src="images/social/black/linkedin.png" ></a>
-							<a href="https://twitter.com/Aequossdwan" target="_blank"><img alt="Aequos SD-WAN LinkedIn" id="twitterBlack" src="images/social/black/twitter.png"></a>
+							<a href="https://twitter.com/Aequossdwan" target="_blank"><img alt="Aequos SD-WAN Twitter" id="twitterBlack" src="images/social/black/twitter.png"></a>
 							<!-- <img alt="Aequos SD-WAN LinkedIn"  id="instaBlack" src="images/social/black/instagram.png">
 							<img id="facebookBlack" src="images/social/black/facebook.png"> -->
 					</div>
 					<div class="infoContact">
-						<button class="contactBtn"><a href="contact-us.html">Contact us</a></button>
+						<button role="navigation" aria-label="navigation to new page with a contact form" class="contactBtn"><a href="contact-us.html">Contact us</a></button>
 					</div>
 			</div>
 
-			</div>
+			</main>
 
 		</section>
 
