@@ -702,6 +702,7 @@ footer{
     justify-content: space-evenly;
     padding: 3px;
     font-family: 'Josefin Sans', sans-serif;
+    z-index: 100;
 }
 .cookie-law p{
     padding: 6px;

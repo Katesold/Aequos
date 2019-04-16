@@ -179,6 +179,11 @@ function switchReasonsL(){
   })
 }
 
+var accept = document.getElementsByClassName('cookie-law')[0];
+
+function accepted(){
+  accept.style.display = "None";
+}
 
 // var home = document.querySelector('.selected');
 
@@ -189,6 +194,10 @@ function switchReasonsL(){
 // })
 
 
+
+/*
+SMOOTH SCROLLING 
+*/
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
