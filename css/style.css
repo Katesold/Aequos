@@ -36,7 +36,7 @@ html {
     z-index: 50;
 }
 .chatbubble{
-    right: 20px;
+    right: 0px;
     height: 60px;
     position: absolute;
     z-index: 50;
@@ -45,7 +45,7 @@ html {
 
 .chattext{
     display: none;
-    right: 20px;
+    right: 0;
     width: 96px;
     cursor: pointer; 
     position: absolute;
@@ -182,7 +182,7 @@ section{
     max-width: 100%;
     height: auto;
     position: absolute;
-    top: 99vh;
+    top: 92vh;
     transform: translateY(-180%);
     left: 42%;
     transition: left .25s ease-in;
@@ -190,7 +190,7 @@ section{
 
 #heading_bottom p{
     position: absolute;
-    top: 84vh;
+    top: 80vh;
     transform: translateY(-100%);
     left: 40%;
     color: white;
@@ -690,6 +690,52 @@ footer{
 .footerCont a:hover{
     color: #009de0;
 }
+.cookie-law {
+    font-weight: lighter;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #f2f2f2;
+    width: 100%;
+    display: flex;
+    font-size: 0.8em;
+    justify-content: space-evenly;
+    padding: 3px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.cookie-law p{
+    padding: 6px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.cookie-law button{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.cookieBtn{
+    /* padding: 5px; */
+    font-size: 0.9em;
+    border-style: none;
+    cursor: pointer;
+    font-weight: normal;
+    background-color: #f2f2f2;
+}
+.cookieBtn:hover, .cookie:hover{
+    color: #009de0;
+}
+.cookie{
+    text-decoration: none;
+    color: black;
+    /* position: relative;
+    top: 12px; */
+    font-weight: normal;
+    min-width: 70px;
+    font-size: 0.9em;
+    align-self: center;
+}
+.cookie .fas{
+    top: 1px;
+    position: relative;
+}
+
 
 
 
@@ -1187,6 +1233,9 @@ MEDIA QUERIES
         padding: 120px 100px 0 0;
         width: 500px;
     }
+    .cookie-law p {
+        font-size: 1.1em;
+    }
 }
 
 @media screen and (min-width: 1130px){
@@ -1299,9 +1348,9 @@ MEDIA QUERIES
     #TFMlogo_heading {
         margin-top: 3vh;
     }
-    #heading_bottom p {
+    /* #heading_bottom p {
         top: 86vh;
-    }
+    } */
     .chattext{
         display: block;
     }
@@ -1332,13 +1381,16 @@ MEDIA QUERIES
         margin-top: 5vh;
     }
     #heading_bottom p {
-        top: 90vh;
+        top: 82vh;
     }
 }
 
 @media screen and (min-height: 900px) and (min-width: 800px){
     .chat{
         top: 80vh;
+    }
+    #heading_bottom p {
+        top: 85vh;
     }
 }
 
