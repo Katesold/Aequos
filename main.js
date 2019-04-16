@@ -185,6 +185,71 @@ function accepted(){
   accept.style.display = "None";
 }
 
+
+/*
+SERVICES FUNCTIONS
+*/
+
+var j = 0;
+function switchSectorsR(){
+  if(i==0){
+    i += 1;
+  }
+  if(reasons.length > i){
+    reasons[i].style.order= "-1";
+    navRs[i+1].src = "images/bluedot.png";
+    reasons[i-1].style.order = "0";
+    navRs[i].src = "images/whitedot.png";
+    i = i + 1;
+  } else{
+    reasons[3].style.order = "0";
+    navRs[4].src = "images/whitedot.png";
+    i = 0;
+    reasons[0].style.order = "-1";
+    navRs[1].src = "images/bluedot.png";
+    //console.log(reasons[i], i);
+  }
+}
+
+function switchSectorsL(){
+
+  i = i-1;
+  console.log(i+" start");
+  if (i < 0){
+    reasons[3].style.order = "-1";
+    navRs[4].src = "images/bluedot.png";
+    reasons[0].style.order = "0";
+    navRs[1].src = "images/whitedot.png";
+    console.log(i+" i<0");
+    i = 4;
+    //console.log(reasons[i], i);
+  } else if (i >= 0 && i < reasons.length){
+    if(i-1 == -1){
+      reasons[3].style.order = "-1";
+      navRs[4].src = "images/bluedot.png";
+      reasons[0].style.order = "0";
+      navRs[1].src = "images/whitedot.png";
+      console.log(i+" i>=0");
+      i = 4;
+    } else{
+      reasons[i-1].style.order = "-1";
+      navRs[i].src = "images/bluedot.png";
+      reasons[i].style.order = "0";
+      navRs[i+1].src = "images/whitedot.png";
+      console.log(i+" else");
+     // console.log(reasons[i], i);
+    }
+      
+  } else {
+    reasons[i-1].style.order = "-1";
+    reasons[0].style.order = "0";
+    reasons[i].style.order = "0";
+   // console.log(reasons[i]);
+  }
+}
+
+
+
 // var home = document.querySelector('.selected');
 
 // home.addEventListener('click', function(){

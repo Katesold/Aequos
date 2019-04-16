@@ -149,7 +149,7 @@ section{
     position: relative;
 }
 
-#main_heading{
+.main_heading{
     color: #fff;
     padding: 16vh 50px 10px 50px;
     position: relative;
@@ -158,7 +158,7 @@ section{
     padding-bottom: 1vh;
 }
 
-#main_heading h2{
+.main_heading h2{
     align-items: center;
     display: flex;
     color: #009de0;
@@ -168,12 +168,12 @@ section{
     padding-left: 4px;
 }
 
-#main_heading h1{
+.main_heading h1{
     font-size: 3em;
     padding-bottom: 10px;
 }
 
-#main_heading h3{
+.main_heading h3{
     padding: 0;
     font-size: 1.2em;
 }
@@ -198,12 +198,12 @@ section{
     transition: left .25s ease-in;
 }
 
-#TFMlogo_heading{
+.TFMlogo_heading{
     /* margin-top: 10vh; */
     position: relative;
     transition: margin-top .25s ease-in; 
 }
-#TFMLogo{
+.TFMLogo{
     margin-left: 30px;
     margin-top: 0vh;
     transition: height .25s ease-in;
@@ -739,6 +739,83 @@ footer{
 
 
 
+/*
+
+SERVICES PAGE
+
+*/
+
+#servicesHome_section{
+    height: 100%;
+    min-height: 100vh;
+    background-color: #009de0;
+    overflow: hidden;
+    position: relative;
+}
+.services h2{
+    color: #FFF;
+}
+.shapeServiceHome{
+    width: 150%;
+    top: 25%;
+}
+#servicesMain{
+    padding: 70px 0 0;
+    font-weight: lighter;
+    background-color: #f2f2f2;
+}
+.servicesMainListed{
+    padding: 20px;
+}
+.servicesMainListed ul{
+    list-style: disc;
+    font-weight: normal;
+    padding-inline-start: 20px;
+}
+.serviceContainer h2{
+    padding: 10px 0;
+    font-size: 1.5em;
+}
+#silver{
+    background-color: #E6E6E6;
+}
+#silver h2{
+    color: #656565;
+}
+#gold{
+    background-color: #CCCCCC;
+    padding-bottom: 30px;
+}
+#gold h2{
+    color: #AD7418;
+}
+#bronze h2{
+    color: #BF6513;
+}
+#servicesMainDescription{
+    color: black;
+    font-weight: lighter;
+    height: 100%;
+    padding-bottom: 20px;
+    background-color: #009de0;
+    overflow: hidden;
+}
+#servicesSectors{
+    height: 10%;
+    background-color: black;
+    color: #FFF;
+}
+#sectorsCont{
+    padding: 70px 20px;
+}
+#sectorsCont h2{
+    font-size: 1.2em;
+    padding: 0 20px 20px;
+}
+
+
+
+
 
 
 /*
@@ -752,15 +829,15 @@ MEDIA QUERIES
     .bot{
         width: 400px;
     }
-    #main_heading h2 {
+    .main_heading h2 {
         font-size: 3.6em;
         padding-left: 4px;
     }
-    #main_heading h3 {
+    .main_heading h3 {
         padding: 0 30px 30px 10px;
         font-size: 1.5em;
     }
-    #TFMLogo{
+    .TFMLogo{
         height: 60px;
     }
     #heading_bottom p {
@@ -864,7 +941,7 @@ MEDIA QUERIES
 } 
 
 @media screen and (min-width: 700px){
-    #main_heading h1 {
+    .main_heading h1 {
         font-size: 5.5em;
     }
     #services_section h2 {
@@ -1027,6 +1104,18 @@ MEDIA QUERIES
     #clients_section h2 {
         font-size: 2.5em;
     }
+
+    /*
+
+    SERVICES SECTION
+
+    */
+
+    .services h3{
+        font-size: 2em;
+    }
+
+
 }
 @media screen and (min-width: 960px){
     .hamburger, .hamburgerBlack{
@@ -1075,10 +1164,10 @@ MEDIA QUERIES
         z-index: 50;
         position: fixed;
     }
-    #main_heading h1 {
+    .main_heading h1 {
         font-size: 7em;
     }
-    #main_heading h2 {
+    .main_heading h2 {
         padding-left: 8px;
     }
     .subSection {
@@ -1119,7 +1208,7 @@ MEDIA QUERIES
     #model{
         order: 2;
     }
-    #TFMLogo{
+    .TFMLogo{
         height: 100%;
     }
     .chattext {
@@ -1240,7 +1329,7 @@ MEDIA QUERIES
 }
 
 @media screen and (min-width: 1130px){
-    #main_heading{
+    .main_heading{
         font-size: 1em;
     }
     #services_section{
@@ -1346,7 +1435,7 @@ MEDIA QUERIES
 }
 
 @media screen and (min-height: 550px){
-    #TFMlogo_heading {
+    .TFMlogo_heading {
         margin-top: 3vh;
     }
     /* #heading_bottom p {
@@ -1358,11 +1447,11 @@ MEDIA QUERIES
 }
 
 @media screen and (max-width: 500px) and (min-height: 700px){
-    #TFMLogo {
+    .TFMLogo {
         height: 60px;
         transition: height .25s ease-in;
     }
-    #TFMlogo_heading {
+    .TFMlogo_heading {
         margin-top: 5vh;
     }
     .chattext{
@@ -1374,11 +1463,11 @@ MEDIA QUERIES
     /* .chattext{
         top: 74vh;
     } */
-    #main_heading{
+    .main_heading{
         transition: margin-top .25s ease-in; 
         padding-top: 25vh;
     }
-    #TFMlogo_heading {
+    .TFMlogo_heading {
         margin-top: 5vh;
     }
     #heading_bottom p {
@@ -1397,7 +1486,7 @@ MEDIA QUERIES
 
 
 @media screen and (max-width: 700px) and (max-height: 700px){
-    #main_heading h1{
+    .main_heading h1{
         font-size: 3em;
         transition: font-size .25s ease-in;
         top: 21vh;
