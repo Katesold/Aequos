@@ -242,9 +242,6 @@ section{
     background: white;
     height: 100%;
     background-image: none;
-    /* background-image: url("../images/Man.png"); */
-    
-    /* height: 1000px; */
     font-size: 0.8em;
     transition: font-size .20s ease-in;
     display: flex;
@@ -872,6 +869,18 @@ SD-WAN PAGE
     overflow: hidden;
     position: relative;
 }
+#SDwanMain {
+    background: #028fcc;
+    text-align: center;
+    padding: 130px 0 70px;
+    margin-top: -74px;
+}
+.sdImg{
+    width: 87%;
+}
+.sdImgLarge{
+    display: none;
+}
 
 
 
@@ -1100,13 +1109,6 @@ MEDIA QUERIES
     }
     #overviewCont{
         font-size: 1.2em;
-        /* display: flex; */
-        /* background: url("../images/Girl.png");
-        background-repeat: no-repeat;
-        background-position: -123px 66px;
-        background-size: 778px;
-        transition: background-size .25s ease-in; */
-        /* background-color: #00A0E5; */
     }
     .partner{
         display: flex;
@@ -1124,12 +1126,9 @@ MEDIA QUERIES
         padding-top: 30px;
         width: 700px;
         align-self: center;
-        /* text-align: left;
-        padding: 120px 0 0 40px;
-        width: 272px; */
+
     }
     .reasonsHome{
-        /* margin: 120px 60px 50px 0; */
         text-align: left;
         padding-right: 50px;
         margin-left: 40%;
@@ -1172,8 +1171,6 @@ MEDIA QUERIES
         padding-bottom: 30px;
     }
     .contactBtn{
-        /* height: 60px;
-        width: 190px; */
         font-size: 19px;
         transition: font-size .25s ease-in;
     }
@@ -1224,6 +1221,16 @@ MEDIA QUERIES
     }
     .servicesMainListed ul {
         min-width: 220px;
+    }
+    /*
+    SD-WAN PAGE
+    */
+    .sdImg{
+        display: none;
+    }
+    .sdImgLarge{
+        display: inline-block;
+        width: 90%;
     }
 
 
