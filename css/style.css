@@ -161,7 +161,7 @@ section{
 .main_heading h2{
     align-items: center;
     display: flex;
-    color: #009de0;
+    color: #028fcc;
     font-size: 2em;
     letter-spacing: 16px;
     padding-bottom: 10px;
@@ -235,8 +235,8 @@ section{
     width: 100%;
     height: 75px;
 }
-.header-link:hover{
-    color: #009de0;
+.header-link:hover, .header-link:active{
+    color: #028fcc;
 }
 #services_section {
     background: white;
@@ -252,11 +252,11 @@ section{
 }
 
 #services_section h2{
-    color: #009de0;
+    color: #028fcc;
     font-weight: lighter;
     font-size: 3em;
     margin-left: 20px;
-    padding-top: 70px;
+    padding-top: 80px;
     transition: font-size .25s ease-in;
 }
 #services_section h3 h4{
@@ -282,7 +282,7 @@ section{
     font-size: 2em;
     text-align: left;
     font-weight: lighter;
-    color: #009de0;
+    color: #028fcc;
 }
 #model{
     font-size: 1.8em;
@@ -328,7 +328,7 @@ section{
 .discoverServices{
     font-size: 1.2em;
     text-decoration: none;
-    color: #009de0;
+    color: #028fcc;
     font-weight: normal;
 }
 
@@ -389,10 +389,10 @@ section{
 }
 #overview_section{
     height: 10%;
-    background-color: #009de0;
+    background-color: #028fcc;
 }
 #overviewCont{
-    background-color: rgba(0, 160, 229, 0.75);
+    background-color: #028fccbe;
     height: 100%;
 }
 #overview_section h2{
@@ -591,17 +591,23 @@ hr{
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 8px;
-    height: 53px;
-    width: 140px;
+    /* height: 53px;
+    width: 140px; */
     cursor: pointer;
+    /* border-style: none; */
+    height: 65px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
-.contactBtn:hover{
-    background-color: #E6E6E6;
-    color: white;
+
+.contactBtn a:hover, .contactBtn a:active{
+    /* background-color: #E6E6E6; */
+    color: #028fcc;
+    transition: font-size .25s ease;
 }
 .contactBtn a{
     text-decoration: none;
     color: black;
+    transition: font-size .25s ease;
 }
 
 
@@ -611,6 +617,10 @@ hr{
 .social img{
     /* padding: 20px; */
     padding: 10px;
+}
+.social img:hover, .social img:active{
+    /* box-shadow: 5px 10px 18px #adadad50; */
+    box-shadow: 0 1px #adadad;
 }
 .social h3{
     padding-left: 10px;
@@ -667,17 +677,11 @@ footer{
     vertical-align: middle;
     padding: 5px;
 }
-.leftArrow{
-    height: 30px;
-}
-.rightArrow{
-    height: 30px;
-}
 .navReasons{
     text-align: center;
     display: block;
 }
-.toRight, .toLeft{
+.toRight, .toLeft, .toRightSector, .toLeftSector{
     background: none;
     border: none;
 }
@@ -687,8 +691,8 @@ footer{
 .footerCont a{
     cursor: pointer;
 }
-.footerCont a:hover{
-    color: #009de0;
+.footerCont a:hover, .footerCont a:active{
+    color: #028fcc;
 }
 .cookie-law {
     font-weight: lighter;
@@ -719,8 +723,8 @@ footer{
     font-weight: normal;
     background-color: #f2f2f2;
 }
-.cookieBtn:hover, .cookie:hover{
-    color: #009de0;
+.cookieBtn:hover, .cookieBtn:active,  .cookie:hover, .cookie:active{
+    color: #028fcc;
 }
 .cookie{
     text-decoration: none;
@@ -739,6 +743,7 @@ footer{
 
 
 
+
 /*
 
 SERVICES PAGE
@@ -748,7 +753,7 @@ SERVICES PAGE
 #servicesHome_section{
     height: 100%;
     min-height: 100vh;
-    background-color: #009de0;
+    background-color: #028fcc;
     overflow: hidden;
     position: relative;
 }
@@ -763,9 +768,12 @@ SERVICES PAGE
     padding: 70px 0 0;
     font-weight: lighter;
     background-color: #f2f2f2;
+    padding-top: 100px;
+    margin-top: -60px;
 }
 .servicesMainListed{
     padding: 20px;
+    align-items: center;
 }
 .servicesMainListed ul{
     list-style: disc;
@@ -776,6 +784,9 @@ SERVICES PAGE
     padding: 10px 0;
     font-size: 1.5em;
 }
+.servicesMainListed ul li{
+    padding: 5px 0;
+}
 #silver{
     background-color: #E6E6E6;
 }
@@ -785,6 +796,7 @@ SERVICES PAGE
 #gold{
     background-color: #CCCCCC;
     padding-bottom: 30px;
+    align-items: baseline;
 }
 #gold h2{
     color: #AD7418;
@@ -797,7 +809,7 @@ SERVICES PAGE
     font-weight: lighter;
     height: 100%;
     padding-bottom: 20px;
-    background-color: #009de0;
+    background-color: #028fcc;
     overflow: hidden;
 }
 #servicesSectors{
@@ -812,9 +824,54 @@ SERVICES PAGE
     font-size: 1.2em;
     padding: 0 20px 20px;
 }
+.sectorsNavi{
+    height: 15px;
+    vertical-align: middle;
+    padding: 5px;
+}
+.leftArrow{
+    height: 30px;
+}
+.rightArrow{
+    height: 30px;
+}
+.sector h3{
+    color: #028fcc;
+}
+.sector{
+    padding-bottom: 0;
+}
+.sector a {
+    color: white;
+    font-size: 0.9em;
+}
+.sector p {
+    max-width: 75vw;
+}
+.serviceNetwork h2{
+    color: white;
+}
+.networkDescr a{
+    color: #FFF;
+    font-size: 1em;
+}
 
 
+/*
 
+SD-WAN PAGE
+
+*/
+.sdMain h3{
+    font-size: 1.5em;
+}
+#SDhome_section{
+    height: 100%;
+    min-height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
 
 
 
@@ -880,12 +937,13 @@ MEDIA QUERIES
     }
     .reasonsHome a{
         padding-top: 30px;
+        font-weight: lighter;
     }
     .reasonsHome p{
         text-align: justify;
     }
     .reasonsHome h3{
-        /* font-weight: lighter; */
+        font-weight: lighter;
         width: 100%;
     }
     .reasonsEnd {
@@ -914,9 +972,6 @@ MEDIA QUERIES
     .footerCont h3 {
         padding: 0 0 15px 0;
     }
-    /* .reasonScroll{
-        position: static;
-    } */
     .navReasons {
         display: none;
     }
@@ -937,6 +992,31 @@ MEDIA QUERIES
     .upside{
         top: 72px;
         left: 0;
+    }
+    .services h1{
+        font-size: 4.2em;
+    }
+    /*
+    SERVICES PAGE
+    */
+    #sectorsCont h2{
+        font-size: 1.5em;
+    }
+    #sectorsCont{
+        padding: 120px 20px 70px 20px;
+    }
+    .servicesMainListed {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+    .serviceContainer{
+        max-width: 380px;
+        padding-right: 20px;
+        font-size: 1.2em;
+    }
+    .shapeServiceHome{
+        top: 15%;
     }
 } 
 
@@ -1016,7 +1096,7 @@ MEDIA QUERIES
         background-position: -106px 439px;
         background-size: 541px;
         transition: background-size .25s ease-in;
-        background-color: #009de0;
+        background-color: #028fcc;
     }
     #overviewCont{
         font-size: 1.2em;
@@ -1092,9 +1172,10 @@ MEDIA QUERIES
         padding-bottom: 30px;
     }
     .contactBtn{
-        height: 60px;
-        width: 190px;
+        /* height: 60px;
+        width: 190px; */
         font-size: 19px;
+        transition: font-size .25s ease-in;
     }
     .servicesList{
         flex-wrap: nowrap;
@@ -1103,6 +1184,9 @@ MEDIA QUERIES
     }
     #clients_section h2 {
         font-size: 2.5em;
+    }
+    .reasonsHome a{
+        text-align: left;
     }
 
     /*
@@ -1114,6 +1198,34 @@ MEDIA QUERIES
     .services h3{
         font-size: 2em;
     }
+    #sectorsCont h2 {
+        font-size: 3em;
+        max-width: 300px;
+    }
+    #sectorsCont{
+        display: flex;
+        justify-content: center;
+    }
+    .sector{
+        margin: 0;
+        font-size: 1.2em;
+    }
+    .sector a{
+        text-align: left;
+        font-size: 0.8em;
+    }
+    .sector p{
+        text-align: left;
+    }
+    .serviceNetwork h2{
+        text-align: left; 
+        font-size: 2.5em;
+        padding: 120px 50px 0;
+    }
+    .servicesMainListed ul {
+        min-width: 220px;
+    }
+
 
 
 }
@@ -1326,6 +1438,35 @@ MEDIA QUERIES
     .cookie-law p {
         font-size: 1.1em;
     }
+    /*
+    SERVICES PAGE
+    */
+
+    #sectorsCont h2 {
+        font-size: 3.5em;
+        max-width: 400px;
+    }
+    .sector a{
+        color: white;
+        font-size: 0.9em;
+    }
+    .serviceNetwork{
+        display: flex;
+        justify-content: center;
+    }
+    .serviceNetwork h2{
+        margin: 0;
+        padding: 120px 0 0 70px;
+        font-size: 3.1em;
+    }
+    .networkDescr{
+        margin: 0;
+        padding: 120px 50px 20px 0;
+    }
+    .serviceContainer {
+        max-width: 500px;
+        font-size: 1.3em;
+    }
 }
 
 @media screen and (min-width: 1130px){
@@ -1430,6 +1571,26 @@ MEDIA QUERIES
     }
     #clients_section h2 {
         font-size: 2.8em;
+    }
+    /*
+    SERVICES PAGE
+    */
+    .sector{
+        margin: 0;
+        font-size: 1.3em;
+    }
+    .serviceNetwork h2{
+        margin: 0;
+        padding-right: 20px;
+    }
+    .networkDescr{
+        margin: 0;
+    }
+    .serviceNetwork{
+        font-size: 1.2em;
+    }
+    .shapeServiceHome{
+        top: 10%;
     }
     
 }
