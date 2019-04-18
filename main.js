@@ -41,7 +41,9 @@ function hideMe() {
   chattext.style.display = "None";
 }
 
-
+/*
+NAVIGATION DISPLAY TOGGLE MOBILE AND DESKTOP
+*/
 function navListen (){
   nav[0].style.display = "None";
   navBlack.style.display = "None";
@@ -49,8 +51,9 @@ function navListen (){
 }
 
 var servicesBtn = document.getElementsByClassName('header-link')[1];
-
-servicesBtn.addEventListener('click', navListen);
+var sdWanBtn = document.getElementsByClassName('header-link')[2];
+var aboutBtn = document.getElementsByClassName('header-link')[3];
+var newsBtn = document.getElementsByClassName('header-link')[4];
 
 
 var home = document.querySelector('.selected');
@@ -58,22 +61,34 @@ var mql = window.matchMedia('(min-width: 960px)');
 if ($( window ).width() < 960){
   home.addEventListener('click', navListen);
   servicesBtn.addEventListener('click', navListen);
+  sdWanBtn.addEventListener('click', navListen);
+  aboutBtn.addEventListener('click', navListen);
+  newsBtn.addEventListener('click', navListen);
 } else{
   home.removeEventListener('click', navListen);
   servicesBtn.removeEventListener('click', navListen);
+  sdWanBtn.removeEventListener('click', navListen);
+  aboutBtn.removeEventListener('click', navListen);
+  newsBtn.removeEventListener('click', navListen);
 }
-// home.addEventListener('click', navListen);
+
 window.addEventListener('resize', function(){
   if(window.matchMedia('(min-width: 960px)').matches){
     nav[0].style.display = "flex";
     navBg.style.height = "0";
     home.removeEventListener('click', navListen);
     servicesBtn.removeEventListener('click', navListen);
+    sdWanBtn.removeEventListener('click', navListen);
+    aboutBtn.removeEventListener('click', navListen);
+    newsBtn.removeEventListener('click', navListen);
   } else{
     nav[0].style.display = "None";
     home.addEventListener('click', navListen);
     servicesBtn.addEventListener('click', navListen);
     navBg.style.height = "75px";
+    sdWanBtn.addEventListener('click', navListen);
+    aboutBtn.addEventListener('click', navListen);
+    newsBtn.addEventListener('click', navListen);
   }
 });
 

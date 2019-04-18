@@ -873,7 +873,7 @@ SD-WAN PAGE
     background: #028fcc;
     text-align: center;
     padding: 130px 0 70px;
-    margin-top: -74px;
+    margin-top: -63px;
 }
 .sdImg{
     width: 87%;
@@ -881,6 +881,115 @@ SD-WAN PAGE
 .sdImgLarge{
     display: none;
 }
+.SDeasy{
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+}
+.SDeasy h2{
+    font-weight: lighter;
+    padding: 30px;
+    color: #028fcc;
+    font-size: 1.1em;
+}
+.sdWanMainsection{
+    color: black;
+    font-weight: lighter;
+    height: 100%;
+    padding-bottom: 20px;
+    background-color: #028fcc;
+    overflow: hidden;
+}
+.mainSDDescr h2{
+    color: #FFF;
+    max-width: 240px;
+    font-size: 2.5em;
+}
+.mainSDDescr h4{
+    padding-bottom: 20px;
+}
+.mainSDDescr ol li{
+    padding-bottom: 15px;
+}
+#shortCompareTech th{
+    text-align: left;
+}
+#shortCompareTech tr{
+    padding: 5px 0;
+}
+#shortCompareTech th, td{
+    padding: 10px;
+}
+#shortCompareTech td{
+    padding-left: 20px;
+    vertical-align: middle;
+}
+#shortCompareTech div{
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+}
+.thSDWan{
+    color: #028fcc;
+}
+.thSDWan span{
+    color: black;
+}
+.fa-times, .fa-check{
+    -webkit-text-stroke: 2px #000;
+    -webkit-text-fill-color: transparent;
+    top: 0;
+    font-size: 1.3em;
+}
+.fa-times{
+    padding-left: 2px;
+}
+table{
+    max-width: 1000px;
+}
+/*
+ABOUT US PAGE
+*/
+
+.aboutMainH h2{
+    color: #FFF;
+}
+.aboutMainH h1 {
+    font-size: 3.3em;
+    padding-top: 10px;
+}
+#aboutMainDescription{
+    color: black;
+    font-weight: lighter;
+    height: 100%;
+    padding-bottom: 20px;
+    background-color: #028fcc;
+    overflow: hidden;
+}
+.aboutIntro a{
+    color: black;
+}
+.aboutIntro h2{
+    text-align: left;
+}
+#aboutUsVideo{
+    margin-top: -80px;
+    padding-top: 80px;
+}
+#aboutUsIconsSection{
+    background-color: black;
+    color: #FFF;
+    padding: 80px 0 50px 0;
+}
+.aboutUsIcons{
+    padding: 0 20px 30px 10%;
+}
+.aboutUsIcons img{
+    height: 60px;
+    padding-bottom: 10px;
+}
+
+
 
 
 
@@ -1026,6 +1135,17 @@ MEDIA QUERIES
     }
     .shapeServiceHome{
         top: 15%;
+    }
+    /*
+    SD-WAN PAGE
+    */
+    .mainSDDescr h2 {
+        max-width: 100%;
+        font-size: 3em;
+    }
+    .SDeasy h2 {
+        font-size: 1.5em;
+        line-height: 1.3em;
     }
 } 
 
@@ -1230,9 +1350,58 @@ MEDIA QUERIES
     }
     .sdImgLarge{
         display: inline-block;
-        width: 90%;
+        width: 85%;
     }
-
+    .mainSDDescr{
+        display: flex;
+        justify-content: center;
+    }
+    .mainSDDescr h2{
+        min-width: 230px;
+    }
+    .mainSDDescr div{
+        padding-top: 100px;
+    }
+    .mainSDDescr h3{
+        text-align: left;
+        font-weight: normal;
+        font-size: 1em;
+        padding-top: 0;
+    }
+    #shortCompareTech{
+        font-size: 1.1em;
+    }
+    .thSDWan{
+        font-size: 1.5em;
+    }
+    .thSDWan span{
+        font-size: 0.6em;
+    }
+    /*
+    ABOUT US PAGE
+    */
+    .aboutIntro h2{
+        text-align: left;
+        padding-left: 50px;
+    }
+    .aboutIntro p{
+        font-size: 1.3em;
+    }
+    .aboutUsIcons img {
+        height: 80px;
+        padding-bottom: 20px;
+    }
+    .aboutUsIcons {
+        padding: 0 10% 50px 20%;
+        font-size: 1.5em;
+    }
+    .aboutUsIcons p{
+        font-size: 0.9em;
+        font-weight: lighter;
+    }
+    #aboutUsIconsSection {
+        padding-top: 120px;
+    }
 
 
 }
@@ -1474,6 +1643,58 @@ MEDIA QUERIES
         max-width: 500px;
         font-size: 1.3em;
     }
+    /*
+    SD-WAN PAGE
+    */
+    .mainSDDescr h2 {
+        font-size: 4em;
+        margin: 20px;
+        text-align: left;
+        max-width: 370px;
+    }
+    .mainSDDescr div {
+        margin: 0;
+        padding-top: 140px;
+    }
+    .SDeasy h2 {
+        font-size: 2.5em;
+        padding: 50px 80px;
+    }
+    .mainSDDescr div {
+        font-size: 1.2em;
+    }
+    .sdHomeDescr h3 {
+        font-size: 1em;
+    }
+    /*
+    ABOUT US PAGE
+    */
+    .aboutIntro h2{
+        margin: 0;
+        max-width: 100%;
+        font-size: 2.5em;
+    }
+    .aboutIntro div{
+        margin: 20px 50px;
+        padding: 0;
+    }
+    #aboutMainDescription{
+        background: url(../images/Girl.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 541px;
+        transition: background-size .25s ease-in;
+        background-color: #028fcc;
+        transform: scaleX(-1);
+    }
+    .aboutIntro {
+        background-color: #028fccbe;
+        height: 100%;
+        padding-bottom: 50px;
+        margin-bottom: -20px;
+        transform: scaleX(-1);
+    }
+
 }
 
 @media screen and (min-width: 1130px){
@@ -1509,32 +1730,11 @@ MEDIA QUERIES
         margin-left: 0;
         margin-bottom: 100px;
     }
-    .subSection h3{
-        /* font-size: 2em; */
-        /* padding-left: 33%; */
-        /* width: 600px; */
-        /* text-align: center; */
-        /* margin-left: auto; */
-        /* margin-right: auto;
-        margin-left: 45vw;
-        padding: 10px 0 10px 1%;
-        text-align: center; */
-    }
-    /* .services_main{
-        display: flex;
-        padding-left: 46vw;
-        padding-top: 50px;
-        justify-content: space-between;
-        width: 600px;
-        font-size: 1.2em;
-        margin: 0;
-    } */
     .serv_sections{
         padding: 0 10px 29px 20px;
         min-width: 171px;
         font-size: 0.8em;
     }
-
     .serv_sections h4{
         font-size: 1em;
     }
@@ -1598,6 +1798,40 @@ MEDIA QUERIES
     }
     .shapeServiceHome{
         top: 10%;
+    }
+    /*
+    SD-WAN PAGE
+    */
+    .mainSDDescr h2 {
+        margin: 20px;
+        font-size: 5em;
+        padding-right: 20px;
+    }
+    .mainSDDescr ol li {
+        padding-bottom: 20px;
+        width: 600px;
+    }
+    .mainSDDescr p{
+        padding-bottom: 30px;
+        width: 600px;
+    }
+    .mainSDDescr h3{
+        width: 600px;
+    }
+    .thSDWan{
+        font-size: 2em;
+    }
+    .thSDWan span{
+        font-size: 0.6em;
+    }
+    /* 
+    ABOUT US PAGE 
+    */
+    .aboutIntro h2 {
+        margin: 0;
+    }
+    .aboutIntro {
+        padding-left: 10%;
     }
     
 }
