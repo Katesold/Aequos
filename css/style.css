@@ -153,7 +153,7 @@ section{
 .main_heading h2{
     align-items: center;
     display: flex;
-    color: #028fcc;
+    color: #037eb3;
     font-size: 2em;
     letter-spacing: 16px;
     padding-bottom: 10px;
@@ -228,7 +228,7 @@ section{
     height: 75px;
 }
 .header-link:hover, .header-link:active{
-    color: #028fcc;
+    color: #037eb3;
 }
 #services_section {
     background: white;
@@ -241,7 +241,7 @@ section{
 }
 
 #services_section h2{
-    color: #028fcc;
+    color: #037eb3;
     font-weight: lighter;
     font-size: 3em;
     margin-left: 20px;
@@ -271,7 +271,7 @@ section{
     font-size: 2em;
     text-align: left;
     font-weight: lighter;
-    color: #028fcc;
+    color: #037eb3;
 }
 #model{
     font-size: 1.8em;
@@ -317,7 +317,7 @@ section{
 .discoverServices{
     font-size: 1.2em;
     text-decoration: none;
-    color: #028fcc;
+    color: #037eb3;
     font-weight: normal;
 }
 
@@ -380,10 +380,10 @@ section{
 }
 #overview_section{
     height: 10%;
-    background-color: #028fcc;
+    background-color: #037eb3;
 }
 #overviewCont{
-    background-color: #028fccbe;
+    background-color: #037eb3ba;
     height: 100%;
 }
 #overview_section h2{
@@ -422,9 +422,7 @@ section{
     text-align: center;
     padding-top: 50px;
 }
-.reasonsHome a:hover{
-    color: black;
-}
+
 .reasonsHome .fas{
     top: 1px;
 }
@@ -578,7 +576,7 @@ hr{
     color: black;
 }
 .cInfoSection a:hover{
-    color: #028fcc;
+    color: #037eb3;
 }
 .infoContact{
     width: 100%;
@@ -599,7 +597,7 @@ hr{
 
 .contactBtn a:hover, .contactBtn a:active{
     /* background-color: #E6E6E6; */
-    color: #028fcc;
+    color: #037eb3;
     transition: font-size .25s ease;
 }
 .contactBtn a{
@@ -689,7 +687,7 @@ footer{
     cursor: pointer;
 }
 .footerCont a:hover, .footerCont a:active{
-    color: #028fcc;
+    color: #037eb3;
 }
 .cookie-law {
     font-weight: lighter;
@@ -721,7 +719,7 @@ footer{
     background-color: #f2f2f2;
 }
 .cookieBtn:hover, .cookieBtn:active,  .cookie:hover, .cookie:active{
-    color: #028fcc;
+    color: #037eb3;
 }
 .cookie{
     text-decoration: none;
@@ -750,7 +748,7 @@ SERVICES PAGE
 #servicesHome_section{
     height: 100%;
     min-height: 100vh;
-    background-color: #028fcc;
+    background-color: #037eb3;
     overflow: hidden;
     position: relative;
 }
@@ -796,7 +794,7 @@ SERVICES PAGE
     align-items: baseline;
 }
 #gold h2{
-    color: #AD7418;
+    color: #986718;
 }
 #bronze h2{
     color: #BF6513;
@@ -806,7 +804,7 @@ SERVICES PAGE
     font-weight: lighter;
     height: 100%;
     padding-bottom: 20px;
-    background-color: #028fcc;
+    background-color: #037eb3;
     overflow: hidden;
 }
 #servicesSectors{
@@ -833,7 +831,7 @@ SERVICES PAGE
     height: 30px;
 }
 .sector h3{
-    color: #028fcc;
+    color: #037eb3;
 }
 .sector{
     padding-bottom: 0;
@@ -849,7 +847,7 @@ SERVICES PAGE
     color: white;
 }
 .networkDescr a{
-    color: #FFF;
+    color: black;
     font-size: 1em;
 }
 
@@ -870,7 +868,7 @@ SD-WAN PAGE
     position: relative;
 }
 #SDwanMain {
-    background: #028fcc;
+    background: #037eb3;
     text-align: center;
     padding: 130px 0 70px;
     margin-top: -63px;
@@ -889,7 +887,7 @@ SD-WAN PAGE
 .SDeasy h2{
     font-weight: lighter;
     padding: 30px;
-    color: #028fcc;
+    color: #037eb3;
     font-size: 1.1em;
 }
 .sdWanMainsection{
@@ -897,7 +895,7 @@ SD-WAN PAGE
     font-weight: lighter;
     height: 100%;
     padding-bottom: 20px;
-    background-color: #028fcc;
+    background-color: #037eb3;
     overflow: hidden;
 }
 .mainSDDescr h2{
@@ -930,7 +928,7 @@ SD-WAN PAGE
     justify-content: center;
 }
 .thSDWan{
-    color: #028fcc;
+    color: #037eb3;
 }
 .thSDWan span{
     color: black;
@@ -980,7 +978,7 @@ ABOUT US PAGE
     font-weight: lighter;
     height: 100%;
     padding-bottom: 20px;
-    background-color: #028fcc;
+    background-color: #037eb3;
     overflow: hidden;
 }
 .aboutIntro a{
@@ -1102,7 +1100,7 @@ CONTACT PAGE
     padding-bottom: 30px;
 }
 #morefeatures{
-    background-color: #028fcc;
+    background-color: #037eb3;
 }
 #morefeatures h2{
     padding: 120px 20px 20px;
@@ -1110,7 +1108,7 @@ CONTACT PAGE
     text-align: center;
 }
 .webinarText h2{
-    color: #028fcc;
+    color: #037eb3;
     padding: 50px 30px 0;
 }
 .webinarContent{
@@ -1131,7 +1129,7 @@ CONTACT PAGE
     -webkit-text-stroke: 1px #fff;
 }
 .webinarSDWan{
-    background-color: #028fcc;
+    background-color: #037eb3;
 }
 .webinarContent p{
     padding-bottom: 30px;
@@ -1182,7 +1180,7 @@ TERMS OF USE PAGE
 */
 #termsSection{
     height: 100%;
-    background-color: #028fcc;
+    background-color: #037eb3;
     overflow: hidden;
     position: relative;
     padding-bottom: 50px;
@@ -1202,7 +1200,7 @@ TERMS OF USE PAGE
     padding: 10px 0;
 }
 .termsContent ol li a{
-    color: #028fcc;
+    color: #037eb3;
     text-decoration: none;
 }
 .termsHead h2{
@@ -1238,7 +1236,7 @@ POLICY PAGe
 }
 .policy a{
     text-decoration: none;
-    color: #028fcc;
+    color: #037eb3;
 }
 .contactPolicy p{
     padding: 10px 0;
@@ -1257,7 +1255,7 @@ POLICY PAGe
     padding-top: 30px;
 }
 .contactLinkFooter a{
-    color: #028fcc;
+    color: #037eb3;
     font-size: 1.3em;
     font-weight: normal;
 }
@@ -1527,7 +1525,7 @@ MEDIA QUERIES
         background-position: -106px 439px;
         background-size: 541px;
         transition: background-size .25s ease-in;
-        background-color: #028fcc;
+        background-color: #037eb3;
     }
     #overviewCont{
         font-size: 1.2em;
@@ -2021,11 +2019,11 @@ MEDIA QUERIES
         background-position: 0 0;
         background-size: 541px;
         transition: background-size .25s ease-in;
-        background-color: #028fcc;
+        background-color: #037eb3;
         transform: scaleX(-1);
     }
     .aboutIntro {
-        background-color: #028fccbe;
+        background-color: #037eb3ba;
         height: 100%;
         padding-bottom: 50px;
         margin-bottom: -20px;
