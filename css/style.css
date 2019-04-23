@@ -568,6 +568,13 @@ hr{
     font-weight: lighter;
     padding: 10px 0;
 }
+.cInfoSection a{
+    text-decoration: none;
+    color: black;
+}
+.cInfoSection a:hover{
+    color: #028fcc;
+}
 .infoContact{
     width: 100%;
     justify-content: center;
@@ -1162,6 +1169,81 @@ CONTACT PAGE
 .grid--support{
     padding-bottom: 50px;
 }
+/*
+TERMS OF USE PAGE
+*/
+#termsSection{
+    height: 100%;
+    background-color: #028fcc;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 50px;
+}
+.termsShape{
+    top: -5%;
+}
+.termsContent{
+    padding: 70px 30px;
+}
+.termsContent ol{
+    list-style-type: decimal-leading-zero;
+    font-weight: lighter;
+    padding: 20px;
+}
+.termsContent ol li{
+    padding: 10px 0;
+}
+.termsContent ol li a{
+    color: #028fcc;
+    text-decoration: none;
+}
+.termsHead h2{
+    color: #FFF;
+}
+.termsHead h1{
+    font-size: 2.2em;
+}
+
+/*
+POLICY PAGe
+*/
+
+.privacyContent h2{
+    padding-top: 70px;
+    padding-bottom: 10px;
+}
+.pContent{
+    padding: 20px;
+    font-weight: lighter;
+}
+.policy ol {
+    list-style-type: decimal-leading-zero;
+    padding: 10px 25px 0;
+}
+.policy ul{
+    list-style: disc;
+    margin-block-start: 0.5em;
+    padding-inline-start: 17px;
+}
+.policy li {
+    padding: 5px 0;
+}
+.policy a{
+    text-decoration: none;
+    color:#028fcc;
+}
+.contactPolicy p{
+    padding: 10px 0;
+}
+.contactPolicy{
+    padding-bottom: 50px;
+}
+.policy{
+    padding-bottom: 50px;
+}
+.policyContainerFirst, .policyContainerSecond{
+    padding: 0;
+}
 
 
 
@@ -1336,6 +1418,12 @@ MEDIA QUERIES
     .webinarText h2 {
         font-weight: lighter;
         font-size: 2.5em;
+    }
+    /*
+    TERMS PAGE
+    */
+    .termsHead h1 {
+        font-size: 4em;
     }
 } 
 
@@ -1619,7 +1707,25 @@ MEDIA QUERIES
     .grid--support{
         align-items: center;
     }
-
+    /*
+    TERMS PAGE
+    */
+    .termsContent {
+        padding: 70px 50px;
+    }
+    /*
+    PRIVACY PAGE
+    */
+    .pContent {
+        padding: 20px 60px;
+        font-size: 1.1em;
+    }
+    .privacyContent h2 {
+        padding-top: 120px;
+    }
+    .policy ul {
+        padding-inline-start: 26px;
+    }
 }
 @media screen and (min-width: 960px){
     .hamburger, .hamburgerBlack{
@@ -2063,6 +2169,21 @@ MEDIA QUERIES
     }
     .aboutIntro {
         padding-left: 10%;
+    }
+    /*
+    TERMS PAGe
+    */
+    .termsContent {
+        padding: 120px 150px;
+    }
+    /*
+    POLICY PAGE
+    */
+    .policy{
+        display: flex;
+    }
+    .policyContainerSecond{
+        padding-top: 120px;
     }
     
 }
