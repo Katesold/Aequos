@@ -54,6 +54,7 @@ var servicesBtn = document.getElementsByClassName('header-link')[1];
 var sdWanBtn = document.getElementsByClassName('header-link')[2];
 var aboutBtn = document.getElementsByClassName('header-link')[3];
 var newsBtn = document.getElementsByClassName('header-link')[4];
+var contactBtn = document.getElementsByClassName('header-link')[5];
 
 
 var home = document.querySelector('.selected');
@@ -64,12 +65,14 @@ if ($( window ).width() < 960){
   sdWanBtn.addEventListener('click', navListen);
   aboutBtn.addEventListener('click', navListen);
   newsBtn.addEventListener('click', navListen);
+  contactBtn.addEventListener('click', navListen);
 } else{
   home.removeEventListener('click', navListen);
   servicesBtn.removeEventListener('click', navListen);
   sdWanBtn.removeEventListener('click', navListen);
   aboutBtn.removeEventListener('click', navListen);
   newsBtn.removeEventListener('click', navListen);
+  contactBtn.removeEventListener('click', navListen);
 }
 
 window.addEventListener('resize', function(){
@@ -81,14 +84,16 @@ window.addEventListener('resize', function(){
     sdWanBtn.removeEventListener('click', navListen);
     aboutBtn.removeEventListener('click', navListen);
     newsBtn.removeEventListener('click', navListen);
+    contactBtn.removeEventListener('click', navListen);
   } else{
     nav[0].style.display = "None";
     home.addEventListener('click', navListen);
     servicesBtn.addEventListener('click', navListen);
-    navBg.style.height = "75px";
     sdWanBtn.addEventListener('click', navListen);
     aboutBtn.addEventListener('click', navListen);
     newsBtn.addEventListener('click', navListen);
+    contactBtn.addEventListener('click', navListen);
+    navBg.style.height = "75px";
   }
 });
 
@@ -109,7 +114,9 @@ function screenTest(e) {
 }
 // mql.addListener(screenTest);
 
-
+/*
+  touch scroll pan-x
+*/
 var left, right;
 if(document.querySelector(".toRight") != null){
   right = document.querySelector(".toRight");
@@ -281,16 +288,94 @@ function switchSectorsL(){
   }
 }
 
+/*
+SD-WAN PAGE FUNCTIONS
+*/
+
+var leftArr, rightArr;
+if(document.querySelector(".toRightArr") != null){
+  rightArr = document.querySelector(".toRightArr");
+  leftArr = document.querySelector(".toLeftArr");
+  rightArr.addEventListener('click', switchSDReasonsR);
+  leftArr.addEventListener('click', switchSDReasonsL);
+}
+
+var reasonsSD = document.getElementsByClassName("SDreasonScroll");
+var SDnavRs = document.getElementsByClassName("sectorsNavi");
+
+var k = 0;
+function switchSDReasonsR(){
+  if(k==0){
+    k += 1;
+  }
+  if(reasonsSD.length > k){
+    reasonsSD[k].style.order= "-1";
+    SDnavRs[k+1].src = "images/bluedot.png";
+    reasonsSD[k-1].style.order = "0";
+    SDnavRs[k].src = "images/whitedot.png";
+    k = k + 1;
+  } else{
+    reasonsSD[6].style.order = "0";
+    SDnavRs[1].src = "images/bluedot.png";
+    k = 0;
+    reasonsSD[0].style.order = "-1";
+    SDnavRs[7].src = "images/whitedot.png";
+  }
+}
+
+function switchSDReasonsL(){
+  k = k-1;
+  if (k < 0){
+    reasonsSD[6].style.order = "-1";
+    SDnavRs[7].src = "images/bluedot.png";
+    reasonsSD[0].style.order = "0";
+    SDnavRs[1].src = "images/whitedot.png";
+    k = 7;
+  } else if (k >= 0 && i < reasonsSD.length){
+    if(k-1 == -1){
+      reasonsSD[6].style.order = "-1";
+      SDnavRs[7].src = "images/bluedot.png";
+      reasonsSD[0].style.order = "0";
+      SDnavRs[1].src = "images/whitedot.png";
+      k = 7;
+    } else{
+      reasonsSD[k-1].style.order = "-1";
+      SDnavRs[k].src = "images/bluedot.png";
+      reasonsSD[k].style.order = "0";
+      SDnavRs[k+1].src = "images/whitedot.png";
+    }   
+  } else {
+    reasonsSD[k-1].style.order = "-1";
+    reasonsSD[0].style.order = "0";
+    reasonsSD[k].style.order = "0";
+  }
+}
+
+var SDtouchStartpt;
+for(var it = 0; it < reasonsSD.length; it++){
+  reasonsSD[it].addEventListener('touchstart', function(e){
+  SDtouchStartpt = e.touches[0].screenX;
+  console.log(e, SDtouchStartpt+" start");
+});
+
+reasonsSD[it].addEventListener('touchend', function(ev){
+  var touchEndpt = ev.changedTouches[0].screenX
+  console.log(ev, touchEndpt+" end");
+  if (touchEndpt < SDtouchStartpt){
+    if(document.querySelector(".toRightArr") != null){
+      switchSDReasonsR();
+    } 
+  } else if (touchEndpt > SDtouchStartpt){
+    if(document.querySelector(".toLeftArr") != null){
+      switchSDReasonsL();
+    }
+  }
+})
+}
 
 
 
-// var home = document.querySelector('.selected');
 
-// home.addEventListener('click', function(){
-//   nav[0].style.display = "None";
-//   navBlack.style.display = "None";
-//   navBg.style.height = "75px";
-// })
 
 
 

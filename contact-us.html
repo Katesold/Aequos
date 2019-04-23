@@ -11,12 +11,10 @@
 <!-- <script src="prefixfree.js"></script> -->
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/> -->
-<!-- <link rel="shortcut icon" 
+
+<link rel="shortcut icon" 
       type="image/x-icon" 
-			href="images/favicon.ico"> -->
-<link rel="shortcut icon" href="favicon.ico?v=<?php echo filemtime('favicon.ico') ?>" />
+			href="favicon.ico"> 
 <script type="application/ld+json">
 	{
 	  "@context": "http://schema.org",
@@ -109,7 +107,7 @@ ga('send', 'pageview'); -->
 					<li><a role="menuitem" tabindex="0" href="sd-wan.html#SDhome_section" class="header-link">SD-WAN</a></li><p class="nav_line">|</p>
 					<li><a role="menuitem" tabindex="0" href="about_us.html#servicesHome_section" class="header-link">ABOUT US</a></li><p class="nav_line">|</p>
 					<li><a role="menuitem" tabindex="0" href="news.html" class="header-link">NEWS</a></li><p class="nav_line">|</p>
-					<li><a role="menuitem" tabindex="0" href="contact-us.html" class="header-link">CONTACT</a></li>						
+					<li><a role="menuitem" tabindex="0" href="contact-us.html#contactHome_section" class="header-link">CONTACT</a></li>						
 				</ul>
 			</nav> 
 		</div>	
@@ -120,55 +118,60 @@ ga('send', 'pageview'); -->
 			</div>
 		</div>
 	</header>
-<div id="contact-us-page">
-	<!-- Section intro -->
-	<div id="header-contact">
-	<section class="section section--intro" id="intro">
-			<div class="section__content section__content--fluid-width section__content--intro">
-				<div class="intro" style="float:none; margin:0 auto;">
-				    <div class="intro__content">
-					<div class="intro__title"><span style="text-align:center;margin: 0 auto;display: table;"><h1>Contact Us</h1></span></div>
-					<h2 class="hide_head">Contact Us</h2>
-					
-					
-				    </div>	
-				</div>
+	<main class="flex-container" role="main">
+		<section id="contactHome_section">
+			<img class="shape shapeContact" src="images/shape.gif" alt="blue background abstract shape">
+			<div class="main_heading contactHead">
+				<h2>AEQUOS</h2>
+				<h1>CONTACT US</h1>
 			</div>
-						
-			<div class="down-scroll animated bounce">
-				<a href="#morefeatures">
-				<span> </span>
-				</a>
+			<div class="TFMlogo_heading contactTFMlogo">
+					<img alt="TFM Group Logo" class="TFMLogo" src="images/TFMlogo.png">
 			</div>
-	</section>
-</div>
-	
+			<div class="cookie-law">
+					<p>This website uses cookies to improve your experience. You can opt-out if you wish.</p>
+					<button onclick="accepted()" class="cookieBtn">ACCEPT</button>
+						<a class="cookie" href="privacy-policy.html" target="_blank">READ MORE <i class='fas fa-angle-right'></i></a>
+				</div> 
+			
+		</section>
+		<div class="chat">
+				<img alt="Lets chat bubble above chat icon" class="chattext" src="images/chattext.png">
+				<img alt="chat bubble to open chat window and start chatting with Aequos" class="chatbubble" onclick="openChat()" src="images/chatbubble.png">
+		</div>
+			<iframe title="Aequos chatbot" class="bot" src="https://snatchbot.me/webchat/?botID=42894&appID=3drApNnnYaVm7PfrtccS"></iframe>
+			<p aria-label="Close chat" role="button" class="close" onclick="closeChat()"> X</p>
+
 	
 	
 	<!-- Section features -->
-	<section class="section section--more-features contact-uspage" id="morefeatures">
-
-			<div class="section__content section__content--fluid-width">
-				<div class="section__description section__description--centered">
+	<section class="contact-uspage" id="morefeatures">
+			<h2>GET IN TOUCH</h2>
+			<div class="section__content">
+				<div class="section__description">
 					<div class="contactform">
 					
-					<form id="contactformsend" method="POST">
-						<div class="row-full"> 
-							<div class="cf-left">
-								<input class="nameform" id="nameform" type="text" name="your_name" value="" size="40"  placeholder="Name" type="text">
+					<form id="contactformsend" class="contactForm" method="POST">
+						<div class="row-full namePhoneCont"> 
+							<div class="cf-left form oneLine">
+								<label for="your_name">Name </label>
+								<input class="nameform" id="nameform" type="text" name="your_name" value="" size="40"  placeholder="Name">
 							</div>
-							<div class="cf-right"><input class="phoneform" id="your_phone" type="text" name="your_phone" value="" size="40"  placeholder="Phone" type="text">
+							<div class="cf-right form oneLine">
+									<label for="your_phone">Phone</label>
+								<input class="phoneform" id="your_phone" type="text" name="your_phone" value="" size="40"  placeholder="Phone">
 							</div>
 						</div>
 						
-						<div class="row-full">
+						<div class="row-full form">
+							<label for="your_email">Email </label>
 							<input class="nameform" id="your_email" type="text" name="your_email" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Email address" type="email">
 						</div>
-						<div class="row-full">
+						<div class="row-full form">
+								<label for="your_message">Write your message </label>
 							<textarea class="textareaform" id="textareaform" name="your_message" cols="40" rows="10" aria-invalid="tru" placeholder="Your message"></textarea>
 						</div>
-						</br>
-						<div class="grid--support">
+						<div class="grid--support form submitBtn">
 							<input class="grid__more" type="submit" value="Send">
 							</div>
 						<div id="msg_form"></div>
@@ -176,42 +179,108 @@ ga('send', 'pageview'); -->
 					</div>
 				</div>
 				</div>
-				
+	</section>
 
-				
-				
-				<div class="grid grid--5col grid--more-features">
-				
-					<div class="grid__item">
-						<div class="grid__icon"><img src="images/icons/location.png" alt="Advanced Technology Innovation Centre" title="Advanced Technology Innovation Centre"/></div>
-						<h3 class="grid__title">Advanced Technology Innovation Centre,<br> Loughborough University Science & Enterprise Park,<br> 5 Oakwood Drive, Loughborough, Leicestershire,<br>LE11 3QF</h3>
-                                                <h3 class="grid__title">Central Working Slough,<br> The Future Works,<br> 2 Brunel Way, Slough, Berkshire,<br>SL1 1FQ</h3>
-					</div>
-					<div class="grid__item">
-						<div class="grid__icon"><img src="images/icons/contact.png" alt="General Enquiries" title="General Enquiries"/></div>
-						<h3 class="grid__title">General Enquiries<br>
-<a href="tel:0345 872 6060">0345 872 6060</a><br><br>Email<br><a href="mailto:info@aequos.co.uk">info@aequos.co.uk</a></h3>
-					</div>
-					<div class="grid__item">
-						<div class="grid__icon"><img src="images/icons/email.png" alt="Technical Support" title="Technical Support"/></div>
-						<h3 class="grid__title">
 
-Technical Support<br>
-<a href="mailto:servicedesk@aequos.co.uk">servicedesk@aequos.co.uk</a><br>
-<br>
-Sales<br>
-<a href="mailto:sales@aequos.co.uk">sales@aequos.co.uk</a></h3>
+	<section class="webinarText">
+		<h2>REGISTER FOR OUR NEXT WEBINAR</h2>
+		<div class="webinarContent">
+			<h3>RIGHT-SIZING YOUR WAN</h3>
+			<p>Experience the future of networking and how to modernise costly and complex legacy WANs that weren’t originally designed for hybrid, cloud and digital user architectures.</p>
+			<div class="webinarSDWan webinar">
+				<h4>WITH SD-WAN YOU CAN</h4>
+				<ul>
+					<li><i class="fa fa-check" title="SD-WAN yes"></i>Right size your WAN</li>
+					<li><i class="fa fa-check" title="SD-WAN yes"></i>Create the right technical environment for your cloud and digital strategy</li>
+					<li><i class="fa fa-check" title="SD-WAN yes"></i>Reduce cost and improve performance</li>
+					<li><i class="fa fa-check" title="SD-WAN yes"></i>Gain visibility and control of your WAN traffic</li>
+					<li><i class="fa fa-check" title="SD-WAN yes"></i>Start your Aequos experience today and let us redefine you organisational WAN strategy.</li>
+				</ul>
+			</div>
+			<div class="webinarAttend webinar">
+				<h3>WHY ATTEND?</h3>
+				<h4>DURING THIS 1 HOUR SESSION</h4>
+				<p>We will provide an SD-WAN overview of your typical legacy WAN infrastructure such as topologies and current angles</p>
+				<p>You will understand current industry trends and business drivers aligned to IT strategy and implications that this has on the WAN</p>
+				<p>Provide an overview of what is possible</p>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="contact-uspage contact_webinar">
+
+			<div class="section__content section__content--fluid-width">
+				<div class="section__description section__description--centered">
+					<div class="contactForm">
+					<h2>REGISTER</h2>
+					
+					<form id="contact_register" method="POST">
+						<div class="row-full namePhoneCont"> 
+							<div class="cf-left form oneLine">
+								<label for="your_first_name">First Name </label>
+								<input class="nameform form" id="your_first_name" type="text" name="your_first_name" value="" size="40"  placeholder="First Name" >
+							</div>
+							<div class="cf-right form oneLine">
+								<label for="your_last_name">Last Name </label>
+								<input class="nameform" id="your_last_name" type="text" name="your_last_name" value="" size="40"  placeholder="Last Name" >
+							</div>
+						</div>
+						
+						<div class="row-full namePhoneCont"> 
+							<div class="cf-left form oneLine">
+								<label for="your_email_webinar">Email </label>
+								<input class="nameform" id="your_email_webinar"  name="your_email_webinar" value="" size="40"  placeholder="Email" type="email">
+							</div>
+							<div class="cf-right form oneLine">
+								<label for="your_company">Company</label>
+								<input class="nameform" id="your_company" type="text" name="your_company" value="" size="40"  placeholder="Company Name" >
+							</div>
+						</div>
+						
+						<div class="row-full namePhoneCont"> 
+							<div class="cf-left form oneLine">
+								<label for="your_company_size">Company size</label>
+								<input class="nameform" id="your_company_size" type="text" name="your_company_size" value="" size="40"  placeholder="Company Size" >
+							</div>
+							<div class="cf-right form oneLine">
+								<label for="your_business">Business Type</label>
+								<input class="nameform" id="your_business" type="text" name="your_business" value="" size="40"  placeholder="Business Type" >
+							</div>
+						</div>
+						<div class="row-full namePhoneCont"> 
+							<div class="cf-left form oneLine">
+								<label for="your_company_website">Company Website</label>
+								<input class="nameform" id="your_company_website" type="text" name="your_company_website" value="" size="40"  placeholder="Company Website" >
+							</div>
+							<div class="cf-right form oneLine">
+								<label for="your_company">Phone</label>
+								<input class="phoneform" id="your_phone_webinar" type="text" name="your_phone_webinar" value="" size="40"  placeholder="Phone">
+							</div>
+						</div>
+						
+						<div class="row-full form">
+							<select class="select_values" id="your_demo" name="your_demo" required >
+								<option disabled selected hidden>Would you like a demo of the AEQUOS SD-WAN platform?</option>
+								<option value="Yes" >Yes</option>
+								<option value="No" >No</option>
+							</select>
+						</div>
+						<div class="grid--support form" id="registerBtn">
+							<input class="grid__more" type="submit" value="Register">
+							</div>
+						<div id="msg_form_webinar"></div>
+					</form>
 					</div>
 				</div>
-				
+				</div>
 	</section>
-	
-	
+	</main>
 	<footer>
 			<div class="footerCont">
 				<div class="footerAequos">
 					<h2>AEQUOS</h2>
-					<h4 class="copyright">Copyright © 2018 AEQUOS.<br>
+					<h4 class="copyright">Copyright © 2019 AEQUOS.<br>
 					All Rights Reserved. A TFM Group Company</h4>
 					<p>Terms of Use</p>
 					<p>Privacy Policy</p>
@@ -222,8 +291,8 @@ Sales<br>
 					<a href="services.html#servicesHome_section">Services</a>
 					<a href="sd-wan.html#SDhome_section">SD-WAN</a>
 					<a href="about_us.html#servicesHome_section">About us</a>
-					<a>News</a>
-					<a href="contact-us.html">Contact</a>
+					<a href="news.html">News</a>
+					<a href="contact-us.html#contactHome_section">Contact</a>
 				</div>
 				<div class="footerTFM">
 						<h3>TFM GROUP</h3>
@@ -247,8 +316,8 @@ Sales<br>
 <script src="js/swiper.min.js"></script>
 <script src="js/swiper.custom.js"></script>
 <script src="js/menu.js"></script> -->
-<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
-
+<!-- <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script> -->
+<!-- <script src="jquery.custom.js"></script> -->
 <script type="text/javascript">
 
 
@@ -289,6 +358,51 @@ jQuery().ready(function() {
 		});
 		});
 </script>
+
+<script type="text/javascript">
+
+	jQuery().ready(function() {
+	
+			// validate signup form on keyup and submit
+			jQuery("#contact_register").validate({
+				rules: {
+					your_first_name     : "required",
+					your_last_name     : "required",
+					your_company     : "required",
+					your_company_size     : "required",
+					your_business     : "required",
+					your_company_website     : "required",
+					your_phone_webinar   : {required: true, number: true },
+					your_email_webinar: {
+						required: true,
+						email: true
+					}
+	
+				},
+				messages: {				 
+					your_email_webinar: "E-mail field is invalid.",
+					your_phone_webinar: "Phone field is invalid."
+				},
+				submitHandler: function(form) {
+				$.ajax({
+									type: 'POST',
+									url: 'http://aequos.co.uk/send-webinar.php',
+									data: $('#contact_register').serialize(),
+									 success: function(data) {
+											 var mydata= $.parseJSON(data);
+											// alert(mydata.raspuns);
+												 $( "#msg_form_webinar" ).show();
+												$( "#msg_form_webinar" ).html(mydata.raspuns);
+													setTimeout(function(){$("#msg_form_webinar").hide();$( "#msg_form_webinar" ).html('');},6000);
+								$('#contact_register')[0].reset();
+									}
+							});		
+					return false;			
+				}
+			});
+			});
+	</script>
+	
 
 
 </body>

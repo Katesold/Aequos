@@ -6,16 +6,8 @@ html {
     height: 100%;
     min-height: 100vh;
     font-family: 'Josefin Sans', sans-serif;
-    /* scroll-behavior: smooth; */
 }
 
-/* .visible{
-    display: block;
-}
-
-.hide{
-    display: none;
-} */
 .shape{
     position: absolute;
     width: 200%;
@@ -33,7 +25,7 @@ html {
     top: 70vh;
     height: 80px;
     display: block;
-    z-index: 50;
+    z-index: 100;
 }
 .chatbubble{
     right: 0px;
@@ -175,7 +167,7 @@ section{
 
 .main_heading h3{
     padding: 0;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 #dropDown{
@@ -463,9 +455,6 @@ section{
 }
 .reasonScroll{
     transition: transform .5s ease-out;
-    /* top: 0px;
-    left: 150%; */
-    /* transition: all 2s ease; */
 }
 
 .reasonScroll p{
@@ -556,6 +545,7 @@ hr{
     border-width: 1px;
     font-size: 12px;
     color: #757575;
+    background-color: #FFF;
   }
 .form label{
     padding-left: 17px;
@@ -588,12 +578,11 @@ hr{
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 8px;
-    /* height: 53px;
-    width: 140px; */
     cursor: pointer;
-    /* border-style: none; */
     height: 65px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c9c9c9;
+    background: transparent;
 }
 
 .contactBtn a:hover, .contactBtn a:active{
@@ -678,12 +667,12 @@ footer{
     text-align: center;
     display: block;
 }
-.toRight, .toLeft, .toRightSector, .toLeftSector{
+.toRight, .toLeft, .toRightSector, .toLeftSector, .toRightArr, .toLeftArr{
     background: none;
     border: none;
 }
 .reasonScroll{
-    touch-action: manipulation;
+    touch-action: pan-x;
 }
 .footerCont a{
     cursor: pointer;
@@ -703,7 +692,7 @@ footer{
     justify-content: space-evenly;
     padding: 3px;
     font-family: 'Josefin Sans', sans-serif;
-    z-index: 100;
+    z-index: 99;
 }
 .cookie-law p{
     padding: 6px;
@@ -918,14 +907,14 @@ SD-WAN PAGE
     padding: 5px 0;
 }
 #shortCompareTech th, td{
-    padding: 10px;
+    padding: 5px;
 }
 #shortCompareTech td{
     padding-left: 20px;
     vertical-align: middle;
 }
 #shortCompareTech div{
-    padding: 70px 20px;
+    padding: 70px 0;
     display: flex;
     justify-content: center;
 }
@@ -947,6 +936,23 @@ SD-WAN PAGE
 table{
     max-width: 1000px;
 }
+.SDreasonScroll p{
+    width: 85vw;
+}
+.SDreasons{
+    margin: 10px;
+}
+.SDreasons img{
+    height: 10px;
+    padding: 4px;
+}
+#SDarrowL, #SDarrowR{
+    height: 30px;
+    padding: 0;
+}
+
+
+
 /*
 ABOUT US PAGE
 */
@@ -1066,6 +1072,96 @@ NEWS PAGE
     width: 80%;
 }
 
+/*
+CONTACT PAGE
+*/
+#contactHome_section{
+    height: 100%;
+    /* min-height: 100vh; */
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+.shapeContact{
+    position: absolute;
+    width: 200%;
+    top: 0;
+}
+.contactHead h1{
+    font-size: 2.5em;
+}
+.contactTFMlogo{
+    padding-bottom: 30px;
+}
+#morefeatures{
+    background-color: #028fcc;
+}
+#morefeatures h2{
+    padding: 120px 20px 20px;
+    font-size: 1.7em;
+    text-align: center;
+}
+.webinarText h2{
+    color: #028fcc;
+    padding: 50px 30px 0;
+}
+.webinarContent{
+    /* width: 90%; */
+    padding: 0 20px;
+}
+.webinarContent h3{
+    padding: 20px 0;
+}
+.webinar{
+    padding: 30px;
+}
+.webinar ul{
+    padding-inline-start: 0;
+}
+.webinar i{
+    padding: 8px;
+    -webkit-text-stroke: 1px #fff;
+}
+.webinarSDWan{
+    background-color: #028fcc;
+}
+.webinarContent p{
+    padding-bottom: 30px;
+}
+.webinarAttend{
+    background-color: black;
+    color: #FFF;
+    margin-top: 30px;
+}
+.webinarAttend h4{
+    font-size: 0.9em;
+    padding: 10px 0;
+}
+.section__description h2{
+    text-align: center;
+    padding: 50px 0 10px;
+    font-size: 1.5em;
+}
+.webinarContent {
+    padding: 30px;
+}
+.select_values{
+    font-size: 0.65em;
+    padding: 3px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-color: #969696;
+    background-color: #FFF;
+}
+.grid--support input{
+    color: black;
+}
+.grid--support{
+    padding-bottom: 50px;
+}
 
 
 
@@ -1227,6 +1323,19 @@ MEDIA QUERIES
     .newsContent h5 {
         font-size: 1.3em;
         padding: 0 20px;
+    }
+    /*
+    CONTACT PAGE
+    */
+    .contactHead h1 {
+        font-size: 4em;
+    }
+    .select_values {
+        font-size: 0.9em;
+    }
+    .webinarText h2 {
+        font-weight: lighter;
+        font-size: 2.5em;
     }
 } 
 
@@ -1498,7 +1607,18 @@ MEDIA QUERIES
     .blogContent{
         padding: 10px 70px 50px;
     }
-
+    /*
+    CONTACT PAGE
+    */
+    .select_values {
+        font-size: 1.1em;
+    }
+    #registerBtn{
+        margin: 0 30%;
+    }
+    .grid--support{
+        align-items: center;
+    }
 
 }
 @media screen and (min-width: 960px){
@@ -1797,6 +1917,16 @@ MEDIA QUERIES
         font-size: 2em;
         padding: 0 50px;
     }
+    /*
+    CONTACT PAGE
+    */
+    .webinarText{
+        display: flex;
+        justify-content: center;
+    }
+    .webinarContent {
+        padding: 30px 30px 30px 0;
+    }
 }
 
 @media screen and (min-width: 1130px){
@@ -1986,6 +2116,9 @@ MEDIA QUERIES
         font-size: 3em;
         transition: font-size .25s ease-in;
         top: 21vh;
+    }
+    .contactHead h1 {
+        font-size: 2.5em;
     }
 }
 
