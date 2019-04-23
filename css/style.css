@@ -352,7 +352,9 @@ section{
 .sdHomeDescr h3{
     padding-bottom: 20px;
 }
-
+.sdHomeDescr a:hover{
+    color: #FFF;
+}
 .sdIconsHome{
     padding: 40px 20px;
     display: flex;
@@ -419,6 +421,9 @@ section{
     color: white;
     text-align: center;
     padding-top: 50px;
+}
+.reasonsHome a:hover{
+    color: black;
 }
 .reasonsHome .fas{
     top: 1px;
@@ -648,7 +653,6 @@ footer{
 }
 .footerCont p{
     font-weight: lighter;
-    padding: 8px 0;
 }
 .footerCont a{
     font-weight: lighter;
@@ -1063,10 +1067,7 @@ NEWS PAGE
 .blogContent h3{
     font-size: 1.2em;
 }
-.blogContent{
-    /* margin: auto; */
-    /* width: 70%; */
-}
+
 .tutorials{
     background-color: #fcd3ab;
     padding-bottom: 50px;
@@ -1169,6 +1170,13 @@ CONTACT PAGE
 .grid--support{
     padding-bottom: 50px;
 }
+.grid__more{
+    cursor: pointer;
+}
+.contact_webinar{
+    background-color: #e6e6e6;
+}
+
 /*
 TERMS OF USE PAGE
 */
@@ -1230,7 +1238,7 @@ POLICY PAGe
 }
 .policy a{
     text-decoration: none;
-    color:#028fcc;
+    color: #028fcc;
 }
 .contactPolicy p{
     padding: 10px 0;
@@ -1244,6 +1252,19 @@ POLICY PAGe
 .policyContainerFirst, .policyContainerSecond{
     padding: 0;
 }
+.small_qualif{
+    width: 120px;
+    padding-top: 30px;
+}
+.contactLinkFooter a{
+    color: #028fcc;
+    font-size: 1.3em;
+    font-weight: normal;
+}
+.contactLinkFooter a:hover{
+    color: black;
+}
+
 
 
 
@@ -1473,6 +1494,9 @@ MEDIA QUERIES
     .serv_sections{
         padding: 0 10px 30px 30px;
         min-width: 171px;
+    }
+    .serv_sections a:hover{
+        color: #006591;
     }
     .service_shortDescr{
         font-size: 1em;
@@ -1885,7 +1909,6 @@ MEDIA QUERIES
         width: 550px;
     }
     .reasonsHome a{
-        color: black;
         font-size: 1em;
     }
     #clients_section h2 {
@@ -1918,16 +1941,15 @@ MEDIA QUERIES
     .location {
         width: 350px;
     }
-    .footerCont p {
-        font-weight: lighter;
-        padding: 10px 0;
-    }
     .partner p{
         padding: 120px 100px 0 0;
         width: 500px;
     }
     .cookie-law p {
         font-size: 1.1em;
+    }
+    .small_qualif {
+        padding-top: 65px;
     }
     /*
     SERVICES PAGE

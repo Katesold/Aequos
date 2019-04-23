@@ -21,17 +21,19 @@ function closeChat(){
 var nav = document.getElementsByClassName("header_menu");
 var navBg = document.getElementsByClassName("hamburgerCont")[0];
 var navBlack = document.getElementsByClassName("hamburgerBlack")[0];
+//var navWhite = document.getElementsByClassName("hamburger")[0];
 
 function menuSwitch(){
     if(nav[0].style.display == "flex"){
         nav[0].style.display = "None";
         navBg.style.height = "75px";
         navBlack.style.display = "None";
-        
+       // navWhite.style.display = "Block";
     } else{
         nav[0].style.display = "flex";
         navBg.style.height = "0";
         navBlack.style.display = "Block";
+        //navWhite.style.display = "None";
     }
 }
 
