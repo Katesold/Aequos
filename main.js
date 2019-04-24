@@ -189,13 +189,34 @@ function switchReasonsL(){
 }
 
 
-
   var touchStartpt;
   for(var j = 0; j < reasons.length; j++){
   reasons[j].addEventListener('touchstart', function(e){
     touchStartpt = e.touches[0].screenX;
-    console.log(e, e.path[1],  touchStartpt);
+    console.log(e, e.path[1],  touchStartpt, j);
   }, {passive: true});
+
+  // reasons[num].addEventListener('touchmove', function(event) {
+  //   var touch = event.targetTouches[0];
+  //   console.log(touch.clientX, j);
+  //   // Place element where the finger is
+  //   reasons[num].style.left = touch.pageX-25 + 'px';
+  //   reasons[num].style.top = touch.pageY-25 + 'px';
+  //   event.preventDefault();
+  // }, false);
+ 
+    var obj = reasons[j];
+    obj.addEventListener('touchmove', function(event) {
+      var touch = event.targetTouches[0];
+      console.log(touch, reasons, j);
+      // Place element where the finger is
+      // event.target.style.left = touch.pageX + 'px';
+      // event.target.style.top = touch.pageY + 'px';
+      obj.style.left = touch.pageX + 'px';
+      obj.target.style.top = touch.pageY + 'px';
+      event.preventDefault();
+    }, false);
+
 
   reasons[j].addEventListener('touchend', function(ev){
     var touchEndpt = ev.changedTouches[0].screenX
@@ -216,6 +237,34 @@ function switchReasonsL(){
     }
   }, {passive: true})
 }
+
+//mulitple element touch
+// for(j;j<reasons.length;j++) {
+//   var obj = reasons[j];
+//   obj.addEventListener('touchmove', function(event) {
+//     var touch = event.targetTouches[0];
+    
+//     // Place element where the finger is
+//     event.target.style.left = touch.pageX + 'px';
+//     event.target.style.top = touch.pageY + 'px';
+//     event.preventDefault();
+//   }, false);
+// }
+
+
+
+
+//draggable touch element
+// for(var j = 0; j < reasons.length; j++){
+// reasons[j].addEventListener('touchmove', function(event) {
+//   var touch = event.targetTouches[0];
+//   console.log(touch.clientX, j);
+//   // Place element where the finger is
+//   reasons[j].style.left = touch.pageX-25 + 'px';
+//   reasons[j].style.top = touch.pageY-25 + 'px';
+//   event.preventDefault();
+// }, false);
+// }
 
 // for(var j = 0; j < reasons.length; j++){
 //   reasons[j].addEventListener('touchmove', function(e){
