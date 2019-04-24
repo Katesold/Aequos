@@ -194,7 +194,7 @@ function switchReasonsL(){
   for(var j = 0; j < reasons.length; j++){
   reasons[j].addEventListener('touchstart', function(e){
     touchStartpt = e.touches[0].screenX;
-    console.log(e, touchStartpt);
+    console.log(e, e.path[1],  touchStartpt);
   }, {passive: true});
 
   reasons[j].addEventListener('touchend', function(ev){
@@ -216,6 +216,14 @@ function switchReasonsL(){
     }
   }, {passive: true})
 }
+
+// for(var j = 0; j < reasons.length; j++){
+//   reasons[j].addEventListener('touchmove', function(e){
+//     console.log(e +" tmove");
+//   }, {passive: true});
+// }
+
+
 
 var accept = document.getElementsByClassName('cookie-law')[0];
 

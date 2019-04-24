@@ -405,6 +405,9 @@ section{
 .sdHomeDescr a:hover{
     color: #FFF;
 }
+.sdHomeDescr{
+    color: #FFF;
+}
 .sdIconsHome{
     padding: 40px 20px;
     display: -webkit-box;
@@ -476,6 +479,7 @@ section{
     padding-bottom: 30px;
     font-weight: lighter;
     padding-right: 120px;
+    color: #FFF;
 }
 .reasonsHome a{
     color: white;
@@ -522,6 +526,7 @@ section{
 }
 .reasonScroll{
     -webkit-transition: -webkit-transform .5s ease-out;
+    position: relative;
     transition: -webkit-transform .5s ease-out;
     -o-transition: transform .5s ease-out;
     transition: transform .5s ease-out;
@@ -780,6 +785,7 @@ footer{
 .copyright{
     padding-bottom: 20px;
     font-weight: lighter;
+    line-height: 1.5em;
 }
 .footerCont h3{
     padding: 15px 0;
@@ -798,8 +804,8 @@ footer{
     border: none;
 }
 .reasonScroll{
-    -ms-touch-action: pan-x;
-        touch-action: pan-x;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
 }
 .footerCont a{
     cursor: pointer;
@@ -980,6 +986,7 @@ SERVICES PAGE
 #sectorsCont h2{
     font-size: 1.2em;
     padding: 0 20px 20px;
+    font-weight: lighter;
 }
 .sectorsNavi{
     height: 15px;
@@ -1083,6 +1090,7 @@ SD-WAN PAGE
 }
 #shortCompareTech th, td{
     padding: 5px;
+    font-weight: lighter;
 }
 #shortCompareTech td{
     padding-left: 20px;
@@ -1104,7 +1112,7 @@ SD-WAN PAGE
     color: black;
 }
 .fa-times, .fa-check{
-    -webkit-text-stroke: 2px #000;
+    -webkit-text-stroke: 1.5px #000;
     -webkit-text-fill-color: transparent;
     top: 0;
     font-size: 1.3em;
@@ -1144,12 +1152,15 @@ ABOUT US PAGE
     padding-top: 10px;
 }
 #aboutMainDescription{
-    color: black;
+    color: #FFF;
     font-weight: lighter;
     height: 100%;
     padding-bottom: 20px;
     background-color: #037eb3;
     overflow: hidden;
+}
+#aboutMainDescription a {
+    color: #FFF;
 }
 .aboutIntro a{
     color: black;
@@ -1168,6 +1179,10 @@ ABOUT US PAGE
 }
 .aboutUsIcons{
     padding: 0 20px 30px 10%;
+    line-height: 1.2em;
+}
+.aboutUsIcons h3{
+    line-height: 1.5em;
 }
 .aboutUsIcons img{
     height: 60px;
@@ -1434,7 +1449,6 @@ POLICY PAGe
 }
 .contactLinkFooter a{
     color: #037eb3;
-    font-size: 1.3em;
     font-weight: normal;
 }
 .contactLinkFooter a:hover{
@@ -1461,7 +1475,7 @@ MEDIA QUERIES
         padding-left: 4px;
     }
     .main_heading h3 {
-        padding: 0 30px 30px 10px;
+        padding: 0 80px 30px 10px;
         font-size: 1.5em;
     }
     .TFMLogo{
@@ -1744,7 +1758,7 @@ MEDIA QUERIES
             align-self: flex-end;
     }
     #overview_section h2 {
-        font-size: 4em;
+        font-size: 3.8em;
         -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
                 order: 1;
@@ -1762,7 +1776,7 @@ MEDIA QUERIES
 
     }
     .reasonsHome p{
-        text-align: justify;
+        text-align: left;
         font-size: 0.9em;
     }
     .reasonsEnd {
@@ -1816,6 +1830,8 @@ MEDIA QUERIES
             -ms-flex-pack: center;
                 justify-content: center;
         padding: 50px;
+        margin: auto;
+        width: 558px;
     }
     #clients_section h2 {
         font-size: 2.5em;
@@ -1886,12 +1902,9 @@ MEDIA QUERIES
 
     */
 
-    .services h3{
-        font-size: 2em;
-    }
     #sectorsCont h2 {
         font-size: 3em;
-        max-width: 300px;
+        max-width: 340px;
     }
     #sectorsCont{
         display: -webkit-box;
@@ -1928,7 +1941,7 @@ MEDIA QUERIES
     }
     .sdImgLarge{
         display: inline-block;
-        width: 85%;
+        width: 80%;
         padding-top: 50px;
         padding-bottom: 50px;
     }
@@ -1954,6 +1967,9 @@ MEDIA QUERIES
     }
     #shortCompareTech{
         font-size: 1.1em;
+    }
+    #shortCompareTech td {
+        padding-left: 70px;
     }
     .thSDWan{
         font-size: 1.5em;
@@ -2149,6 +2165,7 @@ MEDIA QUERIES
             -ms-flex-order: 1;
                 order: 1;
         padding: 0;
+        text-align: left;
     }
     .servicesList{
         -webkit-box-pack: end;
@@ -2158,6 +2175,7 @@ MEDIA QUERIES
             -ms-flex-order: 3;
                 order: 3;
         padding: 20px;
+        width: 566px;
     }
     .subSection p {
         width: 500px;
@@ -2187,10 +2205,10 @@ MEDIA QUERIES
         margin: 0;
     }
     .sdHome h2 {
-        font-size: 3em;
+        font-size: 3.5em;
         margin-left: 40%;
         text-align: left;
-        max-width: 500px;
+        max-width: 515px;
     }
     .sdHomeDescr{
         width: 500px;
@@ -2231,9 +2249,10 @@ MEDIA QUERIES
         background-position: -50px 352px;
     }
     #overview_section h2 {
-        font-size: 5em;
+        font-size: 4em;
         padding-top: 50px;
-        width: 800px;
+        width: 600px;
+        text-align: left;
     }
     #overviewCont{
         -webkit-box-pack: center;
@@ -2280,7 +2299,7 @@ MEDIA QUERIES
         margin: 50px;
     }
     .location {
-        width: 350px;
+        width: 355px;
     }
     .partner p{
         padding: 120px 100px 0 0;
@@ -2299,6 +2318,7 @@ MEDIA QUERIES
     #sectorsCont h2 {
         font-size: 3.5em;
         max-width: 400px;
+        font-weight: lighter;
     }
     .sector a{
         color: white;
@@ -2322,7 +2342,7 @@ MEDIA QUERIES
         padding: 120px 50px 20px 0;
     }
     .serviceContainer {
-        max-width: 500px;
+        max-width: 525px;
         font-size: 1.3em;
     }
     /*
@@ -2340,7 +2360,7 @@ MEDIA QUERIES
     }
     .SDeasy h2 {
         font-size: 2.5em;
-        padding: 50px 80px;
+        padding: 50px 100px;
     }
     .mainSDDescr div {
         font-size: 1.2em;
@@ -2443,6 +2463,7 @@ MEDIA QUERIES
         -ms-flex-item-align: center;
             -ms-grid-row-align: center;
             align-self: center;
+        padding-left: 234px;
     }
     .subSection p{
         font-size: 1.2em;
@@ -2465,10 +2486,11 @@ MEDIA QUERIES
         font-size: 1em;
     }
     .servicesList{
-        margin-left: 30vw;
+        /* margin-left: 30vw; */
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
+        width: 100%;
     }
     .sdHome h2 {
         margin-left: 47%;
@@ -2486,11 +2508,12 @@ MEDIA QUERIES
                 justify-content: center;
     }
     #overview_section h2 {
-        font-size: 6em;
-        width: 1000px;
-        -ms-flex-item-align: center;
+        font-size: 5em;
+        width: 950px;
+        /* -ms-flex-item-align: center;
             -ms-grid-row-align: center;
-            align-self: center;
+            align-self: center; */
+        align-self: flex-end;
     }
     .clientLogos img {
         padding: 20px 55px;
