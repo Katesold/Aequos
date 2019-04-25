@@ -228,6 +228,10 @@ section{
     -o-transition: left .25s ease-in;
     transition: left .25s ease-in;
 }
+#heading_bottom p a {
+    color: white;
+    text-decoration: none;
+}
 
 .TFMlogo_heading{
     /* margin-top: 10vh; */
