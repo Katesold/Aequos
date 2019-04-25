@@ -2,19 +2,24 @@ var button = document.getElementsByClassName('chatbubble');
 var chat = document.getElementsByClassName('bot');
 var closeButton = document.getElementsByClassName('close')[0];
 var chattext = document.getElementsByClassName('chattext')[0];
+var closeChat = document.getElementsByClassName('closeChat')[0];
 
 function openChat(){
     button[0].style.display = 'none';
-    chat[0].style.height = '500px';
+    chat[0].style.height = '480px';
+    chat[0].style.border = "#037eb361 1px solid";
     closeButton.style.display = "block";
     chattext.style.display = "None";
+    closeChat.style.display = "None";
 }
 
-function closeChat(){
+function closeChatX(){
     button[0].style.display = 'block';
     chat[0].style.height = '0';
     closeButton.style.display = "none";
     chattext.style.display = "Block";
+    closeChat.style.display = "Block";
+    chat[0].style.border = "None";
 }
 
 
@@ -37,10 +42,11 @@ function menuSwitch(){
     }
 }
 
-chattext.addEventListener("click", hideMe, {passive: true});
+closeChat.addEventListener("click", hideMe, {passive: true});
 
 function hideMe() {
   chattext.style.display = "None";
+  closeChat.style.display = "None";
 }
 
 /*
@@ -188,34 +194,40 @@ function switchReasonsL(){
   }
 }
 
-
+//touch events
   var touchStartpt;
   for(var j = 0; j < reasons.length; j++){
   reasons[j].addEventListener('touchstart', function(e){
     touchStartpt = e.touches[0].screenX;
-    console.log(e, e.path[1],  touchStartpt, j);
+    // console.log(e, e.path[1],  touchStartpt, j);
   }, {passive: true});
-
-  // reasons[num].addEventListener('touchmove', function(event) {
-  //   var touch = event.targetTouches[0];
-  //   console.log(touch.clientX, j);
-  //   // Place element where the finger is
-  //   reasons[num].style.left = touch.pageX-25 + 'px';
-  //   reasons[num].style.top = touch.pageY-25 + 'px';
-  //   event.preventDefault();
-  // }, false);
  
-    var obj = reasons[j];
-    obj.addEventListener('touchmove', function(event) {
+  reasons[0].addEventListener('touchmove', function(event) {
+    var touch = event.targetTouches[0];
+    event.currentTarget.style.left = touch.pageX-80 + 'px';
+  });
+    reasons[j].addEventListener('touchmove', function(event) {
       var touch = event.targetTouches[0];
-      console.log(touch, reasons, j);
+      // console.log('touchmove ', j, event.currentTarget);
+      // console.log(touch, reasons[0], touch.pageX);
       // Place element where the finger is
       // event.target.style.left = touch.pageX + 'px';
       // event.target.style.top = touch.pageY + 'px';
-      obj.style.left = touch.pageX + 'px';
-      obj.target.style.top = touch.pageY + 'px';
+      // if(num == 4){
+      //   event.target.style.left = touch.pageX + 'px';
+      // } else {
+        // console.log(event.currentTarget, reasons[j]);
+        event.currentTarget.style.left = touch.pageX-150 + 'px';
+        for( var b = 0; b < reasons.length; b++){
+          // console.log(reasons[b]);
+          if(reasons[b].style.order != -1){
+            reasons[b].style.left = "0";
+          }
+        }
       event.preventDefault();
     }, false);
+
+
 
 
   reasons[j].addEventListener('touchend', function(ev){
@@ -237,6 +249,7 @@ function switchReasonsL(){
     }
   }, {passive: true})
 }
+
 
 //mulitple element touch
 // for(j;j<reasons.length;j++) {

@@ -8,7 +8,7 @@
 <meta name="keywords" content="Aequos, technology, Business, SD-WAN" />
 <title>AEQUOS - RIGHT-SIZE YOUR NETWORK</title>
 <link rel="stylesheet" href="css/style.css">
-<script src="prefixfree.js"></script>
+<!-- <script src="prefixfree.js"></script> -->
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="shortcut icon" 
@@ -126,7 +126,7 @@ ga('send', 'pageview'); -->
 			<div class="main_heading">
 				<h2>AEQUOS</h2>
 				<h1>RIGHT-SIZE <br>YOUR NETWORK</h1>
-				<h3>Aequos are the experts in using SD-WAN to deliver the right networking solutions and the right bandwidth at the right times.</h3>
+				<h3>Aequos are experts in delivering the right networking solutions and the right bandwidth at the right times using SD-WAN.</h3>
 			</div>
 			<div class="TFMlogo_heading">
 					<img alt="TFM Group Logo" class="TFMLogo" src="images/TFMlogo.png">
@@ -144,11 +144,12 @@ ga('send', 'pageview'); -->
 
 		</div>
 		<div class="chat">
-				<img alt="Lets chat bubble above chat icon" class="chattext" src="images/chattext.png">
+				<img alt="Lets chat bubble above chat icon" class="chattext" onclick="openChat()" src="images/chattext.png">
 				<img alt="chat bubble to open chat window and start chatting with Aequos" class="chatbubble" onclick="openChat()" src="images/chatbubble.png">
+				<img alt="X that closes the text inviting to chat above chatbubble image" class="closeChat" src="images/closeChat.png">
 		</div>
 			<iframe title="Aequos chatbot" class="bot" src="https://snatchbot.me/webchat/?botID=42894&appID=3drApNnnYaVm7PfrtccS"></iframe>
-			<p aria-label="Close chat" role="button" class="close" onclick="closeChat()"> X</p>
+			<p aria-label="Close chat" role="button" class="close" onclick="closeChatX()"> X</p>
 		<section id="services_section">
 			
 			<div class="subSection">
@@ -194,6 +195,7 @@ ga('send', 'pageview'); -->
 					</div>
 				</div>
 			</div>
+			<div aria-hidden="true" class="blueTransparentTriangle"></div>
 		</section>
 
 		<section id="sdWan_section">
