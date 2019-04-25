@@ -1134,6 +1134,9 @@ table{
 .SDreasonScroll p{
     width: 85vw;
 }
+.SDreasonScroll {
+    position: relative;
+}
 .SDreasons{
     margin: 10px;
 }

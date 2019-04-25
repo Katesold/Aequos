@@ -218,12 +218,12 @@ function switchReasonsL(){
       // } else {
         // console.log(event.currentTarget, reasons[j]);
         event.currentTarget.style.left = touch.pageX-150 + 'px';
-        for( var b = 0; b < reasons.length; b++){
-          // console.log(reasons[b]);
-          if(reasons[b].style.order != -1){
-            reasons[b].style.left = "0";
-          }
-        }
+        // for( var b = 0; b < reasons.length; b++){
+        //   // console.log(reasons[b]);
+        //   if(reasons[b].style.order != -1){
+        //     reasons[b].style.left = "0";
+        //   }
+        // }
       event.preventDefault();
     }, false);
 
@@ -236,20 +236,33 @@ function switchReasonsL(){
     if (touchEndpt < touchStartpt){
       if(document.querySelector(".toRight") != null){
         switchReasonsR();
+        moveDivLeft();
       } else {
         switchSectorsR();
+        moveDivLeft();
       }
     } else if (touchEndpt > touchStartpt){
       if(document.querySelector(".toLeft") != null){
         switchReasonsL();
+        moveDivLeft();
       } else {
         switchSectorsL();
+        moveDivLeft();
       }
 
     }
   }, {passive: true})
 }
 
+
+function moveDivLeft(){
+  for( var b = 0; b < reasons.length; b++){
+    // console.log(reasons[b]);
+    if(reasons[b].style.order != -1){
+      reasons[b].style.left = "0";
+    }
+  }
+}
 
 //mulitple element touch
 // for(j;j<reasons.length;j++) {
@@ -430,23 +443,49 @@ for(var it = 0; it < reasonsSD.length; it++){
   console.log(e, SDtouchStartpt+" start");
 }, {passive: true});
 
+// reasonsSD[0].addEventListener('touchmove', function(event) {
+//   var touch = event.targetTouches[0];
+//   event.currentTarget.style.left = touch.pageX-80 + 'px';
+// });
+  reasonsSD[it].addEventListener('touchmove', function(event) {
+    var touch = event.targetTouches[0];
+
+    event.currentTarget.style.left = touch.pageX-150 + 'px';
+    console.log(event.currentTarget);
+
+    event.preventDefault();
+  }, false);
+
+
+
+
+
 reasonsSD[it].addEventListener('touchend', function(ev){
   var touchEndpt = ev.changedTouches[0].screenX
   console.log(ev, touchEndpt+" end");
   if (touchEndpt < SDtouchStartpt){
     if(document.querySelector(".toRightArr") != null){
       switchSDReasonsR();
+      moveSDDivLeft();
     } 
   } else if (touchEndpt > SDtouchStartpt){
     if(document.querySelector(".toLeftArr") != null){
       switchSDReasonsL();
+      moveSDDivLeft();
     }
   }
 }, {passive: true})
 }
 
 
-
+function moveSDDivLeft(){
+  for( var c = 0; c < reasonsSD.length; c++){
+    // console.log(reasons[b]);
+    if(reasonsSD[c].style.order != -1){
+      reasonsSD[c].style.left = "0";
+    }
+  }
+}
 
 
 
