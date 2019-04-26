@@ -659,7 +659,7 @@ hr{
     border-radius: 15px;
     border-width: thin;
     border-style: solid;
-    border-color: #969696;
+    border-color: #bfbfbf;
     border-width: 1px;
     font-size: 12px;
     color: #757575;
@@ -1028,8 +1028,13 @@ SERVICES PAGE
     color: white;
 }
 .networkDescr a{
-    color: black;
+    color: #FFF;
     font-size: 1em;
+}
+#chooseNetworkSubHead{
+    color: black;
+    font-weight: normal;
+    text-align: left;
 }
 
 
@@ -1536,6 +1541,7 @@ MEDIA QUERIES
     .reasonsHome{
         margin: 20px auto;
         width: 400px;
+
     }
     .reasonsHome a{
         padding-top: 30px;
@@ -1586,6 +1592,10 @@ MEDIA QUERIES
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
+        display: inline-block;
+    }
+    .reasonScroll{
+        position: static;
     }
     .reasonScroll p{
         width: 100%;
@@ -1764,6 +1774,8 @@ MEDIA QUERIES
     }
     #overviewCont{
         font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
     }
     .partner{
         display: -webkit-box;
@@ -1787,7 +1799,7 @@ MEDIA QUERIES
             -ms-flex-order: 1;
                 order: 1;
         padding-top: 30px;
-        width: 700px;
+        width: 678px;
         -ms-flex-item-align: center;
             -ms-grid-row-align: center;
             align-self: center;
@@ -1795,9 +1807,10 @@ MEDIA QUERIES
     }
     .reasonsHome{
         text-align: left;
-        padding-right: 50px;
-        margin-left: 40%;
-
+        padding-right: 75px;
+        margin: 0;
+        /* padding-left: 40%; */
+        align-self: flex-end;
     }
     .reasonsHome p{
         text-align: left;
@@ -2294,7 +2307,7 @@ MEDIA QUERIES
                 justify-content: center;
     }
     .reasonsHome{
-        width: 550px;
+        width: 523px;
     }
     .reasonsHome a{
         font-size: 1em;
@@ -2368,12 +2381,15 @@ MEDIA QUERIES
     }
     .serviceNetwork h2{
         margin: 0;
-        padding: 120px 0 0 70px;
+        padding: 120px 10px 0 70px;
         font-size: 3.1em;
     }
     .networkDescr{
         margin: 0;
         padding: 120px 50px 20px 0;
+    }
+    #chooseNetworkSubHead {
+        font-size: 1.5em;
     }
     .serviceContainer {
         max-width: 525px;
@@ -2542,8 +2558,10 @@ MEDIA QUERIES
                 justify-content: center;
     }
     #overview_section h2 {
-        font-size: 5em;
-        width: 950px;
+        /* font-size: 5em; */
+        width: 750px;
+        padding-right: 150px;
+        padding-bottom: 50px;
         /* -ms-flex-item-align: center;
             -ms-grid-row-align: center;
             align-self: center; */
@@ -2560,9 +2578,13 @@ MEDIA QUERIES
         width: 600px;
         font-size: 1.5em;
     }
+    .partner {
+        padding-right: 5%;
+    }
     .reasonsHome{
-        margin-left: 45%;
         font-size: 1.2em;
+        width: 600px;
+        padding-right: calc(5% + 100px);
     }
     #clients_section h2 {
         font-size: 2.8em;
@@ -2573,6 +2595,7 @@ MEDIA QUERIES
     .sector{
         margin: 0;
         font-size: 1.3em;
+        padding: 0;
     }
     .serviceNetwork h2{
         margin: 0;

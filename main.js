@@ -74,6 +74,7 @@ if ($( window ).width() < 960){
   aboutBtn.addEventListener('click', navListen, {passive: true});
   newsBtn.addEventListener('click', navListen, {passive: true});
   contactBtn.addEventListener('click', navListen, {passive: true});
+  
 } else{
   home.removeEventListener('click', navListen);
   servicesBtn.removeEventListener('click', navListen);
@@ -107,17 +108,22 @@ window.addEventListener('resize', function(){
 
 
 
+// if ($( window ).width() > 500){
+  
+// }
+
+
 function screenTest(e) {
     if (e.matches) {
       nav[0].style.display = "flex";
       navBg.style.height = "0";
       home.removeEventListener('click', navListen);
-      console.log(e);
+      // console.log(e);
     } else {
       nav[0].style.display = "None";
       home.addEventListener('click', navListen, {passive: true});
       navBg.style.height = "75px";
-      console.log(e +" +mql"+ mql);
+      // console.log(e +" +mql"+ mql);
     }
 }
 // mql.addListener(screenTest);
@@ -160,13 +166,13 @@ function switchReasonsR(){
 function switchReasonsL(){
 
   i = i-1;
-  console.log(i+" start");
+  // console.log(i+" start");
   if (i < 0){
     reasons[3].style.order = "-1";
     navRs[4].src = "images/blackdot.png";
     reasons[0].style.order = "0";
     navRs[1].src = "images/whitedot.png";
-    console.log(i+" i<0");
+    // console.log(i+" i<0");
     i = 4;
     //console.log(reasons[i], i);
   } else if (i >= 0 && i < reasons.length){
@@ -175,14 +181,14 @@ function switchReasonsL(){
       navRs[4].src = "images/blackdot.png";
       reasons[0].style.order = "0";
       navRs[1].src = "images/whitedot.png";
-      console.log(i+" i>=0");
+      // console.log(i+" i>=0");
       i = 4;
     } else{
       reasons[i-1].style.order = "-1";
       navRs[i].src = "images/blackdot.png";
       reasons[i].style.order = "0";
       navRs[i+1].src = "images/whitedot.png";
-      console.log(i+" else");
+      // console.log(i+" else");
      // console.log(reasons[i], i);
     }
       
@@ -232,7 +238,7 @@ function switchReasonsL(){
 
   reasons[j].addEventListener('touchend', function(ev){
     var touchEndpt = ev.changedTouches[0].screenX
-    console.log(ev, touchEndpt);
+    // console.log(ev, touchEndpt);
     if (touchEndpt < touchStartpt){
       if(document.querySelector(".toRight") != null){
         switchReasonsR();
@@ -440,7 +446,7 @@ var SDtouchStartpt;
 for(var it = 0; it < reasonsSD.length; it++){
   reasonsSD[it].addEventListener('touchstart', function(e){
   SDtouchStartpt = e.touches[0].screenX;
-  console.log(e, SDtouchStartpt+" start");
+  // console.log(e, SDtouchStartpt+" start");
 }, {passive: true});
 
 // reasonsSD[0].addEventListener('touchmove', function(event) {
@@ -451,18 +457,15 @@ for(var it = 0; it < reasonsSD.length; it++){
     var touch = event.targetTouches[0];
 
     event.currentTarget.style.left = touch.pageX-150 + 'px';
-    console.log(event.currentTarget);
+    // console.log(event.currentTarget);
 
     event.preventDefault();
   }, false);
 
 
-
-
-
 reasonsSD[it].addEventListener('touchend', function(ev){
-  var touchEndpt = ev.changedTouches[0].screenX
-  console.log(ev, touchEndpt+" end");
+  var touchEndpt = ev.changedTouches[0].screenX;
+  // console.log(ev, touchEndpt+" end");
   if (touchEndpt < SDtouchStartpt){
     if(document.querySelector(".toRightArr") != null){
       switchSDReasonsR();
@@ -499,7 +502,7 @@ $('a[href*="#"]')
   .not('[href="#0"]')
   .click(function(event) {
 
-    console.log(event);
+    // console.log(event);
     // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
