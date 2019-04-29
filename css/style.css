@@ -541,14 +541,23 @@ section{
     padding-top: 5px;
 }
 .reasonScroll{
-    -webkit-transition: -webkit-transform .5s ease-out;
+    -webkit-transition: -webkit-transform .5s ease-in;
     position: relative;
     transition: -webkit-transform .5s ease-out;
-    -o-transition: transform .5s ease-out;
-    transition: transform .5s ease-out;
-    transition: transform .5s ease-out, -webkit-transform .5s ease-out;
+    -o-transition: transform .25s ease-in;
+    transition: transform .25s ease-in;
+    transition: transform .25s ease-in, -webkit-transform .5s ease-in;
+    /* animation-iteration-count: infinite; */
 }
-
+/* @keyframes changePosi {
+    from {
+      left: 5px;
+    }
+  
+    to {
+      left: 0;
+    }
+  } */
 .reasonScroll p{
     width: 85vw;
 }

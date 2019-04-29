@@ -149,15 +149,18 @@ function switchReasonsR(){
   }
   if(reasons.length > i){
     reasons[i].style.order= "-1";
+    reasons[i].style.transform = "translateX(5px)";
     navRs[i+1].src = "images/blackdot.png";
     reasons[i-1].style.order = "0";
     navRs[i].src = "images/whitedot.png";
     i = i + 1;
   } else{
     reasons[3].style.order = "0";
+    reasons[3].style.transform = "translateX(5px)";
     navRs[4].src = "images/whitedot.png";
     i = 0;
     reasons[0].style.order = "-1";
+    reasons[0].style.transform = "translateX(5px)";
     navRs[1].src = "images/blackdot.png";
     //console.log(reasons[i], i);
   }
@@ -169,6 +172,7 @@ function switchReasonsL(){
   // console.log(i+" start");
   if (i < 0){
     reasons[3].style.order = "-1";
+    reasons[3].style.transform = "translateX(5px)";
     navRs[4].src = "images/blackdot.png";
     reasons[0].style.order = "0";
     navRs[1].src = "images/whitedot.png";
@@ -178,6 +182,7 @@ function switchReasonsL(){
   } else if (i >= 0 && i < reasons.length){
     if(i-1 == -1){
       reasons[3].style.order = "-1";
+      reasons[3].style.transform = "translateX(5px)";
       navRs[4].src = "images/blackdot.png";
       reasons[0].style.order = "0";
       navRs[1].src = "images/whitedot.png";
@@ -185,6 +190,7 @@ function switchReasonsL(){
       i = 4;
     } else{
       reasons[i-1].style.order = "-1";
+      reasons[i-1].style.transform = "translateX(5px)";
       navRs[i].src = "images/blackdot.png";
       reasons[i].style.order = "0";
       navRs[i+1].src = "images/whitedot.png";
@@ -194,6 +200,7 @@ function switchReasonsL(){
       
   } else {
     reasons[i-1].style.order = "-1";
+    reasons[i-1].style.transform = "translateX(5px)";
     reasons[0].style.order = "0";
     reasons[i].style.order = "0";
    // console.log(reasons[i]);
@@ -205,31 +212,22 @@ function switchReasonsL(){
   for(var j = 0; j < reasons.length; j++){
   reasons[j].addEventListener('touchstart', function(e){
     touchStartpt = e.touches[0].screenX;
-    // console.log(e, e.path[1],  touchStartpt, j);
+    //console.log(e.path[1],  touchStartpt, j);
   }, {passive: true});
  
-  reasons[0].addEventListener('touchmove', function(event) {
-    var touch = event.targetTouches[0];
-    event.currentTarget.style.left = touch.pageX-80 + 'px';
-  });
+  // reasons[0].addEventListener('touchmove', function(event) {
+  //   var touch = event.targetTouches[0];
+  //   event.currentTarget.style.left = touch.pageX-80 + 'px';
+  // });
     reasons[j].addEventListener('touchmove', function(event) {
       var touch = event.targetTouches[0];
+      var beginTouchMove = event.changedTouches[0].screenX;
+      // console.log(event.changedTouches[0].clientX)
       // console.log('touchmove ', j, event.currentTarget);
       // console.log(touch, reasons[0], touch.pageX);
       // Place element where the finger is
-      // event.target.style.left = touch.pageX + 'px';
-      // event.target.style.top = touch.pageY + 'px';
-      // if(num == 4){
-      //   event.target.style.left = touch.pageX + 'px';
-      // } else {
-        // console.log(event.currentTarget, reasons[j]);
-        event.currentTarget.style.left = touch.pageX-150 + 'px';
-        // for( var b = 0; b < reasons.length; b++){
-        //   // console.log(reasons[b]);
-        //   if(reasons[b].style.order != -1){
-        //     reasons[b].style.left = "0";
-        //   }
-        // }
+        event.currentTarget.style.left = beginTouchMove - touchStartpt + 'px';
+        //console.log(beginTouchMove, touchStartpt, touch);
       event.preventDefault();
     }, false);
 
@@ -269,41 +267,6 @@ function moveDivLeft(){
     }
   }
 }
-
-//mulitple element touch
-// for(j;j<reasons.length;j++) {
-//   var obj = reasons[j];
-//   obj.addEventListener('touchmove', function(event) {
-//     var touch = event.targetTouches[0];
-    
-//     // Place element where the finger is
-//     event.target.style.left = touch.pageX + 'px';
-//     event.target.style.top = touch.pageY + 'px';
-//     event.preventDefault();
-//   }, false);
-// }
-
-
-
-
-//draggable touch element
-// for(var j = 0; j < reasons.length; j++){
-// reasons[j].addEventListener('touchmove', function(event) {
-//   var touch = event.targetTouches[0];
-//   console.log(touch.clientX, j);
-//   // Place element where the finger is
-//   reasons[j].style.left = touch.pageX-25 + 'px';
-//   reasons[j].style.top = touch.pageY-25 + 'px';
-//   event.preventDefault();
-// }, false);
-// }
-
-// for(var j = 0; j < reasons.length; j++){
-//   reasons[j].addEventListener('touchmove', function(e){
-//     console.log(e +" tmove");
-//   }, {passive: true});
-// }
-
 
 
 var accept = document.getElementsByClassName('cookie-law')[0];
@@ -455,9 +418,10 @@ for(var it = 0; it < reasonsSD.length; it++){
 // });
   reasonsSD[it].addEventListener('touchmove', function(event) {
     var touch = event.targetTouches[0];
+    var beginTouchMove = event.changedTouches[0].screenX;
 
-    event.currentTarget.style.left = touch.pageX-150 + 'px';
-    // console.log(event.currentTarget);
+      // Place element where the finger is
+    event.currentTarget.style.left = beginTouchMove - SDtouchStartpt + 'px';
 
     event.preventDefault();
   }, false);
