@@ -115,7 +115,7 @@ html {
 .header_menu li {
     padding: 10px;
     min-width: 75px;
-
+    display: flex;
 }
 
 .header_menu ul{
@@ -143,9 +143,6 @@ html {
     display: none;
 }
 
-.nav_line{
-    padding: 8px;
-}
 
 .header{
     z-index: 50;
@@ -2178,10 +2175,9 @@ MEDIA QUERIES
         display: flex;
     }
     .nav_line{
-        padding: 8px;
+        padding-left: 20px;
         display: block;
         font-size: 3em;
-        padding-top: 5px;
     }
     .header{
         z-index: 50;
