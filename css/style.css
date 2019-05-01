@@ -189,7 +189,7 @@ section{
 }
 
 .main_heading h1{
-    font-size: 3em;
+    font-size: 3.3em;
     padding-bottom: 10px;
 }
 
@@ -1227,7 +1227,7 @@ NEWS PAGE
 }
 .newsHead{
     color: black;
-    padding: 32vh 50px 10px 50px;
+    padding: 16vh 50px 35px 50px;
 }
 .newsHead h2{
     color: black;
