@@ -6,7 +6,7 @@ var closeChat = document.getElementsByClassName('closeChat')[0];
 
 function openChat(){
     button[0].style.display = 'none';
-    chat[0].style.height = '480px';
+    chat[0].style.height = '450px';
     chat[0].style.border = "#037eb361 1px solid";
     closeButton.style.display = "block";
     chattext.style.display = "None";

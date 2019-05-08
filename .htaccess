@@ -3,7 +3,7 @@ DirectoryIndex index.html
 #Force non-www:
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www\.aequos\.co.uk [NC]
-RewriteRule ^(.*)$ http://aequos.co.uk/$1 [L,R=301]
+RewriteRule ^(.*)$ https://aequos.co.uk/$1 [L,R=301]
 <IfModule mod_expires.c>
     ExpiresActive on
  

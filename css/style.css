@@ -49,7 +49,6 @@ html {
 .closeChat{
     display: none;
     width: 15px;
-    /* right: 25px; */
     right: -9px;
     position: absolute;
     z-index: 100;
@@ -63,16 +62,14 @@ html {
     position: fixed;
     right: 10px;
     bottom: 10px;
-    /* border-radius: 10px; */
     background: transparent;
     z-index: 60;
-    /* border: #037eb361 1px solid; */
 }
 
 .close{
     position: fixed;
     right: 22px;
-    bottom: 434px;
+    bottom: 408px;
     font-size: 1.5em;
     color: #fff;
     display: none;
@@ -152,7 +149,6 @@ html {
 
 section{
     width: 100%;
-    /* background-color: black; */
 }
 
 #home_section{
@@ -203,7 +199,6 @@ section{
     max-width: 100%;
     height: auto;
     position: absolute;
-    /* top: 92vh; */
     top: 83vh;
     -webkit-transform: translateY(-180%);
         -ms-transform: translateY(-180%);
@@ -216,7 +211,6 @@ section{
 
 #heading_bottom p{
     position: absolute;
-    /* top: 80vh; */
     top: 70vh;
     -webkit-transform: translateY(-100%);
         -ms-transform: translateY(-100%);
@@ -234,7 +228,6 @@ section{
 }
 
 .TFMlogo_heading{
-    /* margin-top: 10vh; */
     position: relative;
     -webkit-transition: margin-top .25s ease-in;
     -o-transition: margin-top .25s ease-in;
@@ -319,7 +312,6 @@ section{
     font-weight: lighter;
 }
 .subSection{
-    /* margin-left: auto; */
     text-align: left;
     margin-bottom: 50px;
 }
@@ -372,10 +364,6 @@ section{
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 }
-/* .service_shortDescr{
-    font-weight: lighter;
-    font-size: 1.2em;
-} */
 .fas {
     top: 2px;
     position: relative;
@@ -401,7 +389,6 @@ section{
     position: relative;
 }
 .upsideShape{
-    /* display: none; */
     position: relative;
     z-index: 1;
 }
@@ -418,7 +405,7 @@ section{
 .sdHomeDescr h3{
     padding-bottom: 20px;
 }
-.sdHomeDescr a:hover{
+.sdHomeDescr a:hover, .sdHomeDescr a:active{
     color: #FFF;
 }
 .sdHomeDescr{
@@ -457,7 +444,6 @@ section{
     background-color: #037eb3;
 }
 #overviewCont{
-    background-color: #037eb3ba;
     height: 100%;
 }
 #overview_section h2{
@@ -510,12 +496,10 @@ section{
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
-    /* margin-bottom: 40px; */
 }
 
 .reasonsEnd h4{
     margin: 0 0 45px;
-    /* font-weight: lighter; */
 }
 
 .reasonsEnd a{
@@ -533,9 +517,7 @@ section{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    /* overflow-x: hidden; */
     width: 100%;
-    /* height: 300px; */
     position: relative;
     overflow: hidden;
     padding-top: 5px;
@@ -547,17 +529,8 @@ section{
     -o-transition: transform .25s ease-in;
     transition: transform .25s ease-in;
     transition: transform .25s ease-in, -webkit-transform .5s ease-in;
-    /* animation-iteration-count: infinite; */
 }
-/* @keyframes changePosi {
-    from {
-      left: 5px;
-    }
-  
-    to {
-      left: 0;
-    }
-  } */
+
 .reasonScroll p{
     width: 85vw;
 }
@@ -704,7 +677,7 @@ hr{
     text-decoration: none;
     color: black;
 }
-.cInfoSection a:hover{
+.cInfoSection a:hover, .cInfoSection a:active{
     color: #037eb3;
 }
 .infoContact{
@@ -730,7 +703,6 @@ hr{
 }
 
 .contactBtn a:hover, .contactBtn a:active{
-    /* background-color: #E6E6E6; */
     color: #037eb3;
     -webkit-transition: font-size .25s ease;
     -o-transition: font-size .25s ease;
@@ -749,11 +721,9 @@ hr{
     padding-bottom: 30px;
 }
 .social img{
-    /* padding: 20px; */
     padding: 10px;
 }
 .social img:hover, .social img:active{
-    /* box-shadow: 5px 10px 18px #adadad50; */
     -webkit-box-shadow: 0 1px #adadad;
             box-shadow: 0 1px #adadad;
 }
@@ -865,7 +835,6 @@ footer{
     font-family: 'Josefin Sans', sans-serif;
 }
 .cookieBtn{
-    /* padding: 5px; */
     font-size: 0.9em;
     border-style: none;
     cursor: pointer;
@@ -878,8 +847,6 @@ footer{
 .cookie{
     text-decoration: none;
     color: black;
-    /* position: relative;
-    top: 12px; */
     font-weight: normal;
     min-width: 70px;
     font-size: 0.9em;
@@ -1202,6 +1169,22 @@ ABOUT US PAGE
     margin-top: -80px;
     padding-top: 80px;
 }
+#aboutUsVideo h2{
+    color: #FFF;
+    background: black;
+    font-size: 1em;
+    padding: 50px 20px 10px;
+    line-height: 1.3em;
+}
+#aboutUsVideo h2 a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+#aboutUsVideo h2 a:hover, #aboutUsVideo h2 a:active{
+    color: #037eb3;
+}
+
 #aboutUsIconsSection{
     background-color: black;
     color: #FFF;
@@ -1261,6 +1244,7 @@ NEWS PAGE
     font-size: 1.5em;
     padding: 10px;
     width: 100%;
+    min-width: 206px;
 }
 .profile a img{
     height: 30px;
@@ -1303,7 +1287,6 @@ CONTACT PAGE
 */
 #contactHome_section{
     height: 100%;
-    /* min-height: 100vh; */
     background-color: black;
     overflow: hidden;
     position: relative;
@@ -1332,7 +1315,6 @@ CONTACT PAGE
     padding: 50px 30px 0;
 }
 .webinarContent{
-    /* width: 90%; */
     padding: 0 20px;
 }
 .webinarContent h3{
@@ -1481,7 +1463,7 @@ POLICY PAGe
     color: #037eb3;
     font-weight: normal;
 }
-.contactLinkFooter a:hover{
+.contactLinkFooter a:hover, .contactLinkFooter a:active{
     color: black;
 }
 
@@ -1749,7 +1731,6 @@ MEDIA QUERIES
         -webkit-transition: width .20s ease-in;
         -o-transition: width .20s ease-in;
         transition: width .20s ease-in;
-        /* padding-bottom: 20px; */
         width: 500px;
     }
 
@@ -1782,7 +1763,7 @@ MEDIA QUERIES
         padding: 0 10px 15px 30px;
         min-width: 171px;
     }
-    .serv_sections a:hover{
+    .serv_sections a:hover, .serv_sections a:active{
         color: #006591;
     }
     .service_shortDescr{
@@ -1809,7 +1790,7 @@ MEDIA QUERIES
         padding-bottom: 20px;
     }
     #overview_section{
-        background: url(../images/Girl.png);
+        background: url(../images/Girl1.png);
         background-repeat: no-repeat;
         background-position: -27px 439px;
         background-size: 400px;
@@ -1855,7 +1836,6 @@ MEDIA QUERIES
         text-align: left;
         padding-right: 75px;
         margin: 0;
-        /* padding-left: 40%; */
         align-self: flex-end;
     }
     .reasonsHome p{
@@ -2102,6 +2082,10 @@ MEDIA QUERIES
     }
     .triangleContAboutUs {
         top: 52px;
+    }
+    #aboutUsVideo h2 {
+        font-size: 1.5em;
+        padding: 50px 80px 20px;
     }
 
     /*
@@ -2488,7 +2472,7 @@ MEDIA QUERIES
         padding: 0;
     }
     #aboutMainDescription{
-        background: url(../images/Girlmirrored.png);
+        background: url(../images/Girlmirrored1.png);
         background-repeat: no-repeat;
         background-position: 600px 62px;
         background-size: 400px;
@@ -2498,7 +2482,6 @@ MEDIA QUERIES
         background-color: #037eb3;
     }
     .aboutIntro {
-        background-color: #037eb3ba;
         height: 100%;
         padding-bottom: 50px;
         margin-bottom: -20px;
@@ -2551,7 +2534,6 @@ MEDIA QUERIES
         background-repeat: no-repeat;
         background-position: -7px 425px;
         background-size: 642px;
-        /* background-attachment: fixed; */
         -webkit-transition: background-size .25s ease-in;
         -o-transition: background-size .25s ease-in;
         transition: background-size .25s ease-in;
@@ -2613,13 +2595,9 @@ MEDIA QUERIES
                 justify-content: center;
     }
     #overview_section h2 {
-        /* font-size: 5em; */
         width: 750px;
         padding-right: 150px;
         padding-bottom: 50px;
-        /* -ms-flex-item-align: center;
-            -ms-grid-row-align: center;
-            align-self: center; */
         align-self: flex-end;
     }
     .clientLogos img {
@@ -2717,6 +2695,10 @@ MEDIA QUERIES
         transition: background-size .25s ease-in;
         background-color: #037eb3;
     }
+    #aboutUsVideo h2 {
+        font-size: 2em;
+        padding: 50px 80px 30px;
+    }
     /*
     TERMS PAGe
     */
@@ -2796,7 +2778,6 @@ MEDIA QUERIES
 
 @media screen and (max-width: 700px) and (max-height: 700px){
     .main_heading h1{
-        /* font-size: 3em; */
         -webkit-transition: font-size .25s ease-in;
         -o-transition: font-size .25s ease-in;
         transition: font-size .25s ease-in;
