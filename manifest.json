@@ -3,12 +3,12 @@
     "name": "AEQUOS - RIGHT-SIZE YOUR NETWORK",
     "icons": [
       {
-        "src": "/images/logo.png",
+        "src": "/images/logo192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/images/Alogo.png",
+        "src": "/images/Alogo512.png",
         "type": "image/png",
         "sizes": "512x512"
       }

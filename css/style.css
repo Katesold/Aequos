@@ -112,6 +112,8 @@ html {
 .header_menu li {
     padding: 10px;
     min-width: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -527,7 +529,10 @@ section{
     position: relative;
     transition: -webkit-transform .5s ease-out;
     -o-transition: transform .25s ease-in;
+    -webkit-transition: -webkit-transform .25s ease-in;
+    transition: -webkit-transform .25s ease-in;
     transition: transform .25s ease-in;
+    transition: transform .25s ease-in, -webkit-transform .25s ease-in;
     transition: transform .25s ease-in, -webkit-transform .5s ease-in;
 }
 
@@ -1231,6 +1236,7 @@ NEWS PAGE
 .profileImg{
     height: 200px;
     padding: 10px;
+    width: 207.250px;
 }
 .profile{
     display: -webkit-box;
@@ -1653,7 +1659,9 @@ MEDIA QUERIES
         padding: 20px;
         padding: 20px;
         height: 200px;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .serviceContainer{
         max-width: 380px;
@@ -1801,8 +1809,13 @@ MEDIA QUERIES
     }
     #overviewCont{
         font-size: 1.2em;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .partner{
         display: -webkit-box;
@@ -1836,7 +1849,8 @@ MEDIA QUERIES
         text-align: left;
         padding-right: 75px;
         margin: 0;
-        align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
     }
     .reasonsHome p{
         text-align: left;
@@ -2598,7 +2612,8 @@ MEDIA QUERIES
         width: 750px;
         padding-right: 150px;
         padding-bottom: 50px;
-        align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
     }
     .clientLogos img {
         padding: 20px 55px;
@@ -2787,5 +2802,4 @@ MEDIA QUERIES
         font-size: 2.5em;
     }
 }
-
 
