@@ -10,8 +10,8 @@ var urlsToCache = [
   '/contact-us.html',
   '/terms-of-use.html',
   '/privacy-policy.html',
-  '/css/style.css',
-  '/main.js'
+  '/css/min-style.css',
+  '/min-main.js'
 ];
 
 self.addEventListener('install', function(event) {

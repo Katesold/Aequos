@@ -109,7 +109,7 @@
 		<p aria-label="Close chat" role="button" class="close" onclick="closeChatX()"> X</p>
 
 	<!-- Section features -->
-	<section class="contact-uspage" id="morefeatures">
+	<!-- <section class="contact-uspage" id="morefeatures">
 			<div aria-hidden="true" class="blackTriangle"></div>
 			<h2>GET IN TOUCH</h2>
 			<div class="section__content">
@@ -241,11 +241,11 @@
 					</div>
 				</div>
 				</div>
-	</section>
+	</section> -->
 
 	<section id="contact_section">
-		<h2>CONTACTS</h2>
-		<hr> 
+		<!-- <h2>CONTACTS</h2>
+		<hr>  -->
 			<div class="contactInfo">
 				<div class="cInfoSection location">
 					<h3>WHERE WE ARE</h3>
@@ -315,21 +315,22 @@
 <!-- <script src="sw.js"></script> -->
 <script type="text/javascript" src="jquery.validate.min.js"></script>
 
-<!-- <script src="js/jquery.paroller.min.js"></script>
+<!-- <script src="js/jquery.paroller.min.js"></script> -->
 <script src="js/jquery.custom.js"></script>
-<script src="js/swiper.min.js"></script>
+<!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+<!-- <script src="js/swiper.min.js"></script>
 <script src="js/swiper.custom.js"></script>
-<script src="js/menu.js"></script> -->
+<script src="js/menu.js"></script>  -->
 <!-- <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script> -->
-<!-- <script src="jquery.custom.js"></script> -->
+<script src="jquery.custom.js"></script>
 <script type="text/javascript">
 
 
 
-jQuery().ready(function() {
-
+$(document).ready(function() {
+		// console.log('test')
 		// validate signup form on keyup and submit
-		jQuery("#contactformsend").validate({
+		$("#contactformsend").validate({
 			rules: {
 				your_name     : "required",
 				your_phone   : {required: true, number: true },
@@ -362,7 +363,7 @@ jQuery().ready(function() {
 		});
 		});
 </script>
-
+<!-- 
 <script type="text/javascript">
 
 	jQuery().ready(function() {
@@ -405,7 +406,7 @@ jQuery().ready(function() {
 				}
 			});
 			});
-	</script>
+	</script> -->
 
 </body>
 </html>
