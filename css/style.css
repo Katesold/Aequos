@@ -772,7 +772,7 @@ footer{
 }
 .footerCont a{
     font-weight: lighter;
-    padding: 8px 0;
+    padding: 13px 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1490,11 +1490,6 @@ MEDIA QUERIES
         font-size: 2.7em;
     }
 }
-@media screen and (min-width: 360px) and (min-height: 700px){
-    .chat{
-        top:74vh;
-    }
-}
 
 @media screen and (min-width: 375px){
     .main_heading h1{
@@ -1507,6 +1502,13 @@ MEDIA QUERIES
         margin-top: 10vh;
     }
 }
+
+@media screen and (min-width: 360px) and (min-height: 700px){
+    .chat{
+        top:62vh;
+    }
+}
+
 
 @media screen and (min-width: 500px){
     .bot{
@@ -2781,12 +2783,6 @@ MEDIA QUERIES
     }
     .TFMlogo_heading {
         margin-top: 5vh;
-    }
-    #heading_bottom p {
-        top: 82vh;
-    }
-    #dropDown{
-        top: 90vh;
     }
 }
 

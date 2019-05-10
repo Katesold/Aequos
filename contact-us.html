@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="css/min-style.css">
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 <link rel="shortcut icon" 
       type="image/x-icon" 
 			href="favicon.ico"> 
@@ -78,20 +78,20 @@
 		</div>	
 		<div class="hamburgerCont">
 			<div class="hamburger_bg">
-				<img alt="hamburger menu to open menu" role="button" aria-label="Open menu" class="hamburger" onclick="menuSwitch()" src="images/hamburger.png">
-				<img alt="hamburger menu to close menu" role="button" aria-label="Close menu" class="hamburgerBlack" onclick="menuSwitch()" src="images/hamburger_black.png">
+				<img alt="hamburger menu to open menu" role="button" aria-label="Open menu" class="lozad hamburger" onclick="menuSwitch()" src="images/hamburger.png">
+				<img alt="hamburger menu to close menu" role="button" aria-label="Close menu" class="hamburgerBlack lozad" onclick="menuSwitch()" src="images/hamburger_black.png">
 			</div>
 		</div>
 	</header>
 	<main class="flex-container" role="main">
 		<section id="contactHome_section">
-			<img class="shape shapeContact" src="images/shape.gif" alt="blue background abstract shape">
+			<img class="shape shapeContact lozad" src="images/shape.gif" alt="blue background abstract shape">
 			<div class="main_heading contactHead">
 				<h2>AEQUOS</h2>
 				<h1>CONTACT US</h1>
 			</div>
 			<div class="TFMlogo_heading contactTFMlogo">
-					<img alt="TFM Group Logo" class="TFMLogo" src="images/TFMlogo.png">
+					<img alt="TFM Group Logo" class="TFMLogo lozad" src="images/TFMlogo.png">
 			</div>
 			<div class="cookie-law">
 					<p>This website uses cookies to improve your experience. You can opt-out if you wish.</p>
@@ -101,11 +101,11 @@
 			
 		</section>
 		<div class="chat">
-			<img alt="Lets chat bubble above chat icon" class="chattext" onclick="openChat()" src="images/chattext.png">
-			<img alt="chat bubble to open chat window and start chatting with Aequos" class="chatbubble" onclick="openChat()" src="images/chatbubble.png">
-			<img alt="X that closes the text inviting to chat above chatbubble image" class="closeChat" src="images/closeChat.png">
+			<img alt="Lets chat bubble above chat icon" class="chattext lozad" onclick="openChat()" src="images/chattext.png">
+			<img alt="chat bubble to open chat window and start chatting with Aequos" class="lozad chatbubble" onclick="openChat()" src="images/chatbubble.png">
+			<img alt="X that closes the text inviting to chat above chatbubble image" class="lozad closeChat" src="images/closeChat.png">
 	</div>
-		<iframe title="Aequos chatbot" class="bot" src="https://snatchbot.me/webchat/?botID=55830&appID=GbE9uekoYZJoUSEjN0ac"></iframe>
+		<iframe title="Aequos chatbot" class="bot lozad" src="https://snatchbot.me/webchat/?botID=55830&appID=GbE9uekoYZJoUSEjN0ac"></iframe>
 		<p aria-label="Close chat" role="button" class="close" onclick="closeChatX()"> X</p>
 
 	<!-- Section features -->
@@ -257,7 +257,7 @@
 								The Future Works,
 									2 Brunel Way, Slough, Berkshire,
 									SL1 1FQ</p>
-						<img class="small_qualif" src="images/Cyber_Essentials_Badge_High_Res.png" alt="Cyber Essentials Badge" title="Cyber_Essentials_Badge"/>
+						<img class="lozad small_qualif" src="images/Cyber_Essentials_Badge_High_Res.png" alt="Cyber Essentials Badge" title="Cyber_Essentials_Badge"/>
 					</div>
 					<div class="cInfoSection emails">
 						<h3>CALL US AT</h3>
@@ -272,8 +272,8 @@
 					</div>
 				<div class="cInfoSection social">
 					<h3>SOCIAL</h3>
-						<a rel="noopener" href="https://www.linkedin.com/company/aequos-sd-wan/" target="_blank"><img alt="Aequos SD-WAN LinkedIn" id="linkedinBlack" src="images/social/black/linkedin.png" ></a>
-						<a rel="noopener" href="https://twitter.com/Aequossdwan" target="_blank"><img alt="Aequos SD-WAN Twitter" id="twitterBlack" src="images/social/black/twitter.png"></a>
+						<a rel="noopener" href="https://www.linkedin.com/company/aequos-sd-wan/" target="_blank"><img alt="Aequos SD-WAN LinkedIn" class="lozad" id="linkedinBlack" src="images/social/black/linkedin.png" ></a>
+						<a rel="noopener" href="https://twitter.com/Aequossdwan" target="_blank"><img alt="Aequos SD-WAN Twitter" class="lozad" id="twitterBlack" src="images/social/black/twitter.png"></a>
 				</div>
 			
 		</div>
@@ -316,7 +316,7 @@
 <script type="text/javascript" src="jquery.validate.min.js"></script>
 
 <!-- <script src="js/jquery.paroller.min.js"></script> -->
-<script src="js/jquery.custom.js"></script>
+<!-- <script src="js/jquery.custom.js"></script> -->
 <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
 <!-- <script src="js/swiper.min.js"></script>
 <script src="js/swiper.custom.js"></script>
@@ -347,7 +347,7 @@ $(document).ready(function() {
 			submitHandler: function(form) {
 			$.ajax({
                 type: 'POST',
-                url: 'http://aequos.co.uk/send.php',
+                url: 'https://aequos.co.uk/send.php',
                 data: $('#contactformsend').serialize(),
                  success: function(data) {
                      var mydata= $.parseJSON(data);

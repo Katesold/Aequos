@@ -107,12 +107,6 @@ window.addEventListener('resize', function(){
 });
 
 
-
-// if ($( window ).width() > 500){
-  
-// }
-
-
 function screenTest(e) {
     if (e.matches) {
       nav[0].style.display = "flex";
@@ -512,3 +506,6 @@ $('a[href*="#"]')
       });
     });
   }
+
+var observer = lozad();
+observer.observe();
