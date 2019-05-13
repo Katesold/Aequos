@@ -2,8 +2,6 @@ DirectoryIndex index.html
 
 #Force non-www:
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^www\.aequos\.co.uk [NC]
-RewriteRule ^(.*)$ https://aequos.co.uk/$1 [L,R=301]
 <IfModule mod_expires.c>
     ExpiresActive on
  
@@ -39,3 +37,15 @@ AddOutputFilterByType DEFLATE audio/mpeg
 AddOutputFilterByType DEFLATE audio/*
 AddOutputFilterByType DEFLATE video/mp4
 </IfModule>
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^aequos\.co\.uk$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.aequos\.co\.uk$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^/?$ "https\:\/\/aequos\.co\.uk\/" [R=301,L]
+
+Redirect 301 /contact-us-webinar.html https://aequos.co.uk/contact-us.html
+Redirect 301 /overview.html https://aequos.co.uk
+Redirect 302 /overview.html https://aequos.co.uk/contact-us.html
