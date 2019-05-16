@@ -646,7 +646,7 @@ hr{
     border-radius: 15px;
     border-width: thin;
     border-style: solid;
-    border-color: #bfbfbf;
+    border-color: #FFF;
     border-width: 1px;
     font-size: 12px;
     color: #757575;
@@ -1352,6 +1352,9 @@ CONTACT PAGE
     font-size: 0.9em;
     padding: 10px 0;
 }
+.webinarContainer{
+    padding: 80px;
+}
 .section__description h2{
     text-align: center;
     padding: 50px 0 10px;
@@ -1379,11 +1382,24 @@ CONTACT PAGE
 }
 .grid__more{
     cursor: pointer;
+    padding: 10px;
+    color: black;
+    border-radius: 8px;
+    background-color: #FFF;
+    font-size: 1em;
 }
 .contact_webinar{
     background-color: #e6e6e6;
 }
-
+#success_message{
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+#error_message{
+    text-align: center;
+    font-size: 1.2em;
+}
 /*
 TERMS OF USE PAGE
 */
@@ -1472,7 +1488,9 @@ POLICY PAGe
 .contactLinkFooter a:hover, .contactLinkFooter a:active{
     color: black;
 }
-
+.section__content{
+    padding-bottom: 50px;
+}
 
 
 
@@ -1578,6 +1596,7 @@ MEDIA QUERIES
     }
     .reasonsHome p{
         text-align: justify;
+        width: 67vw;
     }
     .reasonsHome h3{
         font-weight: lighter;
@@ -1622,6 +1641,7 @@ MEDIA QUERIES
             -ms-flex-direction: column;
                 flex-direction: column;
         display: inline-block;
+        overflow: visible;
     }
     .reasonScroll{
         position: static;
@@ -1876,7 +1896,7 @@ MEDIA QUERIES
         width: 600px;
     }
     .oneLine{
-        width: 46%;
+        width: 100%;
     }
     .namePhoneCont{
         display: -webkit-box;
@@ -1935,6 +1955,7 @@ MEDIA QUERIES
         border-style: solid;
         border-width: 0px 0px 150px 150px;
         position: absolute;
+        left: 0;
     }
     .greyTriangle{
         border-color: transparent rgb(230, 230, 230);
@@ -2015,6 +2036,7 @@ MEDIA QUERIES
     }
     .sector p{
         text-align: left;
+        width: 87%;
     }
     .serviceNetwork h2{
         text-align: left; 
@@ -2141,6 +2163,9 @@ MEDIA QUERIES
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
+    }
+    .webinarContainer{
+        padding: 10px;
     }
     /*
     TERMS PAGE
@@ -2536,6 +2561,9 @@ MEDIA QUERIES
     }
     .webinarContent {
         padding: 30px 30px 30px 0;
+    }
+    .webinarText h2{
+        padding: 50px 0 0;
     }
 }
 
