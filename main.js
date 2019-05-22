@@ -84,6 +84,7 @@ if ($( window ).width() < 960){
   contactBtn.removeEventListener('click', navListen);
 }
 
+//navbar changes when window is resized
 window.addEventListener('resize', function(){
   if(window.matchMedia('(min-width: 960px)').matches){
     nav[0].style.display = "flex";
@@ -122,9 +123,7 @@ function screenTest(e) {
 }
 // mql.addListener(screenTest);
 
-/*
-  touch scroll pan-x
-*/
+//MOBILE left right touch movement for reasons for partnering with Aequos
 var left, right;
 if(document.querySelector(".toRight") != null){
   right = document.querySelector(".toRight");
@@ -201,7 +200,7 @@ function switchReasonsL(){
   }
 }
 
-//touch events
+//listen to touch events and move divs in the direction of movement
   var touchStartpt;
   for(var j = 0; j < reasons.length; j++){
   reasons[j].addEventListener('touchstart', function(e){
@@ -209,16 +208,13 @@ function switchReasonsL(){
     //console.log(e.path[1],  touchStartpt, j);
   }, {passive: true});
  
-  // reasons[0].addEventListener('touchmove', function(event) {
-  //   var touch = event.targetTouches[0];
-  //   event.currentTarget.style.left = touch.pageX-80 + 'px';
-  // });
     reasons[j].addEventListener('touchmove', function(event) {
       var touch = event.targetTouches[0];
       var beginTouchMove = event.changedTouches[0].screenX;
       // console.log(event.changedTouches[0].clientX)
       // console.log('touchmove ', j, event.currentTarget);
       // console.log(touch, reasons[0], touch.pageX);
+
       // Place element where the finger is
         event.currentTarget.style.left = beginTouchMove - touchStartpt + 'px';
         //console.log(beginTouchMove, touchStartpt, touch);
@@ -227,7 +223,7 @@ function switchReasonsL(){
 
 
 
-
+//switch divs upon touch movement left and right
   reasons[j].addEventListener('touchend', function(ev){
     var touchEndpt = ev.changedTouches[0].screenX
     // console.log(ev, touchEndpt);
@@ -285,7 +281,7 @@ if(document.querySelector(".toRightSector") != null){
 var reasons = document.getElementsByClassName("reasonScroll");
 var navSs = document.getElementsByClassName("sectorsNavi");
 
-
+//Services: switch reasons to right for sectors they operate in
 var z = 0;
 function switchSectorsR(){
   if(z==0){
@@ -307,6 +303,7 @@ function switchSectorsR(){
   }
 }
 
+//Services: switch reasons to left for sectors they operate in
 function switchSectorsL(){
   z = z-1;
   if (z < 0){
@@ -351,6 +348,7 @@ if(document.querySelector(".toRightArr") != null){
 var reasonsSD = document.getElementsByClassName("SDreasonScroll");
 var SDnavRs = document.getElementsByClassName("sectorsNavi");
 
+//SDwan: switch reasons to right for benefits of using SD-WAN
 var k = 0;
 function switchSDReasonsR(){
   if(k==0){
@@ -371,6 +369,7 @@ function switchSDReasonsR(){
   }
 }
 
+//SDwan: switch reasons to left for benefits of using SD-WAN
 function switchSDReasonsL(){
   k = k-1;
   if (k < 0){
@@ -399,6 +398,7 @@ function switchSDReasonsL(){
   }
 }
 
+//listen to touch events to move div in direction of touch
 var SDtouchStartpt;
 for(var it = 0; it < reasonsSD.length; it++){
   reasonsSD[it].addEventListener('touchstart', function(e){
@@ -493,7 +493,7 @@ $('a[href*="#"]')
   });
 
 
-  //SERVICE WORKER
+  //SERVICE WORKER REGISTRATION
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
@@ -507,5 +507,6 @@ $('a[href*="#"]')
     });
   }
 
+//Lazy load initialised
 var observer = lozad();
 observer.observe();

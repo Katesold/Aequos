@@ -25,13 +25,12 @@ $mailer = $pp->getMailer();
 // $mailer->SMTPAuth   = true;
 // $mailer->SMTPSecure = "tls";
 // $mailer->Host       = "smtp.gmail.com";
-// $mailer->Username   = "Katalap";
-// $mailer->Password   = "Katesoldika901";
+// $mailer->Username   = "usrname";
+// $mailer->Password   = "pw";
 // $mailer->Port   = 587;
 
 $mailer->setFrom('aequos.co.uk', 'Test Form');
 
-// $pp->sendEmailTo(['kata@22design.co.uk', 'katalap@gmail.com', 'info@aequos.co.uk']);
-$pp->sendEmailTo(['kata@22design.co.uk', 'shabrul.uddin@aequos.co.uk', 'info@aequos.co.uk', 'andy.weedon@aequos.co.uk']); // ← Your email here
+$pp->sendEmailTo(['shabrul.uddin@aequos.co.uk', 'info@aequos.co.uk', 'andy.weedon@aequos.co.uk']); // ← Your email here
 
 echo $pp->process($_POST);

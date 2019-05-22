@@ -48,4 +48,28 @@ RewriteRule ^/?$ "https\:\/\/aequos\.co\.uk\/" [R=301,L]
 
 Redirect 301 /contact-us-webinar.html https://aequos.co.uk/contact-us.html
 Redirect 301 /overview.html https://aequos.co.uk
-Redirect 302 /overview.html https://aequos.co.uk/contact-us.html
+RewriteCond %{HTTP_HOST} ^aequos\.co\.uk$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.aequos\.co\.uk$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^where\-are\-you\-coming\-from\.html$ "https\:\/\/aequos\.co\.uk\/news\.html" [R=301,L]
+RewriteCond %{HTTP_HOST} ^aequos\.co\.uk$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.aequos\.co\.uk$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^let\â\€\™s\-get\-going\.html$ "https\:\/\/aequos\.co\.uk\/news\.html" [R=301,L]
+RewriteCond %{HTTP_HOST} ^aequos\.co\.uk$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.aequos\.co\.uk$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^send\.php$ "https\:\/\/aequos\.co\.uk\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^aequos\.co\.uk$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.aequos\.co\.uk$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^good\-enough\.html$ "https\:\/\/aequos\.co\.uk\/news\.html" [R=301,L]
+
