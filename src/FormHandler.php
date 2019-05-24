@@ -45,7 +45,7 @@ class FormHandler
 		$this->mailer->Subject = "Contact Form Submission ";
 
 		$host = isset($_SERVER['SERVER_NAME'])?$_SERVER['SERVER_NAME']:'localhost';
-        $from_email ='forms@'.$host;
+        $from_email ='info@'.$host;
    		$this->mailer->setFrom($from_email,'Contact Form',false);  
 
    		$this->captcha = false;   

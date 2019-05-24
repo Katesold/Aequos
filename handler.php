@@ -31,6 +31,6 @@ $mailer = $pp->getMailer();
 
 $mailer->setFrom('aequos.co.uk', 'Test Form');
 
-$pp->sendEmailTo(['shabrul.uddin@aequos.co.uk', 'info@aequos.co.uk', 'andy.weedon@aequos.co.uk']); // ← Your email here
+$pp->sendEmailTo(['Andyweedon64@gmail.com', 'andyweedon@btinternet.com', 'kata@22design.co.uk', 'info@aequos.co.uk']); // ← Your email here
 
 echo $pp->process($_POST);
