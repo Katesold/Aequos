@@ -42,7 +42,7 @@ function menuSwitch(){
     }
 }
 
-closeChat.addEventListener("click", hideMe, {passive: true});
+//closeChat.addEventListener("click", hideMe, {passive: true});
 
 function hideMe() {
   chattext.style.display = "None";
