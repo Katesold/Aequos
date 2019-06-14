@@ -22,15 +22,20 @@ $mailer = $pp->getMailer();
 
 //Using Aamazon AWS SES SMTP account
 // $mailer->IsSMTP();
-// $mailer->SMTPAuth   = true;
-// $mailer->SMTPSecure = "tls";
-// $mailer->Host       = "smtp.gmail.com";
-// $mailer->Username   = "usrname";
-// $mailer->Password   = "pw";
-// $mailer->Port   = 587;
+$mailer->SMTPAuth   = true;
+$mailer->SMTPSecure = "tls";
+$mailer->Host       = "smtp.office365.com";
+//$mailer->Host = localhost;
+$mailer->Username   = "no-reply@aequos.co.uk";
+$mailer->Password   = '$D3xprtsW@N2019!';
+$mailer->Port   = 25;
 
-$mailer->setFrom('aequos.co.uk', 'Test Form');
 
-$pp->sendEmailTo(['Andyweedon64@gmail.com', 'andyweedon@btinternet.com', 'kata@22design.co.uk', 'info@aequos.co.uk']); // ← Your email here
+
+$mailer->setFrom('no-reply@aequos.co.uk ', 'Test Form');
+
+$pp->sendEmailTo(['no-reply@aequos.co.uk', 'kata@22design.co.uk', 'Andyweedon64@gmail.com', 'info@aequos.co.uk']); // ← Your email here
 
 echo $pp->process($_POST);
+
+//'andyweedon@btinternet.com'
