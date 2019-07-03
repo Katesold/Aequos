@@ -21,21 +21,31 @@ $validator->field('Message')->maxLength(6000);
 $mailer = $pp->getMailer();
 
 //Using Aamazon AWS SES SMTP account
-// $mailer->IsSMTP();
+// $mailer->IsSMTP();  //uncomment
+// $mailer->SMTPAuth   = false; //uncomment
+// // $mailer->SMTPAutoTLS = false; //comment out
+// // $mailer->SMTPSecure = false;  //comment out
+// $mailer->SMTPSecure = "none";  //uncomment and or set it to false
+// //$mailer->Host       = "smtp.office365.com";  //comment out
+// //$mailer->Host = 'localhost';  //comment out
+// $mailer->Host = 'relay-hosting.secureserver.net';  //uncomment
+// $mailer->Username   = "no-reply@aequos.co.uk"; //uncomment
+// $mailer->Password   = '$D3xprtsW@N2019!';  //uncomment
+// $mailer->Port   = 25;  //uncomment
+
 $mailer->SMTPAuth   = true;
 $mailer->SMTPSecure = "tls";
 $mailer->Host       = "smtp.office365.com";
-//$mailer->Host = localhost;
 $mailer->Username   = "no-reply@aequos.co.uk";
 $mailer->Password   = '$D3xprtsW@N2019!';
 $mailer->Port   = 25;
 
 
 
-$mailer->setFrom('no-reply@aequos.co.uk ', 'Test Form');
+$mailer->setFrom('no-reply@aequos.co.uk ', 'Form');
 
 $pp->sendEmailTo(['no-reply@aequos.co.uk', 'kata@22design.co.uk', 'Andyweedon64@gmail.com', 'info@aequos.co.uk']); // ← Your email here
 
 echo $pp->process($_POST);
 
-//'andyweedon@btinternet.com'
+//'andyweedon@btinternet.com', 'kata@22design.co.uk', 'Andyweedon64@gmail.com', 'info@aequos.co.uk'
