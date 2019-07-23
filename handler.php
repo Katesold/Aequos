@@ -29,8 +29,7 @@ $mailer = $pp->getMailer();
 // //$mailer->Host       = "smtp.office365.com";  //comment out
 // //$mailer->Host = 'localhost';  //comment out
 // $mailer->Host = 'relay-hosting.secureserver.net';  //uncomment
-// $mailer->Username   = "no-reply@aequos.co.uk"; //uncomment
-// $mailer->Password   = '$D3xprtsW@N2019!';  //uncomment
+
 // $mailer->Port   = 25;  //uncomment
 
 $mailer->SMTPAuth   = true;
